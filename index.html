@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Malaysia Salary Calculator 2026. Estimate take-home pay after EPF, SOCSO, LINDUNG 24 Jam, EIS and PCB.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f172a">
+<title>Malaysia Salary Calculator 2026 | Take-Home Pay</title>
+<link rel="stylesheet" href="style.css">
+<!-- Google AdSense: after approval, replace ca-pub-XXXXXXXXXXXXXXXX with your publisher ID. -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+</head>
+<body>
+<header class="topbar">
+  <div class="nav">
+    <a class="brand" href="#top"><span>MY</span> Calculator Hub</a>
+    <nav>
+      <a href="#calculator">Calculator</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">☾</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-inner">
+    <div class="pill">🇲🇾 Updated for 2026</div>
+    <h1>Malaysia Salary Calculator 2026</h1>
+    <p>See your estimated monthly take-home pay after EPF, SOCSO, LINDUNG 24 Jam, EIS and PCB.</p>
+    <a class="hero-btn" href="#calculator">Calculate my salary ↓</a>
+  </div>
+</section>
+
+<section class="ad-slot" aria-label="Advertisement">
+  <span>Advertisement</span>
+  <!-- AdSense unit can be placed here after approval -->
+</section>
+
+<section id="calculator" class="section">
+<div class="calculator-grid">
+  <div class="card input-card">
+    <div class="section-head">
+      <div><p class="eyebrow">YOUR DETAILS</p><h2>Salary calculator</h2></div>
+      <span class="year-badge">2026</span>
+    </div>
+
+    <label>Gross monthly salary (RM)
+      <input id="grossSalary" type="number" min="0" step="0.01" value="5500" inputmode="decimal">
+    </label>
+
+    <label>Age
+      <input id="employeeAge" type="number" min="14" max="75" value="30" inputmode="numeric">
+      <small>EPF contribution rules vary by age.</small>
+    </label>
+
+    <label>Employee category
+      <select id="employeeType">
+        <option value="malaysian">Malaysian citizen</option>
+        <option value="pr">Permanent Resident (PR)</option>
+        <option value="foreign">Non-Malaysian citizen</option>
+      </select>
+    </label>
+
+    <div id="foreignNotice" class="notice hidden">For non-Malaysian employees, EPF is calculated at 2% employee + 2% employer under the current rule. LINDUNG 24 Jam is treated as mandatory in this calculator.</div>
+
+    <div class="field-group">
+      <div class="label-row"><span>LINDUNG 24 Jam</span><span class="help">Non-Employment Injury Scheme</span></div>
+      <div class="radio-grid">
+        <label class="radio-card"><input type="radio" name="lindung" value="yes" checked><span><b>Yes</b><small>I participate</small></span></label>
+        <label class="radio-card"><input type="radio" name="lindung" value="no"><span><b>No</b><small>I opted out</small></span></label>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="label-row"><span>Tax status</span><span class="help">Used for PCB estimate</span></div>
+      <div class="radio-grid">
+        <label class="radio-card"><input type="radio" name="taxStatus" value="single" checked><span><b>Single</b><small>Standard relief</small></span></label>
+        <label class="radio-card"><input type="radio" name="taxStatus" value="married"><span><b>Married</b><small>More options below</small></span></label>
+      </div>
+    </div>
+
+    <div id="spouseBox" class="sub-options hidden">
+      <label>Spouse has no income?
+        <select id="spouseNoIncome"><option value="yes">Yes</option><option value="no">No</option></select>
+      </label>
+    </div>
+
+    <details class="advanced">
+      <summary>Advanced PCB options <span>Optional</span></summary>
+      <div class="advanced-grid">
+        <label>Children eligible for relief
+          <input id="childrenCount" type="number" min="0" max="20" value="0">
+        </label>
+        <label>Monthly zakat (RM)
+          <input id="zakatAmount" type="number" min="0" step="0.01" value="0">
+        </label>
+        <label>Monthly bonus / additional remuneration (RM)
+          <input id="bonusAmount" type="number" min="0" step="0.01" value="0">
+        </label>
+        <label>Tax residency
+          <select id="taxResidency">
+            <option value="resident">Resident</option>
+            <option value="nonresident">Non-resident</option>
+          </select>
+        </label>
+      </div>
+      <p class="advanced-note">PCB is an estimate. Actual payroll PCB can depend on accumulated remuneration, previous PCB/zakat, TP1/TP3 information, benefits and other payroll details.</p>
+    </details>
+
+    <button id="calculateBtn" class="calculate-btn">Calculate take-home pay</button>
+  </div>
+
+  <div class="card result-card" id="results">
+    <div class="result-top">
+      <div><p class="eyebrow">ESTIMATED TAKE-HOME</p><div id="takeHome" class="take-home">RM 0.00</div></div>
+      <div class="mini-chip">per month</div>
+    </div>
+
+    <div class="breakdown">
+      <div class="row"><span>Gross salary</span><strong id="grossResult">RM 0.00</strong></div>
+      <div class="row"><span>EPF <small id="epfRateLabel">Employee</small></span><strong id="epfAmount">RM 0.00</strong></div>
+      <div class="row"><span>SOCSO</span><strong id="socsoAmount">RM 0.00</strong></div>
+      <div class="row"><span>LINDUNG 24 Jam <small id="lindungLabel"></small></span><strong id="lindungAmount">RM 0.00</strong></div>
+      <div class="row"><span>EIS</span><strong id="eisAmount">RM 0.00</strong></div>
+      <div class="row"><span>PCB <small>estimated</small></span><strong id="pcbAmount">RM 0.00</strong></div>
+      <div class="row total"><span>Total deductions</span><strong id="totalDeductions">RM 0.00</strong></div>
+    </div>
+
+    <div class="annual-grid">
+      <div><span>Annual gross</span><strong id="annualGross">RM 0.00</strong></div>
+      <div><span>Annual take-home*</span><strong id="annualTakeHome">RM 0.00</strong></div>
+    </div>
+    <p id="pcbNote" class="result-note"></p>
+
+    <details class="employer">
+      <summary>Employer cost & contributions</summary>
+      <div class="breakdown">
+        <div class="row"><span>Employer EPF</span><strong id="employerEpf">RM 0.00</strong></div>
+        <div class="row"><span>Employer SOCSO</span><strong id="employerSocso">RM 0.00</strong></div>
+        <div class="row"><span>Employer EIS</span><strong id="employerEis">RM 0.00</strong></div>
+        <div class="row total"><span>Employer statutory total</span><strong id="employerTotal">RM 0.00</strong></div>
+      </div>
+    </details>
+
+    <div class="raise-box">
+      <div><span>What if your salary increases by RM500?</span><small>Estimated extra take-home</small></div>
+      <strong id="raiseTakeHome">+RM 0.00</strong>
+    </div>
+
+    <button id="shareBtn" class="share-btn">↗ Share this calculation</button>
+    <p class="disclaimer">*Annual figures are based on the monthly estimate × 12. PCB is an estimate and is not a substitute for an employer's payroll calculation or official HASiL assessment.</p>
+  </div>
+</div>
+</section>
+
+<section class="section" id="how">
+  <div class="content-card">
+    <p class="eyebrow">HOW IT WORKS</p>
+    <h2>What gets deducted from your salary?</h2>
+    <div class="info-grid">
+      <article><h3>EPF / KWSP</h3><p>Your employee retirement contribution. The calculator follows the current contribution-rate structure and wage-range approach for applicable Malaysian/PR employees.</p></article>
+      <article><h3>SOCSO / PERKESO</h3><p>Employment-related social protection contribution calculated using the current PERKESO contribution schedule and RM6,000 wage ceiling.</p></article>
+      <article><h3>LINDUNG 24 Jam</h3><p>An additional non-employment injury protection contribution. Local participation is voluntary; foreign-worker treatment is different.</p></article>
+      <article><h3>EIS</h3><p>Employment Insurance System contribution paid by both employee and employer, subject to the current wage ceiling and eligibility rules.</p></article>
+      <article><h3>PCB</h3><p>Monthly tax deduction. Our public calculator provides an estimate using current Malaysian tax rates and common relief assumptions; payroll PCB can differ.</p></article>
+      <article><h3>Take-home pay</h3><p>Gross salary minus employee EPF, SOCSO, LINDUNG 24 Jam, EIS and estimated PCB.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="content-card">
+    <p class="eyebrow">ABOUT</p>
+    <h2>About Malaysia Calculator Hub</h2>
+    <p>Malaysia Calculator Hub is an independent calculator project designed to make everyday Malaysian financial and employment calculations easier to understand. Our calculators are built for quick estimates and educational use.</p>
+    <p>We use publicly available information from Malaysian government and statutory bodies where possible, including KWSP, PERKESO and HASiL. Rules and contribution schedules can change, so users should confirm important payroll or tax figures with their employer, KWSP, PERKESO or HASiL.</p>
+    <p><b>We are not affiliated with KWSP, PERKESO, HASiL or any Malaysian government agency.</b></p>
+  </div>
+</section>
+
+<section class="section" id="privacy">
+  <div class="content-card">
+    <p class="eyebrow">PRIVACY</p>
+    <h2>Privacy Policy</h2>
+    <p><b>Last updated: 3 September 2026</b></p>
+    <p>Malaysia Calculator Hub is designed so that salary calculations can be performed directly in your browser. We do not require an account and we do not ask you to submit your salary details to us.</p>
+    <h3>Information entered into the calculator</h3>
+    <p>The calculator processes the information you enter locally in your browser to produce the displayed result. We do not intentionally collect or store those values on our server.</p>
+    <h3>Cookies and advertising</h3>
+    <p>If advertising services such as Google AdSense are enabled, third-party vendors including Google may use cookies, web beacons, IP addresses or similar technologies to serve and measure advertising. Google may use information about visits to this and other sites to provide personalized advertising where permitted.</p>
+    <p>You can manage personalized advertising through Google's Ads Settings and your browser settings. Applicable consent requirements will be presented where required.</p>
+    <h3>Analytics</h3>
+    <p>If analytics tools are added, they may collect aggregated information such as pages viewed, approximate device information and general usage patterns. We will update this policy if our analytics practices change.</p>
+    <h3>Contact</h3>
+    <p>For privacy questions, contact us through the email address published on the website once our support mailbox is active.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="content-card">
+    <p class="eyebrow">DISCLAIMER</p>
+    <h2>Calculator Disclaimer</h2>
+    <p>This website provides estimates for educational and planning purposes only. It does not constitute tax, legal, payroll, investment or financial advice.</p>
+    <p>Actual deductions may differ because employers may process wages, benefits, bonuses, arrears, statutory contributions, tax reliefs and PCB using information not entered into this calculator.</p>
+    <p>For official figures, refer to the latest information and calculators provided by KWSP, PERKESO and HASiL, or check your payslip and employer payroll records.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="content-card">
+    <p class="eyebrow">COMING SOON</p>
+    <h2>More Malaysia calculators</h2>
+    <div class="coming-grid">
+      <div>⏱️ <b>OT Calculator</b><small>Overtime pay estimate</small></div>
+      <div>🏠 <b>House Affordability</b><small>How much house can you afford?</small></div>
+      <div>🚗 <b>Car Affordability</b><small>Estimate a comfortable car budget</small></div>
+      <div>📈 <b>Salary Increment</b><small>See your real take-home increase</small></div>
+      <div>📅 <b>Working Days</b><small>Calculate working days and pay periods</small></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <b>Malaysia Calculator Hub</b>
+    <span>Independent • Practical • Malaysia-focused</span>
+    <span>© 2026 Malaysia Calculator Hub</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
