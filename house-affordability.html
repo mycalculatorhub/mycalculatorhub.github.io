@@ -215,7 +215,44 @@
       line-height: 1.5;
       font-size: 14px;
     }
+/* Upfront Cash Estimate */
 
+.house-upfront {
+  display: none;
+  margin-top: 22px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e7ef;
+}
+
+.house-upfront-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.house-upfront-total {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-top: 5px;
+}
+
+.house-upfront .house-result-grid {
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+
+  .house-upfront {
+    padding: 20px 16px;
+  }
+
+  .house-upfront-total {
+    font-size: 29px;
+  }
+
+}
     /* Information */
 
     .house-info {
@@ -500,7 +537,61 @@
       </span>
 
     </div>
+<!-- Buyer information -->
 
+<div class="house-section-title">
+  Buyer Information
+</div>
+
+<div class="house-two-column">
+
+  <div class="house-field">
+
+    <label for="buyerType">
+      Buyer Type
+    </label>
+
+    <select id="buyerType">
+
+      <option value="malaysian" selected>
+        Malaysian Citizen
+      </option>
+
+      <option value="other">
+        Other Buyer
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div class="house-field">
+
+    <label for="firstHome">
+      First Residential Home?
+    </label>
+
+    <select id="firstHome">
+
+      <option value="yes" selected>
+        Yes
+      </option>
+
+      <option value="no">
+        No
+      </option>
+
+    </select>
+
+    <span class="house-help">
+      The 2026 first-home stamp-duty exemption may apply
+      subject to the applicable conditions.
+    </span>
+
+  </div>
+
+</div>
 
     <!-- Loan assumptions -->
 
@@ -777,7 +868,126 @@
       >
         DSR information
       </div>
+<!-- =========================================
+     UPFRONT CASH ESTIMATE
+     ========================================= -->
 
+<div
+  class="house-upfront"
+  id="upfrontSection"
+>
+
+  <div class="house-upfront-header">
+
+    <div class="house-result-label">
+      Estimated Upfront Cash Needed
+    </div>
+
+    <div
+      class="house-upfront-total"
+      id="upfrontTotal"
+    >
+      RM 0.00
+    </div>
+
+    <div class="house-result-subtitle">
+      Estimated amount needed before considering renovation
+      and other optional costs
+    </div>
+
+  </div>
+
+
+  <div class="house-result-grid">
+
+    <div class="house-result-box">
+
+      <span>
+        Down Payment
+      </span>
+
+      <strong id="upfrontDownPayment">
+        RM 0.00
+      </strong>
+
+    </div>
+
+
+    <div class="house-result-box">
+
+      <span>
+        Estimated SPA / Transfer Legal Fee
+      </span>
+
+      <strong id="spaLegalFee">
+        RM 0.00
+      </strong>
+
+    </div>
+
+
+    <div class="house-result-box">
+
+      <span>
+        Estimated Loan Legal Fee
+      </span>
+
+      <strong id="loanLegalFee">
+        RM 0.00
+      </strong>
+
+    </div>
+
+
+    <div class="house-result-box">
+
+      <span>
+        Transfer Stamp Duty
+      </span>
+
+      <strong id="transferStampDuty">
+        RM 0.00
+      </strong>
+
+    </div>
+
+
+    <div class="house-result-box">
+
+      <span>
+        Loan Stamp Duty
+      </span>
+
+      <strong id="loanStampDuty">
+        RM 0.00
+      </strong>
+
+    </div>
+
+
+    <div class="house-result-box">
+
+      <span>
+        Estimated Other / Disbursement Buffer
+      </span>
+
+      <strong id="otherCosts">
+        RM 0.00
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="house-note"
+    id="stampDutyNote"
+  >
+    Stamp-duty estimate will appear here.
+  </div>
+
+</div>
     </div>
 
   </section>
@@ -1120,6 +1330,99 @@ function formatMoney(value) {
 }
 
 
+/* =========================================
+   LEGAL FEE ESTIMATE
+   Standard SRO 2023 scale
+   ========================================= */
+
+function estimateLegalFee(amount) {
+
+  if (amount <= 0) {
+    return 0;
+  }
+
+  let fee = 0;
+
+  if (amount <= 500000) {
+
+    fee = amount * 0.0125;
+
+  } else if (amount <= 7500000) {
+
+    fee =
+      500000 * 0.0125 +
+      (amount - 500000) * 0.01;
+
+  } else {
+
+    fee =
+      500000 * 0.0125 +
+      7000000 * 0.01 +
+      (amount - 7500000) * 0.01;
+
+  }
+
+  return Math.max(fee, 500);
+
+}
+
+
+/* =========================================
+   PROPERTY TRANSFER STAMP DUTY
+   Malaysian citizen / PR style tiered estimate
+   ========================================= */
+
+function calculateTransferStampDuty(propertyValue) {
+
+  let duty = 0;
+
+  if (propertyValue <= 100000) {
+
+    duty = propertyValue * 0.01;
+
+  } else if (propertyValue <= 500000) {
+
+    duty =
+      100000 * 0.01 +
+      (propertyValue - 100000) * 0.02;
+
+  } else if (propertyValue <= 1000000) {
+
+    duty =
+      100000 * 0.01 +
+      400000 * 0.02 +
+      (propertyValue - 500000) * 0.03;
+
+  } else {
+
+    duty =
+      100000 * 0.01 +
+      400000 * 0.02 +
+      500000 * 0.03 +
+      (propertyValue - 1000000) * 0.04;
+
+  }
+
+  return duty;
+
+}
+
+
+/* =========================================
+   LOAN STAMP DUTY
+   ========================================= */
+
+function calculateLoanStampDuty(loanAmount) {
+
+  return loanAmount * 0.005;
+
+}
+
+
+/* =========================================
+   MAIN CALCULATOR
+   ========================================= */
+
 function calculateHouseAffordability() {
 
   /* =========================================
@@ -1166,6 +1469,14 @@ function calculateHouseAffordability() {
     parseInt(
       document.getElementById("loanTenure").value
     );
+
+
+  const buyerType =
+    document.getElementById("buyerType").value;
+
+
+  const firstHome =
+    document.getElementById("firstHome").value;
 
 
   /* =========================================
@@ -1217,7 +1528,7 @@ function calculateHouseAffordability() {
 
 
   /* =========================================
-     MAXIMUM TOTAL DEBT PAYMENT
+     MAXIMUM TOTAL DEBT
      ========================================= */
 
   const maximumTotalDebt =
@@ -1233,12 +1544,6 @@ function calculateHouseAffordability() {
       0,
       maximumTotalDebt - commitments
     );
-
-
-  /*
-    If there is no money left after existing
-    commitments, maximum loan = 0.
-  */
 
 
   /* =========================================
@@ -1285,16 +1590,6 @@ function calculateHouseAffordability() {
   /* =========================================
      HOUSE PRICE
      ========================================= */
-
-  /*
-    If down payment = 10%,
-    loan = 90% of house price.
-
-    Therefore:
-
-    House Price =
-    Loan / (1 - Down Payment %)
-  */
 
   let maximumHousePrice = 0;
 
@@ -1356,7 +1651,7 @@ function calculateHouseAffordability() {
 
 
   /* =========================================
-     DISPLAY RESULTS
+     DISPLAY MAIN RESULTS
      ========================================= */
 
   document.getElementById(
@@ -1457,11 +1752,180 @@ function calculateHouseAffordability() {
 
 
   /* =========================================
+     UPFRONT COST CALCULATION
+     ========================================= */
+
+  const spaLegalFee =
+    estimateLegalFee(maximumHousePrice);
+
+
+  const loanLegalFee =
+    estimateLegalFee(maximumLoan);
+
+
+  let transferStampDuty =
+    calculateTransferStampDuty(
+      maximumHousePrice
+    );
+
+
+  let loanStampDuty =
+    calculateLoanStampDuty(
+      maximumLoan
+    );
+
+
+  /* =========================================
+     FIRST HOME STAMP DUTY EXEMPTION
+     ========================================= */
+
+  let exemptionApplied = false;
+
+
+  if (
+    buyerType === "malaysian" &&
+    firstHome === "yes" &&
+    maximumHousePrice <= 500000
+  ) {
+
+    transferStampDuty = 0;
+    loanStampDuty = 0;
+
+    exemptionApplied = true;
+
+  }
+
+
+  /* =========================================
+     OTHER COST BUFFER
+     =========================================
+
+     This is intentionally conservative and clearly
+     labelled as an estimate for miscellaneous
+     disbursements / searches / registration-type costs.
+
+  */
+
+  let otherCosts = 1500;
+
+
+  if (maximumHousePrice <= 0) {
+
+    otherCosts = 0;
+
+  }
+
+
+  /* =========================================
+     TOTAL UPFRONT CASH
+     ========================================= */
+
+  const upfrontTotal =
+    downPaymentAmount +
+    spaLegalFee +
+    loanLegalFee +
+    transferStampDuty +
+    loanStampDuty +
+    otherCosts;
+
+
+  /* =========================================
+     DISPLAY UPFRONT RESULTS
+     ========================================= */
+
+  document.getElementById(
+    "upfrontDownPayment"
+  ).textContent =
+    formatMoney(downPaymentAmount);
+
+
+  document.getElementById(
+    "spaLegalFee"
+  ).textContent =
+    formatMoney(spaLegalFee);
+
+
+  document.getElementById(
+    "loanLegalFee"
+  ).textContent =
+    formatMoney(loanLegalFee);
+
+
+  document.getElementById(
+    "transferStampDuty"
+  ).textContent =
+    formatMoney(transferStampDuty);
+
+
+  document.getElementById(
+    "loanStampDuty"
+  ).textContent =
+    formatMoney(loanStampDuty);
+
+
+  document.getElementById(
+    "otherCosts"
+  ).textContent =
+    formatMoney(otherCosts);
+
+
+  document.getElementById(
+    "upfrontTotal"
+  ).textContent =
+    formatMoney(upfrontTotal);
+
+
+  /* =========================================
+     STAMP DUTY MESSAGE
+     ========================================= */
+
+  let stampNote = "";
+
+
+  if (exemptionApplied) {
+
+    stampNote =
+      "🎉 Estimated transfer and loan stamp duty: RM0.00. " +
+      "The calculator has applied the 2026–2027 first residential home " +
+      "stamp-duty exemption because the selected buyer is a Malaysian " +
+      "citizen, the property is marked as a first home, and the estimated " +
+      "property price is RM500,000 or below. Eligibility conditions apply.";
+
+  } else if (buyerType === "other") {
+
+    stampNote =
+      "⚠️ This estimate does not apply the Malaysian first-home stamp-duty " +
+      "exemption. Stamp-duty treatment for non-Malaysian buyers can differ " +
+      "and may be substantially higher.";
+
+  } else {
+
+    stampNote =
+      "Stamp-duty figures are estimates based on the applicable property " +
+      "transfer and loan stamp-duty assumptions. Exemptions, remissions, " +
+      "property valuation and transaction details can affect the actual amount.";
+
+  }
+
+
+  document.getElementById(
+    "stampDutyNote"
+  ).textContent =
+    stampNote;
+
+
+  /* =========================================
      SHOW RESULTS
      ========================================= */
 
   document.getElementById(
     "resultBox"
+  ).style.display =
+    "block";
+
+
+  document.getElementById(
+    "upfrontSection"
   ).style.display =
     "block";
 
