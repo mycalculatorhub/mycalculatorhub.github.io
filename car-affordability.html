@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Malaysia Car Affordability Calculator 2026 | Car Loan Calculator
+  </title>
+
+  <meta
+    name="description"
+    content="Malaysia Car Affordability Calculator 2026. Estimate how much car you can afford based on your income, commitments, DSR, down payment, interest rate and loan tenure."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+
+      margin: 0;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: #f5f7fb;
+
+      color: #1f2937;
+
+      line-height: 1.6;
+
+    }
+
+    .car-container {
+
+      max-width: 950px;
+
+      margin: 0 auto;
+
+      padding: 20px;
+
+    }
+
+    .car-back {
+
+      display: inline-block;
+
+      margin-bottom: 18px;
+
+      color: #2563eb;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+    }
+
+    .car-back:hover {
+
+      text-decoration: underline;
+
+    }
+
+    .car-header {
+
+      text-align: center;
+
+      margin-bottom: 25px;
+
+    }
+
+    .car-header h1 {
+
+      margin: 0 0 10px;
+
+      font-size: 34px;
+
+      line-height: 1.2;
+
+      color: #111827;
+
+    }
+
+    .car-header p {
+
+      margin: 0 auto;
+
+      max-width: 700px;
+
+      color: #6b7280;
+
+      font-size: 16px;
+
+    }
+
+    .car-card {
+
+      background: #ffffff;
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.07);
+
+      border: 1px solid #e5e7eb;
+
+      margin-bottom: 24px;
+
+    }
+
+    .car-section-title {
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      color: #111827;
+
+      margin: 0 0 18px;
+
+    }
+
+    .car-two-column {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+
+      margin-bottom: 22px;
+
+    }
+
+    .car-field {
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+    .car-field label {
+
+      font-weight: 700;
+
+      margin-bottom: 7px;
+
+      color: #374151;
+
+    }
+
+    .car-field input,
+    .car-field select {
+
+      width: 100%;
+
+      padding: 13px 14px;
+
+      border: 1px solid #d1d5db;
+
+      border-radius: 10px;
+
+      font-size: 16px;
+
+      background: #ffffff;
+
+      color: #111827;
+
+      outline: none;
+
+    }
+
+    .car-field input:focus,
+    .car-field select:focus {
+
+      border-color: #2563eb;
+
+      box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+
+    }
+
+    .car-help {
+
+      display: block;
+
+      margin-top: 5px;
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+    }
+
+    .car-button {
+
+      width: 100%;
+
+      border: none;
+
+      border-radius: 12px;
+
+      padding: 15px;
+
+      background: #2563eb;
+
+      color: #ffffff;
+
+      font-size: 17px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition: 0.2s;
+
+    }
+
+    .car-button:hover {
+
+      background: #1d4ed8;
+
+    }
+
+    .car-results {
+
+      display: none;
+
+    }
+
+    .car-main-result {
+
+      text-align: center;
+
+      padding: 26px;
+
+      border-radius: 16px;
+
+      background: #f0f6ff;
+
+      border: 1px solid #dbeafe;
+
+      margin-bottom: 20px;
+
+    }
+
+    .car-result-label {
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      color: #6b7280;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.4px;
+
+    }
+
+    .car-main-value {
+
+      font-size: 38px;
+
+      font-weight: 900;
+
+      color: #111827;
+
+      line-height: 1.2;
+
+      margin-top: 5px;
+
+    }
+
+    .car-result-subtitle {
+
+      margin-top: 7px;
+
+      color: #6b7280;
+
+      font-size: 14px;
+
+    }
+
+    .car-result-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 14px;
+
+    }
+
+    .car-result-box {
+
+      padding: 18px;
+
+      border-radius: 13px;
+
+      background: #f9fafb;
+
+      border: 1px solid #e5e7eb;
+
+    }
+
+    .car-result-box span {
+
+      display: block;
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+      margin-bottom: 5px;
+
+    }
+
+    .car-result-box strong {
+
+      display: block;
+
+      font-size: 20px;
+
+      color: #111827;
+
+    }
+
+    .car-status {
+
+      margin-top: 18px;
+
+      padding: 16px;
+
+      border-radius: 12px;
+
+      font-weight: 700;
+
+      text-align: center;
+
+    }
+
+    .car-status.good {
+
+      background: #ecfdf5;
+
+      border: 1px solid #a7f3d0;
+
+      color: #065f46;
+
+    }
+
+    .car-status.warning {
+
+      background: #fffbeb;
+
+      border: 1px solid #fde68a;
+
+      color: #92400e;
+
+    }
+
+    .car-status.danger {
+
+      background: #fef2f2;
+
+      border: 1px solid #fecaca;
+
+      color: #991b1b;
+
+    }
+
+    .car-note {
+
+      margin-top: 18px;
+
+      padding: 15px;
+
+      border-radius: 11px;
+
+      background: #f8fafc;
+
+      border: 1px solid #e2e8f0;
+
+      color: #475569;
+
+      font-size: 14px;
+
+    }
+
+    .car-info {
+
+      background: #ffffff;
+
+      border-radius: 16px;
+
+      padding: 25px;
+
+      border: 1px solid #e5e7eb;
+
+      margin-bottom: 24px;
+
+    }
+
+    .car-info h2 {
+
+      font-size: 22px;
+
+      margin-top: 0;
+
+      color: #111827;
+
+    }
+
+    .car-info h3 {
+
+      font-size: 17px;
+
+      margin-bottom: 5px;
+
+      color: #111827;
+
+    }
+
+    .car-info p {
+
+      color: #4b5563;
+
+    }
+
+    .car-more {
+
+      background: #ffffff;
+
+      border-radius: 16px;
+
+      padding: 25px;
+
+      border: 1px solid #e5e7eb;
+
+      margin-bottom: 24px;
+
+    }
+
+    .car-more h2 {
+
+      margin-top: 0;
+
+      font-size: 22px;
+
+    }
+
+    .calculator-links {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 14px;
+
+    }
+
+    .calculator-link {
+
+      display: grid;
+
+      grid-template-columns:
+        42px 1fr;
+
+      grid-template-rows:
+        auto auto;
+
+      column-gap: 12px;
+
+      padding: 16px;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      color: inherit;
+
+      background: #ffffff;
+
+      transition: 0.2s;
+
+    }
+
+    .calculator-link:hover {
+
+      border-color: #2563eb;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 5px 15px rgba(15, 23, 42, 0.06);
+
+    }
+
+    .calculator-link-icon {
+
+      grid-row: 1 / span 2;
+
+      font-size: 27px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+    .calculator-link-title {
+
+      font-weight: 800;
+
+      color: #111827;
+
+    }
+
+    .calculator-link-description {
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+      margin-top: 2px;
+
+    }
+
+    .car-footer-note {
+
+      text-align: center;
+
+      color: #6b7280;
+
+      font-size: 13px;
+
+      padding: 10px 0 30px;
+
+    }
+
+    @media (max-width: 700px) {
+
+      .car-container {
+
+        padding: 15px;
+
+      }
+
+      .car-header h1 {
+
+        font-size: 28px;
+
+      }
+
+      .car-card,
+      .car-info,
+      .car-more {
+
+        padding: 20px 16px;
+
+      }
+
+      .car-two-column,
+      .car-result-grid,
+      .calculator-links {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .car-main-value {
+
+        font-size: 31px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div class="car-container">
+
+
+    <a
+      href="index.html"
+      class="car-back"
+    >
+      ← Back to Salary Calculator
+    </a>
+
+
+    <header class="car-header">
+
+      <h1>
+        Malaysia Car Affordability Calculator 2026
+      </h1>
+
+      <p>
+        Estimate how much car you can afford based on your
+        income, existing commitments, DSR, down payment,
+        interest rate and loan tenure.
+      </p>
+
+    </header>
+
+
+    <!-- =========================================
+         CALCULATOR INPUT
+         ========================================= -->
+
+    <div class="car-card">
+
+
+      <div class="car-section-title">
+        Your Financial Information
+      </div>
+
+
+      <div class="car-two-column">
+
+
+        <div class="car-field">
+
+          <label for="income">
+            Monthly Gross Income
+          </label>
+
+          <input
+            type="number"
+            id="income"
+            value="5000"
+            min="0"
+            step="100"
+          >
+
+          <span class="car-help">
+            Your monthly income before deductions.
+          </span>
+
+        </div>
+
+
+        <div class="car-field">
+
+          <label for="commitments">
+            Existing Monthly Commitments
+          </label>
+
+          <input
+            type="number"
+            id="commitments"
+            value="1000"
+            min="0"
+            step="50"
+          >
+
+          <span class="car-help">
+            Include housing loans, personal loans,
+            credit commitments and other regular debt payments.
+          </span>
+
+        </div>
+
+
+        <div class="car-field">
+
+          <label for="dsr">
+            Target Maximum DSR
+          </label>
+
+          <select id="dsr">
+
+            <option value="30">
+              30%
+            </option>
+
+            <option value="35">
+              35%
+            </option>
+
+            <option value="40" selected>
+              40%
+            </option>
+
+            <option value="45">
+              45%
+            </option>
+
+            <option value="50">
+              50%
+            </option>
+
+            <option value="60">
+              60%
+            </option>
+
+          </select>
+
+          <span class="car-help">
+            A lower DSR gives you a more conservative estimate.
+          </span>
+
+        </div>
+
+
+        <div class="car-field">
+
+          <label for="carType">
+            Vehicle Type
+          </label>
+
+          <select id="carType">
+
+            <option value="new" selected>
+              New Car
+            </option>
+
+            <option value="used">
+              Used Car
+            </option>
+
+          </select>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="car-section-title">
+        Car Loan Assumptions
+      </div>
+
+
+      <div class="car-two-column">
+
+
+        <div class="car-field">
+
+          <label for="carPrice">
+            Car Price
+          </label>
+
+          <input
+            type="number"
+            id="carPrice"
+            value="80000"
+            min="0"
+            step="1000"
+          >
+
+        </div>
+
+
+        <div class="car-field">
+
+          <label for="downPayment">
+            Down Payment
+          </label>
+
+          <select id="downPayment">
+
+            <option value="10" selected>
+              10%
+            </option>
+
+            <option value="15">
+              15%
+            </option>
+
+            <option value="20">
+              20%
+            </option>
+
+            <option value="30">
+              30%
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="car-field">
+
+          <label for="interestRate">
+            Estimated Interest / Profit Rate
+          </label>
+
+          <input
+            type="number"
+            id="interestRate"
+            value="3.0"
+            min="0"
+            max="20"
+            step="0.1"
+          >
+
+          <span class="car-help">
+            Use the rate offered by your bank/dealer for a more
+            relevant estimate.
+          </span>
+
+        </div>
+
+
+        <div class="car-field">
+
+          <label for="tenure">
+            Loan Tenure
+          </label>
+
+          <select id="tenure">
+
+            <option value="3">
+              3 years
+            </option>
+
+            <option value="5">
+              5 years
+            </option>
+
+            <option value="7">
+              7 years
+            </option>
+
+            <option value="9" selected>
+              9 years
+            </option>
+
+          </select>
+
+        </div>
+
+
+      </div>
+
+
+      <button
+        class="car-button"
+        onclick="calculateCar()"
+      >
+        Calculate Car Affordability
+      </button>
+
+
+    </div>
+
+
+    <!-- =========================================
+         RESULTS
+         ========================================= -->
+
+    <div
+      class="car-card car-results"
+      id="results"
+    >
+
+
+      <div class="car-main-result">
+
+        <div class="car-result-label">
+          Estimated Maximum Affordable Car Price
+        </div>
+
+        <div
+          class="car-main-value"
+          id="maxCarPrice"
+        >
+          RM 0.00
+        </div>
+
+        <div class="car-result-subtitle">
+          Based on your selected income, commitments and target DSR.
+        </div>
+
+      </div>
+
+
+      <div class="car-result-grid">
+
+
+        <div class="car-result-box">
+
+          <span>
+            Maximum Estimated Car Loan
+          </span>
+
+          <strong id="maxLoan">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Estimated Monthly Instalment
+          </span>
+
+          <strong id="monthlyPayment">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Down Payment
+          </span>
+
+          <strong id="downPaymentResult">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Total Interest / Profit
+          </span>
+
+          <strong id="totalInterest">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Total Loan Repayment
+          </span>
+
+          <strong id="totalRepayment">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Estimated Upfront Cash
+          </span>
+
+          <strong id="upfrontCash">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Existing Commitments
+          </span>
+
+          <strong id="existingCommitments">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="car-result-box">
+
+          <span>
+            Estimated DSR After Car Loan
+          </span>
+
+          <strong id="finalDsr">
+            0%
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+      <div
+        class="car-status"
+        id="carStatus"
+      >
+        Result
+      </div>
+
+
+      <div class="car-note">
+
+        <strong>Important:</strong>
+        This calculator provides an estimate only.
+        Actual financing approval, interest/profit rate,
+        financing margin and maximum tenure depend on the
+        bank, vehicle, applicant profile and applicable
+        financing criteria.
+
+      </div>
+
+
+    </div>
+
+
+    <!-- =========================================
+         INFORMATION
+         ========================================= -->
+
+    <div class="car-info">
+
+      <h2>
+        How Car Affordability Is Estimated
+      </h2>
+
+
+      <h3>
+        What is DSR?
+      </h3>
+
+      <p>
+        Debt Service Ratio (DSR) compares your monthly debt
+        commitments with your income. For example, a 40% target
+        DSR means total monthly debt payments are targeted at
+        around 40% of your monthly income.
+      </p>
+
+
+      <h3>
+        Why does the calculator use existing commitments?
+      </h3>
+
+      <p>
+        Your existing loans and debt payments reduce the amount
+        available for a new car instalment. The calculator first
+        estimates how much monthly debt you can support, then
+        subtracts your existing commitments.
+      </p>
+
+
+      <h3>
+        What does the interest rate mean?
+      </h3>
+
+      <p>
+        Enter the estimated rate offered by your bank or financing
+        provider. The result is an illustration and should not be
+        treated as a bank quotation.
+      </p>
+
+
+      <h3>
+        Why is the actual bank result different?
+      </h3>
+
+      <p>
+        Banks may consider factors such as income stability,
+        existing debt, credit history, vehicle type, vehicle age,
+        financing margin, employment profile and their internal
+        affordability assessment.
+      </p>
+
+
+      <h3>
+        New vs used cars
+      </h3>
+
+      <p>
+        Financing margins can differ between new and used vehicles.
+        For example, some banks advertise up to 90% financing for
+        eligible new vehicles, while used-vehicle margins may vary
+        according to the vehicle and applicant.
+      </p>
+
+
+    </div>
+
+
+    <!-- =========================================
+         MORE CALCULATORS
+         ========================================= -->
+
+    <div class="car-more">
+
+      <h2>
+        More Malaysia Calculators
+      </h2>
+
+
+      <div class="calculator-links">
+
+
+        <a
+          href="index.html"
+          class="calculator-link"
+        >
+
+          <div class="calculator-link-icon">
+            💰
+          </div>
+
+          <span class="calculator-link-title">
+            Salary Calculator
+          </span>
+
+          <span class="calculator-link-description">
+            Estimate your Malaysian take-home pay
+          </span>
+
+        </a>
+
+
+        <a
+          href="ot-calculator.html"
+          class="calculator-link"
+        >
+
+          <div class="calculator-link-icon">
+            ⏱️
+          </div>
+
+          <span class="calculator-link-title">
+            OT Calculator
+          </span>
+
+          <span class="calculator-link-description">
+            Calculate overtime pay
+          </span>
+
+        </a>
+
+
+        <a
+          href="house-affordability.html"
+          class="calculator-link"
+        >
+
+          <div class="calculator-link-icon">
+            🏠
+          </div>
+
+          <span class="calculator-link-title">
+            House Affordability
+          </span>
+
+          <span class="calculator-link-description">
+            Estimate how much house you can afford
+          </span>
+
+        </a>
+
+
+        <a
+          href="car-affordability.html"
+          class="calculator-link"
+        >
+
+          <div class="calculator-link-icon">
+            🚗
+          </div>
+
+          <span class="calculator-link-title">
+            Car Affordability
+          </span>
+
+          <span class="calculator-link-description">
+            Estimate your affordable car price and instalment
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="calculator-link"
+        >
+
+          <div class="calculator-link-icon">
+            📈
+          </div>
+
+          <span class="calculator-link-title">
+            Salary Increment
+          </span>
+
+          <span class="calculator-link-description">
+            Calculate your salary increase
+          </span>
+
+        </a>
+
+
+        <a
+          href="#"
+          class="calculator-link"
+        >
+
+          <div class="calculator-link-icon">
+            📅
+          </div>
+
+          <span class="calculator-link-title">
+            Working Days
+          </span>
+
+          <span class="calculator-link-description">
+            Calculate working days and dates
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="car-footer-note">
+
+      This calculator is for educational and estimation purposes only.
+      Always confirm financing terms directly with your bank or
+      financing provider.
+
+    </div>
+
+
+  </div>
+
+
+  <!-- =========================================
+       CALCULATOR ENGINE
+       ========================================= -->
+
+  <script>
+
+    function formatMoney(value) {
+
+      return "RM " + Number(value || 0).toLocaleString(
+        "en-MY",
+        {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }
+      );
+
+    }
+
+
+    function calculateMonthlyPayment(
+      loan,
+      annualRate,
+      years
+    ) {
+
+      if (loan <= 0) {
+        return 0;
+      }
+
+      const months = years * 12;
+
+      const monthlyRate =
+        annualRate / 100 / 12;
+
+
+      if (monthlyRate === 0) {
+
+        return loan / months;
+
+      }
+
+
+      return loan *
+        (
+          monthlyRate *
+          Math.pow(
+            1 + monthlyRate,
+            months
+          )
+        ) /
+        (
+          Math.pow(
+            1 + monthlyRate,
+            months
+          ) - 1
+        );
+
+    }
+
+
+    function calculateLoanFromPayment(
+      payment,
+      annualRate,
+      years
+    ) {
+
+      if (payment <= 0) {
+        return 0;
+      }
+
+      const months = years * 12;
+
+      const monthlyRate =
+        annualRate / 100 / 12;
+
+
+      if (monthlyRate === 0) {
+
+        return payment * months;
+
+      }
+
+
+      return payment *
+        (
+          1 -
+          Math.pow(
+            1 + monthlyRate,
+            -months
+          )
+        ) /
+        monthlyRate;
+
+    }
+
+
+    function calculateCar() {
+
+
+      const income =
+        Math.max(
+          0,
+          Number(
+            document.getElementById("income").value
+          ) || 0
+        );
+
+
+      const commitments =
+        Math.max(
+          0,
+          Number(
+            document.getElementById("commitments").value
+          ) || 0
+        );
+
+
+      const targetDsr =
+        Number(
+          document.getElementById("dsr").value
+        ) || 40;
+
+
+      const carPrice =
+        Math.max(
+          0,
+          Number(
+            document.getElementById("carPrice").value
+          ) || 0
+        );
+
+
+      const downPaymentPercent =
+        Number(
+          document.getElementById("downPayment").value
+        ) || 10;
+
+
+      const interestRate =
+        Math.max(
+          0,
+          Number(
+            document.getElementById("interestRate").value
+          ) || 0
+        );
+
+
+      const tenure =
+        Number(
+          document.getElementById("tenure").value
+        ) || 9;
+
+
+      const carType =
+        document.getElementById("carType").value;
+
+
+      /*
+       ============================================
+       AFFORDABILITY
+       ============================================
+      */
+
+
+      const maximumTotalDebt =
+        income *
+        (targetDsr / 100);
+
+
+      const maximumCarPayment =
+        Math.max(
+          0,
+          maximumTotalDebt -
+          commitments
+        );
+
+
+      const maximumLoan =
+        calculateLoanFromPayment(
+          maximumCarPayment,
+          interestRate,
+          tenure
+        );
+
+
+      /*
+       New-car financing is commonly advertised
+       up to 90%.
+
+       Used-car financing can vary, so we use
+       90% as the default illustrative ceiling
+       while clearly labelling the result as an estimate.
+      */
+
+      let maximumFinancingMargin = 0.90;
+
+
+      if (carType === "used") {
+
+        maximumFinancingMargin = 0.90;
+
+      }
+
+
+      const maximumCarPrice =
+        maximumLoan /
+        maximumFinancingMargin;
+
+
+      /*
+       ============================================
+       USER SELECTED CAR
+       ============================================
+      */
+
+
+      const selectedDownPayment =
+        carPrice *
+        (downPaymentPercent / 100);
+
+
+      const selectedLoan =
+        Math.max(
+          0,
+          carPrice -
+          selectedDownPayment
+        );
+
+
+      const monthlyPayment =
+        calculateMonthlyPayment(
+          selectedLoan,
+          interestRate,
+          tenure
+        );
+
+
+      const totalRepayment =
+        monthlyPayment *
+        tenure *
+        12;
+
+
+      const totalInterest =
+        Math.max(
+          0,
+          totalRepayment -
+          selectedLoan
+        );
+
+
+      const upfrontCash =
+        selectedDownPayment;
+
+
+      const finalDsr =
+        income > 0
+          ? (
+              (
+                commitments +
+                monthlyPayment
+              ) /
+              income
+            ) * 100
+          : 0;
+
+
+      /*
+       ============================================
+       DISPLAY
+       ============================================
+      */
+
+
+      document.getElementById(
+        "maxCarPrice"
+      ).textContent =
+        formatMoney(
+          maximumCarPrice
+        );
+
+
+      document.getElementById(
+        "maxLoan"
+      ).textContent =
+        formatMoney(
+          maximumLoan
+        );
+
+
+      document.getElementById(
+        "monthlyPayment"
+      ).textContent =
+        formatMoney(
+          monthlyPayment
+        );
+
+
+      document.getElementById(
+        "downPaymentResult"
+      ).textContent =
+        formatMoney(
+          selectedDownPayment
+        );
+
+
+      document.getElementById(
+        "totalInterest"
+      ).textContent =
+        formatMoney(
+          totalInterest
+        );
+
+
+      document.getElementById(
+        "totalRepayment"
+      ).textContent =
+        formatMoney(
+          totalRepayment
+        );
+
+
+      document.getElementById(
+        "upfrontCash"
+      ).textContent =
+        formatMoney(
+          upfrontCash
+        );
+
+
+      document.getElementById(
+        "existingCommitments"
+      ).textContent =
+        formatMoney(
+          commitments
+        );
+
+
+      document.getElementById(
+        "finalDsr"
+      ).textContent =
+        finalDsr.toFixed(1) +
+        "%";
+
+
+      /*
+       ============================================
+       AFFORDABILITY STATUS
+       ============================================
+      */
+
+
+      const status =
+        document.getElementById(
+          "carStatus"
+        );
+
+
+      status.className =
+        "car-status";
+
+
+      if (income <= 0) {
+
+        status.classList.add(
+          "danger"
+        );
+
+        status.textContent =
+          "Please enter a valid monthly income.";
+
+      }
+
+      else if (monthlyPayment <= 0) {
+
+        status.classList.add(
+          "good"
+        );
+
+        status.textContent =
+          "Based on your current inputs, there is no estimated car loan payment.";
+
+      }
+
+      else if (
+        finalDsr <= targetDsr
+      ) {
+
+        status.classList.add(
+          "good"
+        );
+
+        status.textContent =
+          "✓ This car is within your selected DSR target.";
+
+      }
+
+      else if (
+        finalDsr <= 50
+      ) {
+
+        status.classList.add(
+          "warning"
+        );
+
+        status.textContent =
+          "⚠ This car exceeds your selected DSR target. Consider a lower-priced car, higher down payment or longer tenure.";
+
+      }
+
+      else {
+
+        status.classList.add(
+          "danger"
+        );
+
+        status.textContent =
+          "⚠ This car would result in a high estimated DSR. Consider reducing the car price or increasing your down payment.";
+
+      }
+
+
+      /*
+       ============================================
+       SHOW RESULTS
+       ============================================
+      */
+
+
+      document.getElementById(
+        "results"
+      ).style.display =
+        "block";
+
+
+      document.getElementById(
+        "results"
+      ).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
