@@ -6,54 +6,54 @@
 
   <title>Malaysia OT Calculator 2026 | Overtime Pay Calculator</title>
 
-  <meta name="description" content="Calculate your Malaysia overtime pay easily. Estimate normal day, rest day and public holiday overtime based on your monthly salary and working hours.">
+  <meta name="description" content="Malaysia OT Calculator 2026. Estimate overtime pay for normal working days, rest days and public holidays using monthly salary and normal working hours.">
 
-  <meta name="keywords" content="Malaysia OT calculator, overtime calculator Malaysia, OT pay calculator, overtime pay Malaysia, salary OT calculator">
+  <meta name="robots" content="index, follow">
 
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .calculator-page {
-      max-width: 800px;
+    .ot-page {
+      max-width: 850px;
       margin: 0 auto;
       padding: 30px 20px 60px;
     }
 
-    .back-link {
+    .ot-back {
       display: inline-block;
       margin-bottom: 20px;
       text-decoration: none;
       font-weight: 600;
     }
 
-    .calculator-card {
+    .ot-card {
       background: #fff;
       border-radius: 18px;
       padding: 30px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
 
-    .calculator-card h1 {
+    .ot-card h1 {
       margin-top: 0;
     }
 
-    .subtitle {
+    .ot-subtitle {
       color: #666;
       margin-bottom: 25px;
+      line-height: 1.6;
     }
 
-    .form-group {
+    .ot-field {
       margin-bottom: 18px;
     }
 
-    .form-group label {
+    .ot-field label {
       display: block;
       font-weight: 600;
       margin-bottom: 7px;
     }
 
-    .form-group input,
-    .form-group select {
+    .ot-field input {
       width: 100%;
       box-sizing: border-box;
       padding: 13px;
@@ -62,9 +62,16 @@
       font-size: 16px;
     }
 
-    .calculate-btn {
+    .ot-help {
+      display: block;
+      margin-top: 5px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .ot-button {
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       border: none;
       border-radius: 10px;
       font-size: 17px;
@@ -73,54 +80,75 @@
       margin-top: 5px;
     }
 
-    .result-box {
+    .ot-result {
+      display: none;
       margin-top: 25px;
       padding: 22px;
       border-radius: 14px;
       background: #f5f7fa;
-      display: none;
     }
 
-    .result-main {
-      font-size: 30px;
+    .ot-total {
+      font-size: 32px;
       font-weight: 800;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
-    .result-row {
+    .ot-row {
       display: flex;
       justify-content: space-between;
-      padding: 9px 0;
+      gap: 20px;
+      padding: 10px 0;
       border-bottom: 1px solid #ddd;
     }
 
-    .result-row:last-child {
+    .ot-row:last-child {
       border-bottom: none;
     }
 
-    .info-section {
+    .ot-section {
       margin-top: 35px;
       line-height: 1.7;
     }
 
-    .info-section h2 {
+    .ot-section h2 {
       margin-top: 30px;
     }
 
-    .note {
-      background: #fff8e1;
-      padding: 15px;
-      border-radius: 10px;
+    .ot-warning {
+      display: none;
       margin-top: 20px;
+      padding: 16px;
+      border-radius: 10px;
+      background: #fff3cd;
+      line-height: 1.6;
+    }
+
+    .ot-note {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 10px;
+      background: #eef6ff;
+      line-height: 1.6;
+    }
+
+    .ot-source {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #666;
     }
 
     @media (max-width: 600px) {
-      .calculator-card {
+      .ot-card {
         padding: 20px;
       }
 
-      .result-main {
-        font-size: 25px;
+      .ot-total {
+        font-size: 27px;
+      }
+
+      .ot-row {
+        font-size: 14px;
       }
     }
   </style>
@@ -128,229 +156,344 @@
 
 <body>
 
-  <main class="calculator-page">
+<main class="ot-page">
 
-    <a href="index.html" class="back-link">← Back to Malaysia Calculator Hub</a>
+  <a href="index.html" class="ot-back">
+    ← Back to Malaysia Calculator Hub
+  </a>
 
-    <section class="calculator-card">
+  <section class="ot-card">
 
-      <h1>🇲🇾 Malaysia OT Calculator</h1>
+    <h1>🇲🇾 Malaysia OT Calculator 2026</h1>
 
-      <p class="subtitle">
-        Estimate your overtime pay based on your monthly salary and overtime hours.
-      </p>
+    <p class="ot-subtitle">
+      Estimate your overtime pay for normal working days, rest days and
+      public holidays based on your monthly salary and normal working hours.
+    </p>
 
-      <div class="form-group">
-        <label for="salary">Monthly Basic Salary (RM)</label>
-        <input
-          type="number"
-          id="salary"
-          min="0"
-          step="0.01"
-          placeholder="Example: 3000"
-        >
+    <div class="ot-field">
+      <label for="salary">Monthly Salary (RM)</label>
+      <input
+        id="salary"
+        type="number"
+        min="0"
+        step="0.01"
+        placeholder="Example: 3000"
+      >
+    </div>
+
+    <div class="ot-field">
+      <label for="hoursPerDay">
+        Normal Working Hours per Day
+      </label>
+
+      <input
+        id="hoursPerDay"
+        type="number"
+        min="1"
+        max="24"
+        step="0.5"
+        value="8"
+      >
+
+      <span class="ot-help">
+        Enter normal working hours excluding meal/rest breaks.
+      </span>
+    </div>
+
+    <div class="ot-field">
+      <label for="normalOT">
+        OT Hours — Normal Working Day
+      </label>
+
+      <input
+        id="normalOT"
+        type="number"
+        min="0"
+        step="0.5"
+        value="0"
+      >
+    </div>
+
+    <div class="ot-field">
+      <label for="restOT">
+        OT Hours — Rest Day
+      </label>
+
+      <input
+        id="restOT"
+        type="number"
+        min="0"
+        step="0.5"
+        value="0"
+      >
+    </div>
+
+    <div class="ot-field">
+      <label for="holidayOT">
+        OT Hours — Public Holiday
+      </label>
+
+      <input
+        id="holidayOT"
+        type="number"
+        min="0"
+        step="0.5"
+        value="0"
+      >
+    </div>
+
+    <button class="ot-button" onclick="calculateOT()">
+      Calculate OT Pay
+    </button>
+
+    <div class="ot-warning" id="eligibilityWarning">
+      <strong>Important:</strong> Under the Employment Act 1955,
+      employees whose monthly wages exceed RM4,000 generally are not
+      entitled to statutory overtime, rest-day or public-holiday payments
+      under the Act, except for employees covered by the manual-worker
+      provisions. Your employment contract may provide different benefits.
+    </div>
+
+    <div class="ot-result" id="resultBox">
+
+      <div class="ot-total" id="totalOT">
+        RM 0.00
       </div>
 
-      <div class="form-group">
-        <label for="workingDays">Working Days per Month</label>
-        <input
-          type="number"
-          id="workingDays"
-          min="1"
-          max="31"
-          value="26"
-        >
+      <div class="ot-row">
+        <span>Ordinary Rate of Pay</span>
+        <strong id="dailyRate">RM 0.00</strong>
       </div>
 
-      <div class="form-group">
-        <label for="hoursPerDay">Normal Working Hours per Day</label>
-        <input
-          type="number"
-          id="hoursPerDay"
-          min="1"
-          max="24"
-          step="0.5"
-          value="8"
-        >
+      <div class="ot-row">
+        <span>Hourly Rate of Pay</span>
+        <strong id="hourlyRate">RM 0.00</strong>
       </div>
 
-      <div class="form-group">
-        <label for="otType">Overtime Type</label>
-        <select id="otType">
-          <option value="normal">Normal Working Day — 1.5×</option>
-          <option value="rest">Rest Day — 2.0×</option>
-          <option value="holiday">Public Holiday — 3.0×</option>
-        </select>
+      <div class="ot-row">
+        <span>Normal-day OT @ 1.5×</span>
+        <strong id="normalResult">RM 0.00</strong>
       </div>
 
-      <div class="form-group">
-        <label for="otHours">Overtime Hours</label>
-        <input
-          type="number"
-          id="otHours"
-          min="0"
-          step="0.5"
-          placeholder="Example: 10"
-        >
+      <div class="ot-row">
+        <span>Rest-day OT @ 2.0×</span>
+        <strong id="restResult">RM 0.00</strong>
       </div>
 
-      <button class="calculate-btn" onclick="calculateOT()">
-        Calculate OT Pay
-      </button>
-
-      <div class="result-box" id="resultBox">
-
-        <div class="result-main" id="totalOT">
-          RM 0.00
-        </div>
-
-        <div class="result-row">
-          <span>Daily Rate</span>
-          <strong id="dailyRate">RM 0.00</strong>
-        </div>
-
-        <div class="result-row">
-          <span>Hourly Rate</span>
-          <strong id="hourlyRate">RM 0.00</strong>
-        </div>
-
-        <div class="result-row">
-          <span>OT Multiplier</span>
-          <strong id="multiplier">1.5×</strong>
-        </div>
-
-        <div class="result-row">
-          <span>OT Hours</span>
-          <strong id="displayHours">0</strong>
-        </div>
-
+      <div class="ot-row">
+        <span>Public-holiday OT @ 3.0×</span>
+        <strong id="holidayResult">RM 0.00</strong>
       </div>
 
-    </section>
+    </div>
 
-    <section class="info-section">
+  </section>
 
-      <h2>How is Malaysian overtime calculated?</h2>
 
-      <p>
-        A commonly used calculation for overtime is based on the employee's
-        ordinary rate of pay and hourly rate of pay.
-      </p>
+  <section class="ot-section">
 
-      <p>
-        For a monthly-rated employee, the ordinary daily rate is commonly
-        calculated using the monthly salary divided by 26. The hourly rate
-        is then calculated by dividing the daily rate by the normal working
-        hours per day.
-      </p>
+    <h2>How is Malaysian overtime calculated?</h2>
 
-      <p>
-        This calculator uses the following indicative multipliers:
-      </p>
+    <p>
+      For a monthly-rated employee, the ordinary rate of pay (ORP)
+      is commonly calculated by dividing the monthly salary by 26.
+      The hourly rate of pay is then calculated by dividing the
+      ordinary rate of pay by the employee's normal working hours per day.
+    </p>
 
-      <ul>
-        <li><strong>Normal working day:</strong> 1.5× hourly rate</li>
-        <li><strong>Rest day:</strong> 2.0× hourly rate</li>
-        <li><strong>Public holiday:</strong> 3.0× hourly rate</li>
-      </ul>
+    <p>
+      The statutory overtime multipliers used by this calculator are:
+    </p>
 
-      <div class="note">
-        <strong>Important:</strong> This calculator provides an estimate and
-        should not be treated as legal or payroll advice. Actual overtime
-        calculations can depend on your employment contract, working
-        arrangements and applicable Malaysian employment law.
-      </div>
+    <ul>
+      <li>
+        <strong>Normal working day:</strong> 1.5× hourly rate
+      </li>
 
-      <h2>Example</h2>
+      <li>
+        <strong>Rest day:</strong> 2.0× hourly rate
+      </li>
 
-      <p>
-        If your monthly basic salary is RM3,000 and you work 10 hours of
-        overtime on a normal working day:
-      </p>
+      <li>
+        <strong>Public holiday:</strong> 3.0× hourly rate
+      </li>
+    </ul>
 
-      <p>
-        Daily rate = RM3,000 ÷ 26 = RM115.38
-      </p>
 
-      <p>
-        Hourly rate = RM115.38 ÷ 8 = RM14.42
-      </p>
+    <h2>Example calculation</h2>
 
-      <p>
-        OT rate = RM14.42 × 1.5 = RM21.63 per hour
-      </p>
+    <p>
+      Suppose your monthly salary is RM3,000 and your normal working
+      hours are 8 hours per day.
+    </p>
 
-      <p>
-        10 hours OT = approximately <strong>RM216.35</strong>
-      </p>
+    <p>
+      Ordinary rate of pay:
+      RM3,000 ÷ 26 = approximately RM115.38 per day.
+    </p>
 
-      <h2>Malaysia OT Calculator</h2>
+    <p>
+      Hourly rate:
+      RM115.38 ÷ 8 = approximately RM14.42 per hour.
+    </p>
 
-      <p>
-        Use this calculator to quickly estimate overtime earnings before
-        checking your actual payslip or company payroll calculation.
-      </p>
+    <p>
+      Therefore, 10 hours of normal-day OT would be approximately:
+      RM14.42 × 1.5 × 10 = <strong>RM216.35</strong>.
+    </p>
 
-    </section>
 
-  </main>
+    <h2>Who is covered?</h2>
 
-  <script>
-    function calculateOT() {
+    <p>
+      The Employment Act 1955 amendments provide protection to private
+      sector employees in Peninsular Malaysia and the Federal Territory
+      of Labuan regardless of salary, but employees earning more than
+      RM4,000 per month generally do not receive the statutory OT,
+      rest-day and public-holiday payment provisions unless they fall
+      within the applicable manual-worker category.
+    </p>
 
-      const salary = parseFloat(document.getElementById("salary").value);
-      const workingDays = parseFloat(document.getElementById("workingDays").value);
-      const hoursPerDay = parseFloat(document.getElementById("hoursPerDay").value);
-      const otHours = parseFloat(document.getElementById("otHours").value);
-      const otType = document.getElementById("otType").value;
+    <p>
+      Sabah and Sarawak have separate labour ordinances, so this
+      calculator should not automatically be treated as the statutory
+      calculation for those states.
+    </p>
 
-      if (
-        isNaN(salary) ||
-        salary < 0 ||
-        isNaN(workingDays) ||
-        workingDays <= 0 ||
-        isNaN(hoursPerDay) ||
-        hoursPerDay <= 0 ||
-        isNaN(otHours) ||
-        otHours < 0
-      ) {
-        alert("Please enter valid values.");
-        return;
-      }
 
-      let multiplier = 1.5;
+    <div class="ot-note">
+      <strong>Important:</strong>
+      This calculator provides an estimate for informational purposes.
+      Actual overtime payments may depend on your employment contract,
+      employee category, working arrangement and applicable Malaysian
+      labour legislation.
+    </div>
 
-      if (otType === "rest") {
-        multiplier = 2;
-      }
+    <p class="ot-source">
+      Information checked against the Jabatan Tenaga Kerja Semenanjung
+      Malaysia (JTKSM) monthly-paid overtime calculator and Employment
+      Act 1955 guidance. Rules may change, so verify important payroll
+      calculations with your employer or the relevant labour authority.
+    </p>
 
-      if (otType === "holiday") {
-        multiplier = 3;
-      }
+  </section>
 
-      const dailyRate = salary / workingDays;
-      const hourlyRate = dailyRate / hoursPerDay;
-      const otHourlyRate = hourlyRate * multiplier;
-      const totalOT = otHourlyRate * otHours;
+</main>
 
-      document.getElementById("totalOT").textContent =
-        "RM " + totalOT.toFixed(2);
 
-      document.getElementById("dailyRate").textContent =
-        "RM " + dailyRate.toFixed(2);
+<script>
 
-      document.getElementById("hourlyRate").textContent =
-        "RM " + hourlyRate.toFixed(2);
+function money(value) {
+  return "RM " + value.toFixed(2);
+}
 
-      document.getElementById("multiplier").textContent =
-        multiplier.toFixed(1) + "×";
 
-      document.getElementById("displayHours").textContent =
-        otHours.toFixed(2);
+function calculateOT() {
 
-      document.getElementById("resultBox").style.display = "block";
-    }
-  </script>
+  const salary =
+    parseFloat(document.getElementById("salary").value);
+
+  const hoursPerDay =
+    parseFloat(document.getElementById("hoursPerDay").value);
+
+  const normalOT =
+    parseFloat(document.getElementById("normalOT").value) || 0;
+
+  const restOT =
+    parseFloat(document.getElementById("restOT").value) || 0;
+
+  const holidayOT =
+    parseFloat(document.getElementById("holidayOT").value) || 0;
+
+
+  if (
+    isNaN(salary) ||
+    salary <= 0 ||
+    isNaN(hoursPerDay) ||
+    hoursPerDay <= 0 ||
+    normalOT < 0 ||
+    restOT < 0 ||
+    holidayOT < 0
+  ) {
+
+    alert("Please enter valid salary and working-hour values.");
+
+    return;
+  }
+
+
+  /*
+    JTKSM / Employment Act calculation:
+
+    Ordinary Rate of Pay (ORP)
+    = Monthly salary / 26
+
+    Hourly Rate of Pay (HRP)
+    = ORP / normal working hours per day
+  */
+
+  const ordinaryRate = salary / 26;
+
+  const hourlyRate =
+    ordinaryRate / hoursPerDay;
+
+
+  const normalPay =
+    hourlyRate * 1.5 * normalOT;
+
+  const restPay =
+    hourlyRate * 2 * restOT;
+
+  const holidayPay =
+    hourlyRate * 3 * holidayOT;
+
+  const total =
+    normalPay + restPay + holidayPay;
+
+
+  document.getElementById("dailyRate").textContent =
+    money(ordinaryRate);
+
+  document.getElementById("hourlyRate").textContent =
+    money(hourlyRate);
+
+  document.getElementById("normalResult").textContent =
+    money(normalPay);
+
+  document.getElementById("restResult").textContent =
+    money(restPay);
+
+  document.getElementById("holidayResult").textContent =
+    money(holidayPay);
+
+  document.getElementById("totalOT").textContent =
+    money(total);
+
+
+  document.getElementById("resultBox").style.display =
+    "block";
+
+
+  /*
+    Display statutory eligibility warning
+    for monthly wages above RM4,000.
+  */
+
+  if (salary > 4000) {
+
+    document.getElementById("eligibilityWarning").style.display =
+      "block";
+
+  } else {
+
+    document.getElementById("eligibilityWarning").style.display =
+      "none";
+  }
+
+}
+
+</script>
 
 </body>
 </html>
