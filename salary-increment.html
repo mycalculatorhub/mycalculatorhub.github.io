@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+>
+
+<meta
+  name="description"
+  content="Malaysia Salary Increment Calculator 2026. Calculate your salary increase, new monthly salary, annual increase and percentage increment easily."
+>
+
+<meta
+  name="robots"
+  content="index, follow"
+>
+
+<meta
+  name="theme-color"
+  content="#0f172a"
+>
+
+<link
+  rel="canonical"
+  href="https://mycalculatorhub.github.io/salary-increment.html"
+>
+
+<title>Malaysia Salary Increment Calculator 2026 | Salary Increase Calculator</title>
+
+<meta property="og:type" content="website">
+<meta
+  property="og:title"
+  content="Malaysia Salary Increment Calculator 2026 | Salary Increase Calculator"
+>
+<meta
+  property="og:description"
+  content="Calculate your new salary, increment amount and annual salary increase with our free Malaysia Salary Increment Calculator."
+>
+<meta
+  property="og:url"
+  content="https://mycalculatorhub.github.io/salary-increment.html"
+>
+<meta
+  property="og:site_name"
+  content="Malaysia Calculator Hub"
+>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+  .calculator-card {
+    max-width: 760px;
+    margin: 30px auto;
+  }
+
+  .input-group {
+    margin-bottom: 18px;
+  }
+
+  .input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+
+  .input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #ffffff;
+  }
+
+  .input-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .input-hint {
+    display: block;
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 13px;
+  }
+
+  .calculate-btn {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    margin-top: 5px;
+  }
+
+  .calculate-btn:hover {
+    background: #1d4ed8;
+  }
+
+  .results {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+  }
+
+  .results h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .result-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .result-label {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .result-value {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+  }
+
+  .highlight {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+  }
+
+  .highlight .result-value {
+    color: #2563eb;
+  }
+
+  .percentage-result {
+    margin-top: 16px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    text-align: center;
+  }
+
+  .percentage-result strong {
+    color: #047857;
+    font-size: 18px;
+  }
+
+  .info-section {
+    max-width: 760px;
+    margin: 35px auto;
+  }
+
+  .info-section h2 {
+    margin-bottom: 12px;
+  }
+
+  .info-section p {
+    line-height: 1.7;
+    color: #475569;
+  }
+
+  .formula-box {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 15px 18px;
+    margin: 18px 0;
+    border-radius: 6px;
+  }
+
+  .calculator-links {
+    max-width: 760px;
+    margin: 35px auto;
+  }
+
+  .calculator-links h2 {
+    margin-bottom: 15px;
+  }
+
+  .calculator-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .calculator-link {
+    display: block;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  .calculator-link:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+  }
+
+  .coming-soon {
+    color: #64748b;
+    cursor: default;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .result-grid,
+    .calculator-links-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .result-value {
+      font-size: 20px;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+
+<main>
+
+  <section class="calculator-card">
+
+    <a href="index.html" class="back-link">
+      ← Back to Malaysia Salary Calculator
+    </a>
+
+    <h1>Malaysia Salary Increment Calculator 2026</h1>
+
+    <p>
+      Calculate your salary increase, increment amount, new monthly salary
+      and estimated annual salary increase. This free calculator is useful
+      for employees comparing salary increments and new job offers in Malaysia.
+    </p>
+
+    <div class="input-group">
+      <label for="currentSalary">
+        Current Monthly Salary (RM)
+      </label>
+
+      <input
+        type="number"
+        id="currentSalary"
+        min="0"
+        step="0.01"
+        placeholder="e.g. 4000"
+        value="4000"
+      >
+
+      <span class="input-hint">
+        Enter your current gross monthly salary.
+      </span>
+    </div>
+
+    <div class="input-group">
+      <label for="incrementPercentage">
+        Salary Increment (%)
+      </label>
+
+      <input
+        type="number"
+        id="incrementPercentage"
+        min="0"
+        step="0.01"
+        placeholder="e.g. 10"
+        value="10"
+      >
+
+      <span class="input-hint">
+        Enter the percentage increase offered by your employer.
+      </span>
+    </div>
+
+    <button
+      type="button"
+      class="calculate-btn"
+      onclick="calculateIncrement()"
+    >
+      Calculate Salary Increment
+    </button>
+
+    <div class="results" id="results">
+
+      <h2>Salary Increment Results</h2>
+
+      <div class="result-grid">
+
+        <div class="result-box">
+          <span class="result-label">
+            Current Monthly Salary
+          </span>
+
+          <span class="result-value" id="currentSalaryResult">
+            RM4,000.00
+          </span>
+        </div>
+
+        <div class="result-box">
+          <span class="result-label">
+            Increment Percentage
+          </span>
+
+          <span class="result-value" id="percentageResult">
+            10.00%
+          </span>
+        </div>
+
+        <div class="result-box highlight">
+          <span class="result-label">
+            Salary Increase
+          </span>
+
+          <span class="result-value" id="incrementAmount">
+            RM400.00
+          </span>
+        </div>
+
+        <div class="result-box highlight">
+          <span class="result-label">
+            New Monthly Salary
+          </span>
+
+          <span class="result-value" id="newSalary">
+            RM4,400.00
+          </span>
+        </div>
+
+        <div class="result-box">
+          <span class="result-label">
+            Current Annual Salary
+          </span>
+
+          <span class="result-value" id="currentAnnual">
+            RM48,000.00
+          </span>
+        </div>
+
+        <div class="result-box">
+          <span class="result-label">
+            New Annual Salary
+          </span>
+
+          <span class="result-value" id="newAnnual">
+            RM52,800.00
+          </span>
+        </div>
+
+        <div class="result-box">
+          <span class="result-label">
+            Annual Salary Increase
+          </span>
+
+          <span class="result-value" id="annualIncrease">
+            RM4,800.00
+          </span>
+        </div>
+
+        <div class="result-box">
+          <span class="result-label">
+            Monthly Increase
+          </span>
+
+          <span class="result-value" id="monthlyIncrease">
+            RM400.00
+          </span>
+        </div>
+
+      </div>
+
+      <div class="percentage-result">
+        Your new salary is
+        <strong id="percentageMessage">10.00% higher</strong>
+        than your current salary.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="info-section">
+
+    <h2>How to Calculate a Salary Increment</h2>
+
+    <p>
+      A salary increment is usually expressed as a percentage of your
+      current monthly salary. For example, if your current salary is
+      RM4,000 and you receive a 10% increment, your salary will increase
+      by RM400 per month.
+    </p>
+
+    <div class="formula-box">
+
+      <strong>Salary Increase</strong><br>
+      Current Salary × Increment Percentage ÷ 100
+
+      <br><br>
+
+      <strong>New Salary</strong><br>
+      Current Salary + Salary Increase
+
+    </div>
+
+    <p>
+      For example, a RM4,000 monthly salary with a 10% increment results
+      in a RM400 monthly increase and a new monthly salary of RM4,400.
+    </p>
+
+    <h2>Monthly vs Annual Salary Increase</h2>
+
+    <p>
+      Your monthly increment can be useful when comparing job offers,
+      promotions or annual salary reviews. The annual increase shows
+      the additional gross salary you would receive over 12 months,
+      before deductions such as EPF, SOCSO, EIS and PCB.
+    </p>
+
+  </section>
+
+
+  <section class="calculator-links">
+
+    <h2>More Malaysia Calculators</h2>
+
+    <div class="calculator-links-grid">
+
+      <a href="index.html" class="calculator-link">
+        💰 Malaysia Salary Calculator
+      </a>
+
+      <a href="ot-calculator.html" class="calculator-link">
+        ⏱️ Malaysia OT Calculator
+      </a>
+
+      <a href="house-affordability.html" class="calculator-link">
+        🏠 House Affordability Calculator
+      </a>
+
+      <a href="car-affordability.html" class="calculator-link">
+        🚗 Car Affordability Calculator
+      </a>
+
+      <a
+        href="salary-increment.html"
+        class="calculator-link"
+      >
+        📈 Salary Increment Calculator
+      </a>
+
+      <span class="calculator-link coming-soon">
+        📅 Working Days Calculator — Coming Soon
+      </span>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<script>
+
+function formatMoney(amount) {
+  return "RM" + amount.toLocaleString("en-MY", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+}
+
+
+function calculateIncrement() {
+
+  const currentSalaryInput =
+    document.getElementById("currentSalary");
+
+  const incrementPercentageInput =
+    document.getElementById("incrementPercentage");
+
+  let currentSalary =
+    parseFloat(currentSalaryInput.value);
+
+  let incrementPercentage =
+    parseFloat(incrementPercentageInput.value);
+
+
+  if (isNaN(currentSalary) || currentSalary < 0) {
+    currentSalary = 0;
+    currentSalaryInput.value = 0;
+  }
+
+
+  if (
+    isNaN(incrementPercentage) ||
+    incrementPercentage < 0
+  ) {
+    incrementPercentage = 0;
+    incrementPercentageInput.value = 0;
+  }
+
+
+  const incrementAmount =
+    currentSalary * (incrementPercentage / 100);
+
+  const newSalary =
+    currentSalary + incrementAmount;
+
+  const currentAnnual =
+    currentSalary * 12;
+
+  const newAnnual =
+    newSalary * 12;
+
+  const annualIncrease =
+    incrementAmount * 12;
+
+
+  document.getElementById("currentSalaryResult").textContent =
+    formatMoney(currentSalary);
+
+  document.getElementById("percentageResult").textContent =
+    incrementPercentage.toFixed(2) + "%";
+
+  document.getElementById("incrementAmount").textContent =
+    formatMoney(incrementAmount);
+
+  document.getElementById("newSalary").textContent =
+    formatMoney(newSalary);
+
+  document.getElementById("currentAnnual").textContent =
+    formatMoney(currentAnnual);
+
+  document.getElementById("newAnnual").textContent =
+    formatMoney(newAnnual);
+
+  document.getElementById("annualIncrease").textContent =
+    formatMoney(annualIncrease);
+
+  document.getElementById("monthlyIncrease").textContent =
+    formatMoney(incrementAmount);
+
+  document.getElementById("percentageMessage").textContent =
+    incrementPercentage.toFixed(2) + "% higher";
+}
+
+
+// Calculate automatically when the page loads
+calculateIncrement();
+
+</script>
+
+</body>
+</html>
