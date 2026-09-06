@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -6,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta
-  name="description"
-  content="Malaysia Working Days Calculator 2026. Calculate working days between two dates, excluding weekends and optional public holidays."
+name="description"
+content="Malaysia Working Days Calculator 2026. Calculate working days between two dates, excluding weekends and optional public holidays."
+
 >
 
 <meta name="robots" content="index, follow">
@@ -22,19 +24,30 @@
 <title>Malaysia Working Days Calculator 2026 | Working Days Between Dates</title>
 
 <meta property="og:type" content="website">
+
 <meta
-  property="og:title"
-  content="Malaysia Working Days Calculator 2026 | Working Days Between Dates"
+property="og:title"
+content="Malaysia Working Days Calculator 2026 | Working Days Between Dates"
+
 >
+
 <meta
-  property="og:description"
-  content="Calculate the number of working days between two dates, excluding weekends and optional Malaysian public holidays."
+property="og:description"
+content="Calculate the number of working days between two dates, excluding weekends and optional Malaysian public holidays."
+
 >
+
 <meta
-  property="og:url"
-  content="https://mycalculatorhub.github.io/working-days.html"
+property="og:url"
+content="https://mycalculatorhub.github.io/working-days.html"
+
 >
-<meta property="og:site_name" content="Malaysia Calculator Hub">
+
+<meta
+property="og:site_name"
+content="Malaysia Calculator Hub"
+
+>
 
 <link rel="stylesheet" href="style.css">
 
@@ -215,6 +228,15 @@
   background: #eff6ff;
 }
 
+.calculator-link small {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 15px;
@@ -250,7 +272,7 @@
 
 <section class="calculator-card">
 
-<a href="index.html" class="back-link">
+<a href="salary-calculator.html" class="back-link">
   ← Back to Malaysia Salary Calculator
 </a>
 
@@ -262,7 +284,6 @@
   exclude public holidays manually.
 </p>
 
-
 <div class="input-group">
 
 <label for="startDate">
@@ -270,12 +291,12 @@
 </label>
 
 <input
-  type="date"
-  id="startDate"
+type="date"
+id="startDate"
+
 >
 
 </div>
-
 
 <div class="input-group">
 
@@ -284,30 +305,37 @@
 </label>
 
 <input
-  type="date"
-  id="endDate"
+type="date"
+id="endDate"
+
 >
 
 </div>
-
 
 <div class="checkbox-group">
 
 <input
-  type="checkbox"
-  id="excludeWeekends"
-  checked
+type="checkbox"
+id="excludeWeekends"
+checked
+
 >
 
 <label for="excludeWeekends">
-  <strong>Exclude Saturdays and Sundays</strong><br>
-  <span class="input-hint">
-    Recommended for a standard Monday–Friday working schedule.
-  </span>
+
+<strong>
+  Exclude Saturdays and Sundays
+</strong>
+
+<br>
+
+<span class="input-hint">
+  Recommended for a standard Monday–Friday working schedule.
+</span>
+
 </label>
 
 </div>
-
 
 <div class="input-group">
 
@@ -316,11 +344,12 @@
 </label>
 
 <input
-  type="number"
-  id="hoursPerDay"
-  min="0"
-  step="0.5"
-  value="8"
+type="number"
+id="hoursPerDay"
+min="0"
+step="0.5"
+value="8"
+
 >
 
 <span class="input-hint">
@@ -329,15 +358,14 @@
 
 </div>
 
-
 <button
-  type="button"
-  class="calculate-btn"
-  onclick="calculateWorkingDays()"
->
-  Calculate Working Days
-</button>
+type="button"
+class="calculate-btn"
+onclick="calculateWorkingDays()"
 
+>
+
+Calculate Working Days </button>
 
 <div class="results">
 
@@ -352,14 +380,14 @@
 </span>
 
 <span
-  class="result-value"
-  id="workingDays"
+class="result-value"
+id="workingDays"
+
 >
-  0
-</span>
+
+0 </span>
 
 </div>
-
 
 <div class="result-box">
 
@@ -368,14 +396,14 @@
 </span>
 
 <span
-  class="result-value"
-  id="calendarDays"
+class="result-value"
+id="calendarDays"
+
 >
-  0
-</span>
+
+0 </span>
 
 </div>
-
 
 <div class="result-box">
 
@@ -384,14 +412,14 @@
 </span>
 
 <span
-  class="result-value"
-  id="workingWeeks"
+class="result-value"
+id="workingWeeks"
+
 >
-  0.00
-</span>
+
+0.00 </span>
 
 </div>
-
 
 <div class="result-box">
 
@@ -400,11 +428,12 @@
 </span>
 
 <span
-  class="result-value"
-  id="workingHours"
+class="result-value"
+id="workingHours"
+
 >
-  0
-</span>
+
+0 </span>
 
 </div>
 
@@ -413,7 +442,6 @@
 </div>
 
 </section>
-
 
 <section class="info-section">
 
@@ -426,16 +454,16 @@
   are excluded from the working-day count.
 </p>
 
-
 <div class="info-box">
 
-<strong>Example:</strong><br><br>
+<strong>Example:</strong>
+
+<br><br>
 
 If you select Monday as the start date and Friday as the end date,
 the calculator counts 5 working days when weekends are excluded.
 
 </div>
-
 
 <h2>Working Days vs Calendar Days</h2>
 
@@ -445,7 +473,6 @@ the calculator counts 5 working days when weekends are excluded.
   weekends and may also exclude public holidays depending on your
   work schedule.
 </p>
-
 
 <h2>Public Holidays</h2>
 
@@ -459,7 +486,6 @@ the calculator counts 5 working days when weekends are excluded.
 
 </section>
 
-
 <section class="calculator-links">
 
 <h2>More Malaysia Calculators</h2>
@@ -467,50 +493,81 @@ the calculator counts 5 working days when weekends are excluded.
 <div class="calculator-links-grid">
 
 <a
-  href="index.html"
-  class="calculator-link"
+href="salary-calculator.html"
+class="calculator-link"
+
 >
-  💰 Malaysia Salary Calculator
+
+💰 Malaysia Salary Calculator
+
+  <small>
+    Calculate your estimated take-home pay
+  </small>
 </a>
 
-
 <a
-  href="ot-calculator.html"
-  class="calculator-link"
+href="ot-calculator.html"
+class="calculator-link"
+
 >
-  ⏱️ Malaysia OT Calculator
+
+⏱️ Malaysia OT Calculator
+
+  <small>
+    Calculate your overtime pay
+  </small>
 </a>
 
-
 <a
-  href="house-affordability.html"
-  class="calculator-link"
+href="house-affordability.html"
+class="calculator-link"
+
 >
-  🏠 House Affordability Calculator
+
+🏠 House Affordability Calculator
+
+  <small>
+    Estimate how much house you can afford
+  </small>
 </a>
 
-
 <a
-  href="car-affordability.html"
-  class="calculator-link"
+href="car-affordability.html"
+class="calculator-link"
+
 >
-  🚗 Car Affordability Calculator
+
+🚗 Car Affordability Calculator
+
+  <small>
+    Estimate your affordable car price and instalment
+  </small>
 </a>
 
-
 <a
-  href="salary-increment.html"
-  class="calculator-link"
+href="salary-increment.html"
+class="calculator-link"
+
 >
-  📈 Salary Increment Calculator
+
+📈 Salary Increment Calculator
+
+  <small>
+    Calculate your new salary after an increment
+  </small>
 </a>
 
-
 <a
-  href="working-days.html"
-  class="calculator-link"
+href="working-days.html"
+class="calculator-link"
+
 >
-  📅 Working Days Calculator
+
+📅 Working Days Calculator
+
+  <small>
+    Calculate working days between dates
+  </small>
 </a>
 
 </div>
@@ -518,7 +575,6 @@ the calculator counts 5 working days when weekends are excluded.
 </section>
 
 </main>
-
 
 <script>
 
@@ -541,7 +597,9 @@ function calculateWorkingDays() {
 
   if (!startInput || !endInput) {
 
-    alert("Please select both a start date and an end date.");
+    alert(
+      "Please select both a start date and an end date."
+    );
 
     return;
 
@@ -566,7 +624,9 @@ function calculateWorkingDays() {
 
   if (endDate < startDate) {
 
-    alert("End date cannot be earlier than the start date.");
+    alert(
+      "End date cannot be earlier than the start date."
+    );
 
     return;
 
