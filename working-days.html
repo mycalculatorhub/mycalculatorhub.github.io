@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta
+  name="description"
+  content="Malaysia Working Days Calculator 2026. Calculate working days between two dates, excluding weekends and optional public holidays."
+>
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#0f172a">
+
+<link
+  rel="canonical"
+  href="https://mycalculatorhub.github.io/working-days.html"
+>
+
+<title>Malaysia Working Days Calculator 2026 | Working Days Between Dates</title>
+
+<meta property="og:type" content="website">
+<meta
+  property="og:title"
+  content="Malaysia Working Days Calculator 2026 | Working Days Between Dates"
+>
+<meta
+  property="og:description"
+  content="Calculate the number of working days between two dates, excluding weekends and optional Malaysian public holidays."
+>
+<meta
+  property="og:url"
+  content="https://mycalculatorhub.github.io/working-days.html"
+>
+<meta property="og:site_name" content="Malaysia Calculator Hub">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.calculator-card {
+  max-width: 760px;
+  margin: 30px auto;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.input-hint {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.checkbox-group label {
+  line-height: 1.5;
+}
+
+.calculate-btn {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.calculate-btn:hover {
+  background: #1d4ed8;
+}
+
+.results {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.results h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.result-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.result-label {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.result-value {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.highlight {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.highlight .result-value {
+  color: #2563eb;
+}
+
+.info-section {
+  max-width: 760px;
+  margin: 35px auto;
+}
+
+.info-section h2 {
+  margin-bottom: 12px;
+}
+
+.info-section p {
+  line-height: 1.7;
+  color: #475569;
+}
+
+.info-box {
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+  padding: 15px 18px;
+  margin: 18px 0;
+  border-radius: 6px;
+}
+
+.calculator-links {
+  max-width: 760px;
+  margin: 35px auto;
+}
+
+.calculator-links h2 {
+  margin-bottom: 15px;
+}
+
+.calculator-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.calculator-link {
+  display: block;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.calculator-link:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+
+  .result-grid,
+  .calculator-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-value {
+    font-size: 20px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<main>
+
+<section class="calculator-card">
+
+<a href="index.html" class="back-link">
+  ← Back to Malaysia Salary Calculator
+</a>
+
+<h1>Malaysia Working Days Calculator 2026</h1>
+
+<p>
+  Calculate the number of working days between two dates.
+  Weekends can be excluded automatically, with an option to
+  exclude public holidays manually.
+</p>
+
+
+<div class="input-group">
+
+<label for="startDate">
+  Start Date
+</label>
+
+<input
+  type="date"
+  id="startDate"
+>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="endDate">
+  End Date
+</label>
+
+<input
+  type="date"
+  id="endDate"
+>
+
+</div>
+
+
+<div class="checkbox-group">
+
+<input
+  type="checkbox"
+  id="excludeWeekends"
+  checked
+>
+
+<label for="excludeWeekends">
+  <strong>Exclude Saturdays and Sundays</strong><br>
+  <span class="input-hint">
+    Recommended for a standard Monday–Friday working schedule.
+  </span>
+</label>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="hoursPerDay">
+  Working Hours Per Day
+</label>
+
+<input
+  type="number"
+  id="hoursPerDay"
+  min="0"
+  step="0.5"
+  value="8"
+>
+
+<span class="input-hint">
+  Used to estimate total working hours.
+</span>
+
+</div>
+
+
+<button
+  type="button"
+  class="calculate-btn"
+  onclick="calculateWorkingDays()"
+>
+  Calculate Working Days
+</button>
+
+
+<div class="results">
+
+<h2>Working Days Results</h2>
+
+<div class="result-grid">
+
+<div class="result-box highlight">
+
+<span class="result-label">
+  Working Days
+</span>
+
+<span
+  class="result-value"
+  id="workingDays"
+>
+  0
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<span class="result-label">
+  Calendar Days
+</span>
+
+<span
+  class="result-value"
+  id="calendarDays"
+>
+  0
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<span class="result-label">
+  Estimated Working Weeks
+</span>
+
+<span
+  class="result-value"
+  id="workingWeeks"
+>
+  0.00
+</span>
+
+</div>
+
+
+<div class="result-box">
+
+<span class="result-label">
+  Estimated Working Hours
+</span>
+
+<span
+  class="result-value"
+  id="workingHours"
+>
+  0
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="info-section">
+
+<h2>How the Working Days Calculator Works</h2>
+
+<p>
+  This calculator counts the number of days from the selected
+  start date to the selected end date, including both dates.
+  When the weekend option is selected, Saturdays and Sundays
+  are excluded from the working-day count.
+</p>
+
+
+<div class="info-box">
+
+<strong>Example:</strong><br><br>
+
+If you select Monday as the start date and Friday as the end date,
+the calculator counts 5 working days when weekends are excluded.
+
+</div>
+
+
+<h2>Working Days vs Calendar Days</h2>
+
+<p>
+  Calendar days include every day between the two dates,
+  including Saturdays and Sundays. Working days normally exclude
+  weekends and may also exclude public holidays depending on your
+  work schedule.
+</p>
+
+
+<h2>Public Holidays</h2>
+
+<p>
+  Public holidays can vary depending on the state, employment
+  arrangement and holiday calendar. For this reason, this version
+  does not automatically remove Malaysian public holidays.
+  You can use the working-day result as a base calculation and
+  adjust it for applicable public holidays.
+</p>
+
+</section>
+
+
+<section class="calculator-links">
+
+<h2>More Malaysia Calculators</h2>
+
+<div class="calculator-links-grid">
+
+<a
+  href="index.html"
+  class="calculator-link"
+>
+  💰 Malaysia Salary Calculator
+</a>
+
+
+<a
+  href="ot-calculator.html"
+  class="calculator-link"
+>
+  ⏱️ Malaysia OT Calculator
+</a>
+
+
+<a
+  href="house-affordability.html"
+  class="calculator-link"
+>
+  🏠 House Affordability Calculator
+</a>
+
+
+<a
+  href="car-affordability.html"
+  class="calculator-link"
+>
+  🚗 Car Affordability Calculator
+</a>
+
+
+<a
+  href="salary-increment.html"
+  class="calculator-link"
+>
+  📈 Salary Increment Calculator
+</a>
+
+
+<a
+  href="working-days.html"
+  class="calculator-link"
+>
+  📅 Working Days Calculator
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<script>
+
+function calculateWorkingDays() {
+
+  const startInput =
+    document.getElementById("startDate").value;
+
+  const endInput =
+    document.getElementById("endDate").value;
+
+  const excludeWeekends =
+    document.getElementById("excludeWeekends").checked;
+
+  let hoursPerDay =
+    parseFloat(
+      document.getElementById("hoursPerDay").value
+    );
+
+
+  if (!startInput || !endInput) {
+
+    alert("Please select both a start date and an end date.");
+
+    return;
+
+  }
+
+
+  if (isNaN(hoursPerDay) || hoursPerDay < 0) {
+
+    hoursPerDay = 0;
+
+    document.getElementById("hoursPerDay").value = 0;
+
+  }
+
+
+  const startDate =
+    new Date(startInput + "T00:00:00");
+
+  const endDate =
+    new Date(endInput + "T00:00:00");
+
+
+  if (endDate < startDate) {
+
+    alert("End date cannot be earlier than the start date.");
+
+    return;
+
+  }
+
+
+  let calendarDays = 0;
+
+  let workingDays = 0;
+
+  const currentDate =
+    new Date(startDate);
+
+
+  while (currentDate <= endDate) {
+
+    calendarDays++;
+
+
+    const day =
+      currentDate.getDay();
+
+
+    if (
+      !excludeWeekends ||
+      (day !== 0 && day !== 6)
+    ) {
+
+      workingDays++;
+
+    }
+
+
+    currentDate.setDate(
+      currentDate.getDate() + 1
+    );
+
+  }
+
+
+  const workingWeeks =
+    workingDays / 5;
+
+
+  const workingHours =
+    workingDays * hoursPerDay;
+
+
+  document.getElementById("workingDays").textContent =
+    workingDays;
+
+
+  document.getElementById("calendarDays").textContent =
+    calendarDays;
+
+
+  document.getElementById("workingWeeks").textContent =
+    workingWeeks.toFixed(2);
+
+
+  document.getElementById("workingHours").textContent =
+    workingHours.toLocaleString(
+      "en-MY",
+      {
+        maximumFractionDigits: 2
+      }
+    );
+
+}
+
+
+// Set today's date automatically
+// and a one-month period for the initial example.
+
+function setDefaultDates() {
+
+  const today =
+    new Date();
+
+
+  const nextMonth =
+    new Date(today);
+
+  nextMonth.setMonth(
+    nextMonth.getMonth() + 1
+  );
+
+
+  const formatDate =
+    date =>
+      date.toISOString().split("T")[0];
+
+
+  document.getElementById("startDate").value =
+    formatDate(today);
+
+
+  document.getElementById("endDate").value =
+    formatDate(nextMonth);
+
+
+  calculateWorkingDays();
+
+}
+
+
+setDefaultDates();
+
+</script>
+
+</body>
+</html>
