@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
 
   <meta
@@ -11,7 +12,7 @@
 
   <meta
     name="description"
-    content="Malaysia Calculator Hub 2026. Free calculators for salary, OT, house affordability, car affordability, salary increments, working days and practical engineering calculations."
+    content="Malaysia Calculator Hub 2026. Free calculators for salary, overtime, house affordability, car affordability, salary increments, working days and engineering calculations."
   >
 
   <meta
@@ -31,7 +32,8 @@
 
   <title>Malaysia Calculator Hub 2026 | Free Malaysia Calculators</title>
 
-  <!-- Open Graph / Social Sharing -->
+
+  <!-- Open Graph -->
 
   <meta
     property="og:type"
@@ -45,7 +47,7 @@
 
   <meta
     property="og:description"
-    content="Free Malaysia calculators for salary, OT, house affordability, car affordability, salary increments, working days and practical engineering calculations."
+    content="Free Malaysia calculators for salary, overtime, house affordability, car affordability, salary increments, working days and more."
   >
 
   <meta
@@ -58,138 +60,300 @@
     content="Malaysia Calculator Hub"
   >
 
-  <link rel="stylesheet" href="style.css">
 
-  <!-- Google AdSense: after approval, replace ca-pub-XXXXXXXXXXXXXXXX with your publisher ID. -->
-  <!--
-  <script
-    async
-    src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-XXXXXXXXXXXXXXXX"
-    crossorigin="anonymous">
-  </script>
-  -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <!-- Homepage-specific styling -->
 
   <style>
 
     /* =========================
-       CALCULATOR HUB
+       HUB HERO
     ========================= */
 
-    .hub-section {
-      padding-top: 10px;
+    .hub-hero {
+      padding: 70px 20px 55px;
+      text-align: center;
     }
 
-    .hub-intro {
-      max-width: 760px;
+    .hub-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hub-hero h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .hub-hero p {
+      max-width: 700px;
       margin: 0 auto 28px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+
+    /* =========================
+       HUB INTRO
+    ========================= */
+
+    .hub-intro {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .hub-intro h2 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .hub-intro p {
-      color: #64748b;
+      margin: 0 auto;
+      max-width: 720px;
       line-height: 1.7;
+      opacity: 0.78;
     }
 
-    .calculator-category {
-      margin-top: 30px;
+
+    /* =========================
+       CATEGORY
+    ========================= */
+
+    .hub-category {
+      margin-top: 48px;
     }
 
-    .calculator-category h3 {
-      margin-bottom: 6px;
+    .hub-category-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
     }
 
-    .category-description {
-      color: #64748b;
-      margin-top: 0;
-      margin-bottom: 15px;
-      line-height: 1.6;
+    .hub-category-head h2 {
+      margin: 0;
+      font-size: 1.45rem;
     }
 
-    .calculator-hub-grid {
+    .hub-category-head p {
+      margin: 4px 0 0;
+      font-size: 0.92rem;
+      opacity: 0.7;
+    }
+
+
+    /* =========================
+       CALCULATOR GRID
+    ========================= */
+
+    .hub-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 18px;
     }
+
+
+    /* =========================
+       ACTIVE CALCULATOR CARD
+    ========================= */
 
     .hub-card {
       display: block;
-      padding: 18px;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      background: #ffffff;
       text-decoration: none;
       color: inherit;
+
+      padding: 24px;
+
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 18px;
+
+      background: rgba(255, 255, 255, 0.025);
+
       transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        border-color 0.15s ease;
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
     }
 
     .hub-card:hover {
-      transform: translateY(-2px);
-      border-color: #2563eb;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      transform: translateY(-3px);
+
+      border-color: rgba(96, 165, 250, 0.65);
+
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
     }
 
-    .hub-card-icon {
-      font-size: 26px;
-      margin-bottom: 9px;
+    .hub-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
     }
 
-    .hub-card-title {
-      display: block;
-      font-weight: 800;
-      font-size: 17px;
-      margin-bottom: 5px;
+    .hub-icon {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 14px;
+
+      background: rgba(59, 130, 246, 0.12);
+
+      font-size: 1.45rem;
     }
 
-    .hub-card-description {
-      display: block;
-      color: #64748b;
-      font-size: 14px;
-      line-height: 1.5;
+    .hub-arrow {
+      font-size: 1.15rem;
+      opacity: 0.55;
     }
+
+    .hub-card h3 {
+      margin: 0 0 7px;
+
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+
+    .hub-card p {
+      margin: 0;
+
+      font-size: 0.93rem;
+      line-height: 1.55;
+
+      opacity: 0.72;
+    }
+
+    .hub-card-label {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      font-size: 0.76rem;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+
+      opacity: 0.75;
+    }
+
+
+    /* =========================
+       FEATURED SALARY CARD
+    ========================= */
+
+    .hub-card.featured {
+      border-color: rgba(96, 165, 250, 0.45);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.12),
+          rgba(255, 255, 255, 0.025)
+        );
+    }
+
+    .hub-card.featured .hub-card-label {
+      opacity: 1;
+    }
+
+
+    /* =========================
+       COMING SOON
+    ========================= */
 
     .hub-card.coming-soon {
-      opacity: 0.72;
       cursor: default;
+      opacity: 0.58;
     }
 
     .hub-card.coming-soon:hover {
       transform: none;
-      border-color: #e2e8f0;
+      border-color: rgba(148, 163, 184, 0.22);
       box-shadow: none;
     }
 
     .coming-badge {
       display: inline-block;
-      margin-top: 9px;
-      padding: 4px 8px;
+
+      padding: 5px 9px;
+
       border-radius: 999px;
-      background: #f1f5f9;
-      color: #64748b;
-      font-size: 11px;
+
+      font-size: 0.68rem;
       font-weight: 700;
+
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+
+      background: rgba(148, 163, 184, 0.12);
     }
 
-    .hub-note {
-      margin-top: 24px;
-      padding: 16px 18px;
-      border-radius: 12px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      color: #475569;
-      line-height: 1.6;
-      font-size: 14px;
+
+    /* =========================
+       INFO SECTION
+    ========================= */
+
+    .hub-info {
+      max-width: 900px;
+      margin: 60px auto 0;
     }
+
+    .hub-info h2 {
+      margin-bottom: 12px;
+    }
+
+    .hub-info p {
+      line-height: 1.75;
+      opacity: 0.78;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 700px) {
 
-      .calculator-hub-grid {
+      .hub-hero {
+        padding: 48px 18px 35px;
+      }
+
+      .hub-hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .hub-hero p {
+        font-size: 0.98rem;
+      }
+
+      .hub-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hub-category-head {
+        display: block;
+      }
+
+      .hub-category-head p {
+        margin-top: 6px;
+      }
+
+      .hub-card {
+        padding: 20px;
       }
 
     }
@@ -202,26 +366,26 @@
 <body>
 
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="topbar">
 
   <div class="nav">
 
-    <a class="brand" href="#top">
+    <a
+      class="brand"
+      href="index.html"
+    >
       <span>MY</span> Calculator Hub
     </a>
+
 
     <nav>
 
       <a href="#calculators">
         Calculators
-      </a>
-
-      <a href="#calculator">
-        Salary
-      </a>
-
-      <a href="#how">
-        How it works
       </a>
 
       <a href="#about">
@@ -233,6 +397,7 @@
       </a>
 
     </nav>
+
 
     <button
       id="themeToggle"
@@ -247,6 +412,7 @@
 </header>
 
 
+
 <main id="top">
 
 
@@ -254,33 +420,31 @@
      HERO
 ========================= -->
 
-<section class="hero">
+<section class="hub-hero">
 
-  <div class="hero-inner">
+  <div class="hub-hero-inner">
 
     <div class="pill">
-      🇲🇾 Malaysia-focused • Updated for 2026
+      🇲🇾 Free Malaysia Calculators • 2026
     </div>
+
 
     <h1>
       Malaysia Calculator Hub
     </h1>
 
+
     <p>
-      Free practical calculators for Malaysian salaries, overtime,
-      loans, affordability, working days and more.
+      Simple, practical calculators for Malaysian salaries,
+      employment, homes, cars, everyday calculations and
+      engineering & manufacturing.
     </p>
 
-    <a
-      class="hero-btn"
-      href="#calculators"
-    >
-      Explore calculators ↓
-    </a>
 
   </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -301,21 +465,23 @@
 </section>
 
 
+
 <!-- =========================
-     CALCULATOR HUB
+     CALCULATORS
 ========================= -->
 
 <section
+  class="section"
   id="calculators"
-  class="section hub-section"
 >
 
   <div class="content-card">
 
+
     <div class="hub-intro">
 
       <p class="eyebrow">
-        FREE CALCULATORS
+        CALCULATORS
       </p>
 
       <h2>
@@ -323,110 +489,182 @@
       </h2>
 
       <p>
-        Simple calculators designed for everyday Malaysian financial,
-        employment and practical calculation needs.
+        Select a calculator below to get a quick estimate using
+        simple and practical inputs.
       </p>
 
     </div>
+
 
 
     <!-- =========================
          MONEY & EMPLOYMENT
     ========================= -->
 
-    <div class="calculator-category">
+    <div class="hub-category">
 
-      <h3>
-        💰 Money & Employment
-      </h3>
+      <div class="hub-category-head">
 
-      <p class="category-description">
-        Calculate salary, overtime, salary increases and working days.
-      </p>
+        <div>
+
+          <h2>
+            💰 Money & Employment
+          </h2>
+
+          <p>
+            Salary, overtime, increments and working days
+          </p>
+
+        </div>
+
+      </div>
 
 
-      <div class="calculator-hub-grid">
+      <div class="hub-grid">
 
+
+        <!-- SALARY -->
 
         <a
-          href="#calculator"
-          class="hub-card"
+          class="hub-card featured"
+          href="salary-calculator.html"
         >
 
-          <div class="hub-card-icon">
-            💰
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              💵
+            </div>
+
+            <span class="hub-arrow">
+              →
+            </span>
+
           </div>
 
-          <span class="hub-card-title">
-            Malaysia Salary Calculator
-          </span>
 
-          <span class="hub-card-description">
-            Estimate take-home pay after EPF, SOCSO,
+          <h3>
+            Malaysia Salary Calculator
+          </h3>
+
+          <p>
+            Estimate your take-home pay after EPF, SOCSO,
             LINDUNG 24 Jam, EIS and PCB.
+          </p>
+
+          <span class="hub-card-label">
+            Calculate salary →
           </span>
 
         </a>
 
 
+
+        <!-- OT -->
+
         <a
-          href="ot-calculator.html"
           class="hub-card"
+          href="ot-calculator.html"
         >
 
-          <div class="hub-card-icon">
-            ⏱️
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              ⏱️
+            </div>
+
+            <span class="hub-arrow">
+              →
+            </span>
+
           </div>
 
-          <span class="hub-card-title">
-            Malaysia OT Calculator
-          </span>
 
-          <span class="hub-card-description">
+          <h3>
+            OT Calculator
+          </h3>
+
+          <p>
             Calculate overtime pay for normal days,
             rest days and public holidays.
+          </p>
+
+          <span class="hub-card-label">
+            Calculate OT →
           </span>
 
         </a>
 
 
+
+        <!-- SALARY INCREMENT -->
+
         <a
+          class="hub-card"
           href="salary-increment.html"
-          class="hub-card"
         >
 
-          <div class="hub-card-icon">
-            📈
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              📈
+            </div>
+
+            <span class="hub-arrow">
+              →
+            </span>
+
           </div>
 
-          <span class="hub-card-title">
-            Salary Increment Calculator
-          </span>
 
-          <span class="hub-card-description">
-            Calculate your increment amount, new salary
-            and annual salary increase.
+          <h3>
+            Salary Increment Calculator
+          </h3>
+
+          <p>
+            Calculate your salary increase, new salary
+            and annual income difference.
+          </p>
+
+          <span class="hub-card-label">
+            Calculate increment →
           </span>
 
         </a>
 
 
+
+        <!-- WORKING DAYS -->
+
         <a
-          href="working-days.html"
           class="hub-card"
+          href="working-days.html"
         >
 
-          <div class="hub-card-icon">
-            📅
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              📅
+            </div>
+
+            <span class="hub-arrow">
+              →
+            </span>
+
           </div>
 
-          <span class="hub-card-title">
-            Working Days Calculator
-          </span>
 
-          <span class="hub-card-description">
+          <h3>
+            Working Days Calculator
+          </h3>
+
+          <p>
             Calculate working days between two dates,
-            excluding weekends.
+            excluding weekends when needed.
+          </p>
+
+          <span class="hub-card-label">
+            Calculate working days →
           </span>
 
         </a>
@@ -435,1157 +673,476 @@
       </div>
 
     </div>
+
 
 
     <!-- =========================
          HOME & VEHICLES
     ========================= -->
 
-    <div class="calculator-category">
+    <div class="hub-category">
 
-      <h3>
-        🏠 Home & Vehicles
-      </h3>
-
-      <p class="category-description">
-        Estimate affordable house and car budgets based on your income
-        and financial commitments.
-      </p>
-
-
-      <div class="calculator-hub-grid">
-
-
-        <a
-          href="house-affordability.html"
-          class="hub-card"
-        >
-
-          <div class="hub-card-icon">
-            🏠
-          </div>
-
-          <span class="hub-card-title">
-            House Affordability Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Estimate how much house you may be able to afford
-            based on income, commitments and DSR.
-          </span>
-
-        </a>
-
-
-        <a
-          href="car-affordability.html"
-          class="hub-card"
-        >
-
-          <div class="hub-card-icon">
-            🚗
-          </div>
-
-          <span class="hub-card-title">
-            Car Affordability Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Estimate a comfortable car budget based on income,
-            commitments and loan assumptions.
-          </span>
-
-        </a>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         ENGINEERING & MANUFACTURING
-    ========================= -->
-
-    <div class="calculator-category">
-
-      <h3>
-        🏭 Engineering & Manufacturing
-      </h3>
-
-      <p class="category-description">
-        Practical calculators for production, manufacturing,
-        materials and engineering calculations.
-      </p>
-
-
-      <div class="calculator-hub-grid">
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            📏
-          </div>
-
-          <span class="hub-card-title">
-            Roll Length Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Calculate material length from roll diameter,
-            core diameter and material thickness.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            🔄
-          </div>
-
-          <span class="hub-card-title">
-            Roll Diameter Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Calculate final roll diameter from material length,
-            thickness and core diameter.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            ⚖️
-          </div>
-
-          <span class="hub-card-title">
-            Material Weight Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Estimate material weight using dimensions,
-            thickness and material density.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            📊
-          </div>
-
-          <span class="hub-card-title">
-            OEE Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Calculate availability, performance, quality
-            and overall equipment effectiveness.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            ⚙️
-          </div>
-
-          <span class="hub-card-title">
-            Production Efficiency Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Calculate actual production efficiency against
-            target output and available production time.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            ⏱️
-          </div>
-
-          <span class="hub-card-title">
-            Cycle Time Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Calculate cycle time, production rate and
-            estimated output.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         FUTURE CATEGORIES
-    ========================= -->
-
-    <div class="calculator-category">
-
-      <h3>
-        🧮 More Calculators
-      </h3>
-
-      <p class="category-description">
-        More practical calculators will be added as the hub grows.
-      </p>
-
-
-      <div class="calculator-hub-grid">
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            🧾
-          </div>
-
-          <span class="hub-card-title">
-            EPF Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Estimate employee and employer EPF contributions.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            🏦
-          </div>
-
-          <span class="hub-card-title">
-            Loan Payment Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Estimate monthly loan payments and total repayment.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            🔢
-          </div>
-
-          <span class="hub-card-title">
-            Percentage Calculator
-          </span>
-
-          <span class="hub-card-description">
-            Quickly calculate percentages, increases and decreases.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-        <div class="hub-card coming-soon">
-
-          <div class="hub-card-icon">
-            📐
-          </div>
-
-          <span class="hub-card-title">
-            Unit Converter
-          </span>
-
-          <span class="hub-card-description">
-            Convert common units used in everyday and
-            engineering calculations.
-          </span>
-
-          <span class="coming-badge">
-            Coming Soon
-          </span>
-
-        </div>
-
-
-      </div>
-
-
-      <div class="hub-note">
-
-        💡 <strong>Our goal:</strong> Build a useful collection of
-        free calculators covering Malaysian employment, finance,
-        everyday calculations and practical engineering needs.
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     SALARY CALCULATOR
-========================= -->
-
-<section
-  id="calculator"
-  class="section"
->
-
-  <div class="calculator-grid">
-
-
-    <!-- INPUT CARD -->
-
-    <div class="card input-card">
-
-      <div class="section-head">
+      <div class="hub-category-head">
 
         <div>
-
-          <p class="eyebrow">
-            YOUR DETAILS
-          </p>
 
           <h2>
-            Malaysia Salary Calculator
+            🏠 Home & Vehicles
           </h2>
 
-        </div>
-
-        <span class="year-badge">
-          2026
-        </span>
-
-      </div>
-
-
-      <label>
-
-        Gross monthly salary (RM)
-
-        <input
-          id="grossSalary"
-          type="number"
-          min="0"
-          step="0.01"
-          value="5500"
-          inputmode="decimal"
-        >
-
-      </label>
-
-
-      <label>
-
-        Age
-
-        <input
-          id="employeeAge"
-          type="number"
-          min="14"
-          max="75"
-          value="30"
-          inputmode="numeric"
-        >
-
-        <small>
-          EPF contribution rules vary by age.
-        </small>
-
-      </label>
-
-
-      <label>
-
-        Employee category
-
-        <select id="employeeType">
-
-          <option value="malaysian">
-            Malaysian citizen
-          </option>
-
-          <option value="pr">
-            Permanent Resident (PR)
-          </option>
-
-          <option value="foreign">
-            Non-Malaysian citizen
-          </option>
-
-        </select>
-
-      </label>
-
-
-      <div
-        id="foreignNotice"
-        class="notice hidden"
-      >
-
-        For non-Malaysian employees, EPF is calculated at 2% employee
-        + 2% employer under the current rule. LINDUNG 24 Jam is treated
-        as mandatory in this calculator.
-
-      </div>
-
-
-      <!-- LINDUNG 24 JAM -->
-
-      <div class="field-group">
-
-        <div class="label-row">
-
-          <span>
-            LINDUNG 24 Jam
-          </span>
-
-          <span class="help">
-            Non-Employment Injury Scheme
-          </span>
-
-        </div>
-
-
-        <div class="radio-grid">
-
-          <label class="radio-card">
-
-            <input
-              type="radio"
-              name="lindung"
-              value="yes"
-              checked
-            >
-
-            <span>
-
-              <b>
-                Yes
-              </b>
-
-              <small>
-                I participate
-              </small>
-
-            </span>
-
-          </label>
-
-
-          <label class="radio-card">
-
-            <input
-              type="radio"
-              name="lindung"
-              value="no"
-            >
-
-            <span>
-
-              <b>
-                No
-              </b>
-
-              <small>
-                I opted out
-              </small>
-
-            </span>
-
-          </label>
-
-        </div>
-
-      </div>
-
-
-      <!-- TAX STATUS -->
-
-      <div class="field-group">
-
-        <div class="label-row">
-
-          <span>
-            Tax status
-          </span>
-
-          <span class="help">
-            Used for PCB estimate
-          </span>
-
-        </div>
-
-
-        <div class="radio-grid">
-
-          <label class="radio-card">
-
-            <input
-              type="radio"
-              name="taxStatus"
-              value="single"
-              checked
-            >
-
-            <span>
-
-              <b>
-                Single
-              </b>
-
-              <small>
-                Standard relief
-              </small>
-
-            </span>
-
-          </label>
-
-
-          <label class="radio-card">
-
-            <input
-              type="radio"
-              name="taxStatus"
-              value="married"
-            >
-
-            <span>
-
-              <b>
-                Married
-              </b>
-
-              <small>
-                More options below
-              </small>
-
-            </span>
-
-          </label>
-
-        </div>
-
-      </div>
-
-
-      <!-- SPOUSE -->
-
-      <div
-        id="spouseBox"
-        class="sub-options hidden"
-      >
-
-        <label>
-
-          Spouse has no income?
-
-          <select id="spouseNoIncome">
-
-            <option value="yes">
-              Yes
-            </option>
-
-            <option value="no">
-              No
-            </option>
-
-          </select>
-
-        </label>
-
-      </div>
-
-
-      <!-- ADVANCED PCB -->
-
-      <details class="advanced">
-
-        <summary>
-
-          Advanced PCB options
-
-          <span>
-            Optional
-          </span>
-
-        </summary>
-
-
-        <div class="advanced-grid">
-
-
-          <label>
-
-            Children eligible for relief
-
-            <input
-              id="childrenCount"
-              type="number"
-              min="0"
-              max="20"
-              value="0"
-            >
-
-          </label>
-
-
-          <label>
-
-            Monthly zakat (RM)
-
-            <input
-              id="zakatAmount"
-              type="number"
-              min="0"
-              step="0.01"
-              value="0"
-            >
-
-          </label>
-
-
-          <label>
-
-            Monthly bonus / additional remuneration (RM)
-
-            <input
-              id="bonusAmount"
-              type="number"
-              min="0"
-              step="0.01"
-              value="0"
-            >
-
-          </label>
-
-
-          <label>
-
-            Tax residency
-
-            <select id="taxResidency">
-
-              <option value="resident">
-                Resident
-              </option>
-
-              <option value="nonresident">
-                Non-resident
-              </option>
-
-            </select>
-
-          </label>
-
-
-        </div>
-
-
-        <p class="advanced-note">
-
-          PCB is an estimate. Actual payroll PCB can depend on accumulated
-          remuneration, previous PCB/zakat, TP1/TP3 information, benefits
-          and other payroll details.
-
-        </p>
-
-      </details>
-
-
-      <!-- CALCULATE -->
-
-      <button
-        id="calculateBtn"
-        class="calculate-btn"
-      >
-        Calculate take-home pay
-      </button>
-
-    </div>
-
-
-    <!-- RESULT CARD -->
-
-    <div
-      class="card result-card"
-      id="results"
-    >
-
-
-      <div class="result-top">
-
-        <div>
-
-          <p class="eyebrow">
-            ESTIMATED TAKE-HOME
+          <p>
+            Plan your home and vehicle budget
           </p>
 
-          <div
-            id="takeHome"
-            class="take-home"
-          >
-            RM 0.00
-          </div>
-
-        </div>
-
-        <div class="mini-chip">
-          per month
         </div>
 
       </div>
 
 
-      <!-- BREAKDOWN -->
-
-      <div class="breakdown">
+      <div class="hub-grid">
 
 
-        <div class="row">
+        <!-- HOUSE -->
 
-          <span>
-            Gross salary
+        <a
+          class="hub-card"
+          href="house-affordability.html"
+        >
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              🏠
+            </div>
+
+            <span class="hub-arrow">
+              →
+            </span>
+
+          </div>
+
+
+          <h3>
+            House Affordability Calculator
+          </h3>
+
+          <p>
+            Estimate how much house you may be able to afford
+            based on income, commitments and DSR.
+          </p>
+
+          <span class="hub-card-label">
+            Calculate affordability →
           </span>
 
-          <strong id="grossResult">
-            RM 0.00
-          </strong>
-
-        </div>
+        </a>
 
 
-        <div class="row">
 
-          <span>
+        <!-- CAR -->
 
-            EPF
+        <a
+          class="hub-card"
+          href="car-affordability.html"
+        >
 
-            <small id="epfRateLabel">
-              Employee
-            </small>
+          <div class="hub-card-top">
 
+            <div class="hub-icon">
+              🚗
+            </div>
+
+            <span class="hub-arrow">
+              →
+            </span>
+
+          </div>
+
+
+          <h3>
+            Car Affordability Calculator
+          </h3>
+
+          <p>
+            Estimate a comfortable car budget based on income,
+            commitments, down payment and loan terms.
+          </p>
+
+          <span class="hub-card-label">
+            Calculate car budget →
           </span>
 
-          <strong id="epfAmount">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-        <div class="row">
-
-          <span>
-            SOCSO
-          </span>
-
-          <strong id="socsoAmount">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-        <div class="row">
-
-          <span>
-
-            LINDUNG 24 Jam
-
-            <small id="lindungLabel"></small>
-
-          </span>
-
-          <strong id="lindungAmount">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-        <div class="row">
-
-          <span>
-            EIS
-          </span>
-
-          <strong id="eisAmount">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-        <div class="row">
-
-          <span>
-
-            PCB
-
-            <small>
-              estimated
-            </small>
-
-          </span>
-
-          <strong id="pcbAmount">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-        <div class="row total">
-
-          <span>
-            Total deductions
-          </span>
-
-          <strong id="totalDeductions">
-            RM 0.00
-          </strong>
-
-        </div>
+        </a>
 
 
       </div>
-
-
-      <!-- ANNUAL -->
-
-      <div class="annual-grid">
-
-
-        <div>
-
-          <span>
-            Annual gross
-          </span>
-
-          <strong id="annualGross">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            Annual take-home*
-          </span>
-
-          <strong id="annualTakeHome">
-            RM 0.00
-          </strong>
-
-        </div>
-
-
-      </div>
-
-
-      <p
-        id="pcbNote"
-        class="result-note"
-      ></p>
-
-
-      <!-- EMPLOYER -->
-
-      <details class="employer">
-
-        <summary>
-          Employer cost & contributions
-        </summary>
-
-
-        <div class="breakdown">
-
-
-          <div class="row">
-
-            <span>
-              Employer EPF
-            </span>
-
-            <strong id="employerEpf">
-              RM 0.00
-            </strong>
-
-          </div>
-
-
-          <div class="row">
-
-            <span>
-              Employer SOCSO
-            </span>
-
-            <strong id="employerSocso">
-              RM 0.00
-            </strong>
-
-          </div>
-
-
-          <div class="row">
-
-            <span>
-              Employer EIS
-            </span>
-
-            <strong id="employerEis">
-              RM 0.00
-            </strong>
-
-          </div>
-
-
-          <div class="row total">
-
-            <span>
-              Employer statutory total
-            </span>
-
-            <strong id="employerTotal">
-              RM 0.00
-            </strong>
-
-          </div>
-
-
-        </div>
-
-      </details>
-
-
-      <!-- RAISE -->
-
-      <div class="raise-box">
-
-        <div>
-
-          <span>
-            What if your salary increases by RM500?
-          </span>
-
-          <small>
-            Estimated extra take-home
-          </small>
-
-        </div>
-
-        <strong id="raiseTakeHome">
-          +RM 0.00
-        </strong>
-
-      </div>
-
-
-      <!-- SHARE -->
-
-      <button
-        id="shareBtn"
-        class="share-btn"
-      >
-        ↗ Share this calculation
-      </button>
-
-
-      <p class="disclaimer">
-
-        *Annual figures are based on the monthly estimate × 12.
-        PCB is an estimate and is not a substitute for an employer's
-        payroll calculation or official HASiL assessment.
-
-      </p>
-
 
     </div>
+
+
+
+    <!-- =========================
+         ENGINEERING
+    ========================= -->
+
+    <div class="hub-category">
+
+      <div class="hub-category-head">
+
+        <div>
+
+          <h2>
+            🏭 Engineering & Manufacturing
+          </h2>
+
+          <p>
+            Practical tools for engineers, technicians and production teams
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="hub-grid">
+
+
+        <!-- ROLL LENGTH -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              📏
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Roll Length Calculator
+          </h3>
+
+          <p>
+            Calculate material roll length using roll diameter,
+            core diameter and material thickness.
+          </p>
+
+        </div>
+
+
+
+        <!-- ROLL DIAMETER -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              🧵
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Roll Diameter Calculator
+          </h3>
+
+          <p>
+            Estimate roll diameter from material length,
+            thickness and core diameter.
+          </p>
+
+        </div>
+
+
+
+        <!-- MATERIAL WEIGHT -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              ⚖️
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Material Weight Calculator
+          </h3>
+
+          <p>
+            Calculate approximate material weight using
+            dimensions, density and quantity.
+          </p>
+
+        </div>
+
+
+
+        <!-- OEE -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              📊
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            OEE Calculator
+          </h3>
+
+          <p>
+            Calculate Overall Equipment Effectiveness using
+            availability, performance and quality.
+          </p>
+
+        </div>
+
+
+
+        <!-- PRODUCTION EFFICIENCY -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              ⚙️
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Production Efficiency Calculator
+          </h3>
+
+          <p>
+            Calculate production efficiency from actual output
+            versus planned or standard output.
+          </p>
+
+        </div>
+
+
+
+        <!-- CYCLE TIME -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              ⏲️
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Cycle Time Calculator
+          </h3>
+
+          <p>
+            Calculate cycle time, output rate and production
+            capacity for manufacturing processes.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         EVERYDAY
+    ========================= -->
+
+    <div class="hub-category">
+
+      <div class="hub-category-head">
+
+        <div>
+
+          <h2>
+            🧮 Everyday Calculators
+          </h2>
+
+          <p>
+            More useful calculators coming to the hub
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="hub-grid">
+
+
+        <!-- EPF -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              🏦
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            EPF Calculator
+          </h3>
+
+          <p>
+            Estimate employee and employer EPF contributions.
+          </p>
+
+        </div>
+
+
+
+        <!-- LOAN -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              💳
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Loan Payment Calculator
+          </h3>
+
+          <p>
+            Estimate monthly loan payments and total interest.
+          </p>
+
+        </div>
+
+
+
+        <!-- PERCENTAGE -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              %
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Percentage Calculator
+          </h3>
+
+          <p>
+            Quickly calculate percentages, increases,
+            decreases and differences.
+          </p>
+
+        </div>
+
+
+
+        <!-- UNIT -->
+
+        <div class="hub-card coming-soon">
+
+          <div class="hub-card-top">
+
+            <div class="hub-icon">
+              🔄
+            </div>
+
+            <span class="coming-badge">
+              Coming Soon
+            </span>
+
+          </div>
+
+
+          <h3>
+            Unit Converter
+          </h3>
+
+          <p>
+            Convert common measurements between useful units.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
 
   </div>
 
 </section>
 
-
-<!-- =========================
-     HOW IT WORKS
-========================= -->
-
-<section
-  class="section"
-  id="how"
->
-
-  <div class="content-card">
-
-    <p class="eyebrow">
-      HOW IT WORKS
-    </p>
-
-    <h2>
-      What gets deducted from your salary?
-    </h2>
-
-
-    <div class="info-grid">
-
-
-      <article>
-
-        <h3>
-          EPF / KWSP
-        </h3>
-
-        <p>
-          Your employee retirement contribution. The calculator follows
-          the current contribution-rate structure and wage-range approach
-          for applicable Malaysian/PR employees.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <h3>
-          SOCSO / PERKESO
-        </h3>
-
-        <p>
-          Employment-related social protection contribution calculated
-          using the current PERKESO contribution schedule and RM6,000
-          wage ceiling.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <h3>
-          LINDUNG 24 Jam
-        </h3>
-
-        <p>
-          An additional non-employment injury protection contribution.
-          Local participation is voluntary; foreign-worker treatment
-          is different.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <h3>
-          EIS
-        </h3>
-
-        <p>
-          Employment Insurance System contribution paid by both employee
-          and employer, subject to the current wage ceiling and eligibility
-          rules.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <h3>
-          PCB
-        </h3>
-
-        <p>
-          Monthly tax deduction. Our public calculator provides an estimate
-          using current Malaysian tax rates and common relief assumptions;
-          payroll PCB can differ.
-        </p>
-
-      </article>
-
-
-      <article>
-
-        <h3>
-          Take-home pay
-        </h3>
-
-        <p>
-          Gross salary minus employee EPF, SOCSO, LINDUNG 24 Jam,
-          EIS and estimated PCB.
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
 
 
 <!-- =========================
@@ -1610,38 +1167,30 @@
 
     <p>
       Malaysia Calculator Hub is an independent calculator project
-      designed to make everyday Malaysian financial, employment and
-      practical calculations easier to understand. Our calculators
-      are built for quick estimates and educational use.
+      designed to make everyday Malaysian financial, employment,
+      household and engineering calculations easier to understand.
     </p>
 
 
     <p>
-      We aim to build calculators covering Malaysian employment and
-      personal finance as well as practical engineering and
-      manufacturing calculations.
-    </p>
-
-
-    <p>
-      We use publicly available information from Malaysian government
-      and statutory bodies where possible, including KWSP, PERKESO
-      and HASiL. Rules and contribution schedules can change, so users
-      should confirm important payroll or tax figures with their employer,
-      KWSP, PERKESO or HASiL.
+      Our calculators are designed for quick estimates and educational
+      or planning purposes. Where possible, calculations are based on
+      publicly available information from relevant Malaysian government
+      and statutory bodies.
     </p>
 
 
     <p>
       <b>
-        We are not affiliated with KWSP, PERKESO, HASiL or any Malaysian
-        government agency.
+        Malaysia Calculator Hub is not affiliated with KWSP, PERKESO,
+        HASiL or any Malaysian government agency.
       </b>
     </p>
 
   </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1666,28 +1215,26 @@
 
     <p>
       <b>
-        Last updated: 6 September 2026
+        Last updated: 3 September 2026
       </b>
     </p>
 
 
     <p>
       Malaysia Calculator Hub is designed so that calculator inputs
-      can be processed directly in your browser. We do not require
-      an account and we do not ask you to submit your calculator
-      inputs to us.
+      can generally be processed directly in your browser. We do not
+      require an account to use the calculators.
     </p>
 
 
     <h3>
-      Information entered into the calculator
+      Information entered into calculators
     </h3>
 
     <p>
-      The calculator processes information you enter locally in
-      your browser to produce the displayed result. We do not
-      intentionally collect or store those calculator values on
-      our server.
+      Calculator inputs are processed locally in your browser to produce
+      the displayed result. We do not intentionally collect or store
+      salary or other calculator values on our server.
     </p>
 
 
@@ -1699,15 +1246,11 @@
       If advertising services such as Google AdSense are enabled,
       third-party vendors including Google may use cookies, web beacons,
       IP addresses or similar technologies to serve and measure advertising.
-      Google may use information about visits to this and other sites
-      to provide personalized advertising where permitted.
     </p>
 
 
     <p>
-      You can manage personalized advertising through Google's Ads Settings
-      and your browser settings. Applicable consent requirements will be
-      presented where required.
+      Applicable consent requirements will be presented where required.
     </p>
 
 
@@ -1717,8 +1260,9 @@
 
     <p>
       If analytics tools are added, they may collect aggregated information
-      such as pages viewed, approximate device information and general usage
-      patterns. We will update this policy if our analytics practices change.
+      such as pages viewed, approximate device information and general
+      usage patterns. This policy will be updated if our analytics practices
+      change.
     </p>
 
 
@@ -1734,6 +1278,7 @@
   </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1756,21 +1301,21 @@
     <p>
       This website provides estimates for educational and planning
       purposes only. It does not constitute tax, legal, payroll,
-      investment or financial advice.
+      investment, engineering or financial advice.
     </p>
 
 
     <p>
-      Actual deductions may differ because employers may process wages,
-      benefits, bonuses, arrears, statutory contributions, tax reliefs
-      and PCB using information not entered into these calculators.
+      Actual results may differ because calculations can depend on
+      information, rules, rates, contribution schedules or other
+      factors not entered into the calculators.
     </p>
 
 
     <p>
-      For official figures, refer to the latest information and calculators
-      provided by KWSP, PERKESO and HASiL, or check your payslip and
-      employer payroll records.
+      For official figures, users should refer to the latest information
+      from the relevant Malaysian government or statutory authority,
+      or consult a qualified professional where appropriate.
     </p>
 
   </div>
@@ -1779,6 +1324,7 @@
 
 
 </main>
+
 
 
 <!-- =========================
@@ -1804,6 +1350,7 @@
   </div>
 
 </footer>
+
 
 
 <script src="script.js"></script>
