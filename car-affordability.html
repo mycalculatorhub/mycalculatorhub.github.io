@@ -10,18 +10,55 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Malaysia Car Affordability Calculator 2026 | Car Loan Calculator
-  </title>
-
   <meta
     name="description"
-    content="Malaysia Car Affordability Calculator 2026. Estimate how much car you can afford based on your income, commitments, DSR, down payment, interest rate and loan tenure."
+    content="Use our Malaysia Car Affordability Calculator 2026 to estimate how much car you can afford based on your income, existing commitments, DSR, down payment, interest rate and loan tenure."
   >
 
   <meta
     name="robots"
     content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0f172a"
+  >
+
+  <link
+    rel="canonical"
+    href="https://mycalculatorhub.github.io/car-affordability.html"
+  >
+
+  <title>
+    Malaysia Car Affordability Calculator 2026 | Car Loan Calculator
+  </title>
+
+  <!-- Social sharing -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Malaysia Car Affordability Calculator 2026 | Car Loan Calculator"
+  >
+
+  <meta
+    property="og:description"
+    content="Estimate how much car you can afford based on your income, commitments, DSR, down payment, interest rate and loan tenure."
+  >
+
+  <meta
+    property="og:url"
+    content="https://mycalculatorhub.github.io/car-affordability.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Malaysia Calculator Hub"
   >
 
   <style>
@@ -553,6 +590,24 @@
 
     }
 
+    .calculator-link.coming-soon {
+
+      cursor: default;
+
+      opacity: 0.75;
+
+    }
+
+    .calculator-link.coming-soon:hover {
+
+      border-color: #e5e7eb;
+
+      transform: none;
+
+      box-shadow: none;
+
+    }
+
     .car-footer-note {
 
       text-align: center;
@@ -636,10 +691,6 @@
 
     </header>
 
-
-    <!-- =========================================
-         CALCULATOR INPUT
-         ========================================= -->
 
     <div class="car-card">
 
@@ -880,10 +931,6 @@
     </div>
 
 
-    <!-- =========================================
-         RESULTS
-         ========================================= -->
-
     <div
       class="car-card car-results"
       id="results"
@@ -1043,10 +1090,6 @@
     </div>
 
 
-    <!-- =========================================
-         INFORMATION
-         ========================================= -->
-
     <div class="car-info">
 
       <h2>
@@ -1115,10 +1158,6 @@
 
     </div>
 
-
-    <!-- =========================================
-         MORE CALCULATORS
-         ========================================= -->
 
     <div class="car-more">
 
@@ -1210,9 +1249,8 @@
         </a>
 
 
-        <a
-          href="#"
-          class="calculator-link"
+        <div
+          class="calculator-link coming-soon"
         >
 
           <div class="calculator-link-icon">
@@ -1224,15 +1262,14 @@
           </span>
 
           <span class="calculator-link-description">
-            Calculate your salary increase
+            Coming soon
           </span>
 
-        </a>
+        </div>
 
 
-        <a
-          href="#"
-          class="calculator-link"
+        <div
+          class="calculator-link coming-soon"
         >
 
           <div class="calculator-link-icon">
@@ -1244,10 +1281,10 @@
           </span>
 
           <span class="calculator-link-description">
-            Calculate working days and dates
+            Coming soon
           </span>
 
-        </a>
+        </div>
 
 
       </div>
@@ -1266,10 +1303,6 @@
 
   </div>
 
-
-  <!-- =========================================
-       CALCULATOR ENGINE
-       ========================================= -->
 
   <script>
 
@@ -1424,13 +1457,6 @@
         document.getElementById("carType").value;
 
 
-      /*
-       ============================================
-       AFFORDABILITY
-       ============================================
-      */
-
-
       const maximumTotalDebt =
         income *
         (targetDsr / 100);
@@ -1452,15 +1478,6 @@
         );
 
 
-      /*
-       New-car financing is commonly advertised
-       up to 90%.
-
-       Used-car financing can vary, so we use
-       90% as the default illustrative ceiling
-       while clearly labelling the result as an estimate.
-      */
-
       let maximumFinancingMargin = 0.90;
 
 
@@ -1474,13 +1491,6 @@
       const maximumCarPrice =
         maximumLoan /
         maximumFinancingMargin;
-
-
-      /*
-       ============================================
-       USER SELECTED CAR
-       ============================================
-      */
 
 
       const selectedDownPayment =
@@ -1532,13 +1542,6 @@
               income
             ) * 100
           : 0;
-
-
-      /*
-       ============================================
-       DISPLAY
-       ============================================
-      */
 
 
       document.getElementById(
@@ -1612,13 +1615,6 @@
         "%";
 
 
-      /*
-       ============================================
-       AFFORDABILITY STATUS
-       ============================================
-      */
-
-
       const status =
         document.getElementById(
           "carStatus"
@@ -1689,13 +1685,6 @@
       }
 
 
-      /*
-       ============================================
-       SHOW RESULTS
-       ============================================
-      */
-
-
       document.getElementById(
         "results"
       ).style.display =
@@ -1710,7 +1699,6 @@
       });
 
     }
-
 
   </script>
 
