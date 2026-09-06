@@ -1,26 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
 
 <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1"
+name="viewport"
+content="width=device-width, initial-scale=1"
+
 >
 
 <meta
-  name="description"
-  content="Malaysia Salary Increment Calculator 2026. Calculate your salary increase, new monthly salary, annual increase and percentage increment easily."
+name="description"
+content="Malaysia Salary Increment Calculator 2026. Calculate your salary increase, new monthly salary, annual increase and percentage increment easily."
+
 >
 
 <meta
-  name="robots"
-  content="index, follow"
+name="robots"
+content="index, follow"
+
 >
 
 <meta
-  name="theme-color"
-  content="#0f172a"
+name="theme-color"
+content="#0f172a"
+
 >
 
 <link
@@ -222,11 +227,6 @@
     background: #eff6ff;
   }
 
-  .coming-soon {
-    color: #64748b;
-    cursor: default;
-  }
-
   .back-link {
     display: inline-block;
     margin-bottom: 15px;
@@ -259,242 +259,251 @@
 
   <section class="calculator-card">
 
-    <a href="index.html" class="back-link">
-      ← Back to Malaysia Salary Calculator
-    </a>
+```
+<a href="salary-calculator.html" class="back-link">
+  ← Back to Malaysia Salary Calculator
+</a>
 
-    <h1>Malaysia Salary Increment Calculator 2026</h1>
+<h1>Malaysia Salary Increment Calculator 2026</h1>
 
-    <p>
-      Calculate your salary increase, increment amount, new monthly salary
-      and estimated annual salary increase. This free calculator is useful
-      for employees comparing salary increments and new job offers in Malaysia.
-    </p>
+<p>
+  Calculate your salary increase, increment amount, new monthly salary
+  and estimated annual salary increase. This free calculator is useful
+  for employees comparing salary increments and new job offers in Malaysia.
+</p>
 
-    <div class="input-group">
-      <label for="currentSalary">
-        Current Monthly Salary (RM)
-      </label>
+<div class="input-group">
+  <label for="currentSalary">
+    Current Monthly Salary (RM)
+  </label>
 
-      <input
-        type="number"
-        id="currentSalary"
-        min="0"
-        step="0.01"
-        placeholder="e.g. 4000"
-        value="4000"
-      >
+  <input
+    type="number"
+    id="currentSalary"
+    min="0"
+    step="0.01"
+    placeholder="e.g. 4000"
+    value="4000"
+  >
 
-      <span class="input-hint">
-        Enter your current gross monthly salary.
+  <span class="input-hint">
+    Enter your current gross monthly salary.
+  </span>
+</div>
+
+<div class="input-group">
+  <label for="incrementPercentage">
+    Salary Increment (%)
+  </label>
+
+  <input
+    type="number"
+    id="incrementPercentage"
+    min="0"
+    step="0.01"
+    placeholder="e.g. 10"
+    value="10"
+  >
+
+  <span class="input-hint">
+    Enter the percentage increase offered by your employer.
+  </span>
+</div>
+
+<button
+  type="button"
+  class="calculate-btn"
+  onclick="calculateIncrement()"
+>
+  Calculate Salary Increment
+</button>
+
+<div class="results" id="results">
+
+  <h2>Salary Increment Results</h2>
+
+  <div class="result-grid">
+
+    <div class="result-box">
+      <span class="result-label">
+        Current Monthly Salary
+      </span>
+
+      <span class="result-value" id="currentSalaryResult">
+        RM4,000.00
       </span>
     </div>
 
-    <div class="input-group">
-      <label for="incrementPercentage">
-        Salary Increment (%)
-      </label>
+    <div class="result-box">
+      <span class="result-label">
+        Increment Percentage
+      </span>
 
-      <input
-        type="number"
-        id="incrementPercentage"
-        min="0"
-        step="0.01"
-        placeholder="e.g. 10"
-        value="10"
-      >
-
-      <span class="input-hint">
-        Enter the percentage increase offered by your employer.
+      <span class="result-value" id="percentageResult">
+        10.00%
       </span>
     </div>
 
-    <button
-      type="button"
-      class="calculate-btn"
-      onclick="calculateIncrement()"
-    >
-      Calculate Salary Increment
-    </button>
+    <div class="result-box highlight">
+      <span class="result-label">
+        Salary Increase
+      </span>
 
-    <div class="results" id="results">
-
-      <h2>Salary Increment Results</h2>
-
-      <div class="result-grid">
-
-        <div class="result-box">
-          <span class="result-label">
-            Current Monthly Salary
-          </span>
-
-          <span class="result-value" id="currentSalaryResult">
-            RM4,000.00
-          </span>
-        </div>
-
-        <div class="result-box">
-          <span class="result-label">
-            Increment Percentage
-          </span>
-
-          <span class="result-value" id="percentageResult">
-            10.00%
-          </span>
-        </div>
-
-        <div class="result-box highlight">
-          <span class="result-label">
-            Salary Increase
-          </span>
-
-          <span class="result-value" id="incrementAmount">
-            RM400.00
-          </span>
-        </div>
-
-        <div class="result-box highlight">
-          <span class="result-label">
-            New Monthly Salary
-          </span>
-
-          <span class="result-value" id="newSalary">
-            RM4,400.00
-          </span>
-        </div>
-
-        <div class="result-box">
-          <span class="result-label">
-            Current Annual Salary
-          </span>
-
-          <span class="result-value" id="currentAnnual">
-            RM48,000.00
-          </span>
-        </div>
-
-        <div class="result-box">
-          <span class="result-label">
-            New Annual Salary
-          </span>
-
-          <span class="result-value" id="newAnnual">
-            RM52,800.00
-          </span>
-        </div>
-
-        <div class="result-box">
-          <span class="result-label">
-            Annual Salary Increase
-          </span>
-
-          <span class="result-value" id="annualIncrease">
-            RM4,800.00
-          </span>
-        </div>
-
-        <div class="result-box">
-          <span class="result-label">
-            Monthly Increase
-          </span>
-
-          <span class="result-value" id="monthlyIncrease">
-            RM400.00
-          </span>
-        </div>
-
-      </div>
-
-      <div class="percentage-result">
-        Your new salary is
-        <strong id="percentageMessage">10.00% higher</strong>
-        than your current salary.
-      </div>
-
+      <span class="result-value" id="incrementAmount">
+        RM400.00
+      </span>
     </div>
+
+    <div class="result-box highlight">
+      <span class="result-label">
+        New Monthly Salary
+      </span>
+
+      <span class="result-value" id="newSalary">
+        RM4,400.00
+      </span>
+    </div>
+
+    <div class="result-box">
+      <span class="result-label">
+        Current Annual Salary
+      </span>
+
+      <span class="result-value" id="currentAnnual">
+        RM48,000.00
+      </span>
+    </div>
+
+    <div class="result-box">
+      <span class="result-label">
+        New Annual Salary
+      </span>
+
+      <span class="result-value" id="newAnnual">
+        RM52,800.00
+      </span>
+    </div>
+
+    <div class="result-box">
+      <span class="result-label">
+        Annual Salary Increase
+      </span>
+
+      <span class="result-value" id="annualIncrease">
+        RM4,800.00
+      </span>
+    </div>
+
+    <div class="result-box">
+      <span class="result-label">
+        Monthly Increase
+      </span>
+
+      <span class="result-value" id="monthlyIncrease">
+        RM400.00
+      </span>
+    </div>
+
+  </div>
+
+  <div class="percentage-result">
+    Your new salary is
+    <strong id="percentageMessage">10.00% higher</strong>
+    than your current salary.
+  </div>
+
+</div>
+```
 
   </section>
-
 
   <section class="info-section">
 
-    <h2>How to Calculate a Salary Increment</h2>
+```
+<h2>How to Calculate a Salary Increment</h2>
 
-    <p>
-      A salary increment is usually expressed as a percentage of your
-      current monthly salary. For example, if your current salary is
-      RM4,000 and you receive a 10% increment, your salary will increase
-      by RM400 per month.
-    </p>
+<p>
+  A salary increment is usually expressed as a percentage of your
+  current monthly salary. For example, if your current salary is
+  RM4,000 and you receive a 10% increment, your salary will increase
+  by RM400 per month.
+</p>
 
-    <div class="formula-box">
+<div class="formula-box">
 
-      <strong>Salary Increase</strong><br>
-      Current Salary × Increment Percentage ÷ 100
+  <strong>Salary Increase</strong><br>
+  Current Salary × Increment Percentage ÷ 100
 
-      <br><br>
+  <br><br>
 
-      <strong>New Salary</strong><br>
-      Current Salary + Salary Increase
+  <strong>New Salary</strong><br>
+  Current Salary + Salary Increase
 
-    </div>
+</div>
 
-    <p>
-      For example, a RM4,000 monthly salary with a 10% increment results
-      in a RM400 monthly increase and a new monthly salary of RM4,400.
-    </p>
+<p>
+  For example, a RM4,000 monthly salary with a 10% increment results
+  in a RM400 monthly increase and a new monthly salary of RM4,400.
+</p>
 
-    <h2>Monthly vs Annual Salary Increase</h2>
+<h2>Monthly vs Annual Salary Increase</h2>
 
-    <p>
-      Your monthly increment can be useful when comparing job offers,
-      promotions or annual salary reviews. The annual increase shows
-      the additional gross salary you would receive over 12 months,
-      before deductions such as EPF, SOCSO, EIS and PCB.
-    </p>
+<p>
+  Your monthly increment can be useful when comparing job offers,
+  promotions or annual salary reviews. The annual increase shows
+  the additional gross salary you would receive over 12 months,
+  before deductions such as EPF, SOCSO, EIS and PCB.
+</p>
+```
 
   </section>
 
-
   <section class="calculator-links">
 
-    <h2>More Malaysia Calculators</h2>
+```
+<h2>More Malaysia Calculators</h2>
 
-    <div class="calculator-links-grid">
+<div class="calculator-links-grid">
 
-      <a href="index.html" class="calculator-link">
-        💰 Malaysia Salary Calculator
-      </a>
+  <a href="salary-calculator.html" class="calculator-link">
+    💰 Malaysia Salary Calculator
+  </a>
 
-      <a href="ot-calculator.html" class="calculator-link">
-        ⏱️ Malaysia OT Calculator
-      </a>
+  <a href="ot-calculator.html" class="calculator-link">
+    ⏱️ Malaysia OT Calculator
+  </a>
 
-      <a href="house-affordability.html" class="calculator-link">
-        🏠 House Affordability Calculator
-      </a>
+  <a href="house-affordability.html" class="calculator-link">
+    🏠 House Affordability Calculator
+  </a>
 
-      <a href="car-affordability.html" class="calculator-link">
-        🚗 Car Affordability Calculator
-      </a>
+  <a href="car-affordability.html" class="calculator-link">
+    🚗 Car Affordability Calculator
+  </a>
 
-      <a
-        href="salary-increment.html"
-        class="calculator-link"
-      >
-        📈 Salary Increment Calculator
-      </a>
+  <a
+    href="salary-increment.html"
+    class="calculator-link"
+  >
+    📈 Salary Increment Calculator
+  </a>
 
-      <span class="calculator-link coming-soon">
-        📅 Working Days Calculator — Coming Soon
-      </span>
+  <a
+    href="working-days.html"
+    class="calculator-link"
+  >
+    📅 Working Days Calculator
+    <small style="display:block; margin-top:5px; color:#64748b; font-weight:400;">
+      Calculate working days between dates
+    </small>
+  </a>
 
-    </div>
+</div>
+```
 
   </section>
 
 </main>
-
 
 <script>
 
