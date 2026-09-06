@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Malaysia OT Calculator 2026 | Overtime Pay Calculator</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description" content="Malaysia OT Calculator 2026. Calculate overtime pay for normal working days, rest days and public holidays based on your monthly salary and working hours.">
+  <meta
+    name="description"
+    content="Malaysia OT Calculator 2026. Calculate overtime pay for normal working days, rest days and public holidays based on your monthly salary and working hours."
+  >
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0f172a"
+  >
+
+  <link
+    rel="canonical"
+    href="https://mycalculatorhub.github.io/ot-calculator.html"
+  >
+
+  <title>
+    Malaysia OT Calculator 2026 | Overtime Pay Calculator
+  </title>
+
+
+  <!-- Open Graph / Social Sharing -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Malaysia OT Calculator 2026 | Overtime Pay Calculator"
+  >
+
+  <meta
+    property="og:description"
+    content="Calculate Malaysian overtime pay for normal working days, rest days and public holidays."
+  >
+
+  <meta
+    property="og:url"
+    content="https://mycalculatorhub.github.io/ot-calculator.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Malaysia Calculator Hub"
+  >
+
 
   <link rel="stylesheet" href="style.css">
 
+
   <style>
+
     /* =========================================
        OT CALCULATOR PAGE
        ========================================= */
@@ -23,7 +78,9 @@
       padding: 24px 20px 70px;
     }
 
+
     /* Back to Salary Calculator */
+
     .ot-back {
       display: inline-flex;
       align-items: center;
@@ -34,7 +91,9 @@
       font-size: 14px;
     }
 
+
     /* Main Calculator Card */
+
     .ot-calculator-card {
       background: #ffffff;
       border-radius: 20px;
@@ -43,21 +102,25 @@
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+
     .ot-header {
       text-align: center;
       margin-bottom: 30px;
     }
+
 
     .ot-icon {
       font-size: 42px;
       margin-bottom: 8px;
     }
 
+
     .ot-header h1 {
       margin: 0 0 10px;
       font-size: 32px;
       line-height: 1.2;
     }
+
 
     .ot-header p {
       max-width: 650px;
@@ -67,14 +130,18 @@
       font-size: 15px;
     }
 
+
     /* Inputs */
+
     .ot-input-section {
       margin-top: 25px;
     }
 
+
     .ot-field {
       margin-bottom: 20px;
     }
+
 
     .ot-field label {
       display: block;
@@ -82,6 +149,7 @@
       margin-bottom: 8px;
       font-size: 15px;
     }
+
 
     .ot-field input {
       width: 100%;
@@ -94,11 +162,13 @@
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
+
     .ot-field input:focus {
       outline: none;
       border-color: #4f7cff;
       box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.12);
     }
+
 
     .ot-help {
       display: block;
@@ -108,12 +178,15 @@
       line-height: 1.4;
     }
 
+
     /* OT Categories */
+
     .ot-category-title {
       font-size: 18px;
       font-weight: 800;
       margin: 28px 0 16px;
     }
+
 
     .ot-category-grid {
       display: grid;
@@ -121,12 +194,14 @@
       gap: 14px;
     }
 
+
     .ot-category {
       background: #f7f9fc;
       border: 1px solid #e4e8ef;
       border-radius: 14px;
       padding: 16px;
     }
+
 
     .ot-category label {
       display: block;
@@ -136,10 +211,12 @@
       line-height: 1.4;
     }
 
+
     .ot-category label small {
       color: #777;
       font-weight: 600;
     }
+
 
     .ot-category input {
       width: 100%;
@@ -151,13 +228,16 @@
       background: #fff;
     }
 
+
     .ot-category input:focus {
       outline: none;
       border-color: #4f7cff;
       box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.10);
     }
 
+
     /* Calculate Button */
+
     .ot-button {
       width: 100%;
       padding: 15px 20px;
@@ -170,16 +250,20 @@
       transition: transform 0.15s, opacity 0.15s;
     }
 
+
     .ot-button:hover {
       opacity: 0.92;
       transform: translateY(-1px);
     }
 
+
     .ot-button:active {
       transform: translateY(0);
     }
 
+
     /* Results */
+
     .ot-result {
       display: none;
       margin-top: 28px;
@@ -189,10 +273,12 @@
       border: 1px solid #e2e7ef;
     }
 
+
     .ot-result-header {
       text-align: center;
       margin-bottom: 22px;
     }
+
 
     .ot-result-label {
       font-size: 13px;
@@ -203,17 +289,20 @@
       margin-bottom: 5px;
     }
 
+
     .ot-total {
       font-size: 36px;
       font-weight: 900;
       line-height: 1.2;
     }
 
+
     .ot-result-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
+
 
     .ot-result-box {
       background: #fff;
@@ -222,6 +311,7 @@
       padding: 15px;
     }
 
+
     .ot-result-box span {
       display: block;
       color: #666;
@@ -229,11 +319,14 @@
       margin-bottom: 6px;
     }
 
+
     .ot-result-box strong {
       font-size: 17px;
     }
 
+
     /* Warning */
+
     .ot-warning {
       display: none;
       margin-top: 20px;
@@ -246,10 +339,13 @@
       font-size: 14px;
     }
 
+
     /* Information Sections */
+
     .ot-info {
       margin-top: 28px;
     }
+
 
     .ot-info-card {
       background: #ffffff;
@@ -260,17 +356,20 @@
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+
     .ot-info-card h2 {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: 22px;
     }
 
+
     .ot-info-card h3 {
       margin-top: 24px;
       margin-bottom: 8px;
       font-size: 17px;
     }
+
 
     .ot-info-card p,
     .ot-info-card li {
@@ -279,11 +378,14 @@
       font-size: 15px;
     }
 
+
     .ot-info-card ul {
       padding-left: 22px;
     }
 
+
     /* Rate Table */
+
     .ot-rate-table {
       width: 100%;
       border-collapse: collapse;
@@ -291,6 +393,7 @@
       overflow: hidden;
       border-radius: 10px;
     }
+
 
     .ot-rate-table th,
     .ot-rate-table td {
@@ -300,16 +403,20 @@
       font-size: 14px;
     }
 
+
     .ot-rate-table th {
       font-weight: 800;
       background: #f5f7fa;
     }
 
+
     .ot-rate-table tr:last-child td {
       border-bottom: none;
     }
 
+
     /* Important Note */
+
     .ot-note {
       margin-top: 20px;
       padding: 16px;
@@ -321,6 +428,7 @@
       font-size: 14px;
     }
 
+
     .ot-disclaimer {
       margin-top: 20px;
       font-size: 13px;
@@ -328,10 +436,13 @@
       line-height: 1.6;
     }
 
+
     /* More Calculators */
+
     .more-calculators {
       margin-top: 35px;
     }
+
 
     .more-calculators-card {
       background: #ffffff;
@@ -340,6 +451,7 @@
       box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
+
 
     .more-calculators-card .eyebrow {
       margin: 0 0 5px;
@@ -350,16 +462,19 @@
       text-transform: uppercase;
     }
 
+
     .more-calculators-card h2 {
       margin: 0 0 20px;
       font-size: 22px;
     }
+
 
     .calculator-links {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
+
 
     .calculator-link {
       display: block;
@@ -372,20 +487,24 @@
       transition: transform 0.15s, box-shadow 0.15s;
     }
 
+
     .calculator-link:hover {
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
     }
+
 
     .calculator-link.current {
       border: 2px solid #4f7cff;
       background: #f4f7ff;
     }
 
+
     .calculator-link-icon {
       font-size: 25px;
       margin-bottom: 7px;
     }
+
 
     .calculator-link-title {
       display: block;
@@ -394,6 +513,7 @@
       margin-bottom: 4px;
     }
 
+
     .calculator-link-description {
       display: block;
       color: #777;
@@ -401,46 +521,57 @@
       line-height: 1.4;
     }
 
+
     /* Mobile */
+
     @media (max-width: 700px) {
 
       .ot-page {
         padding: 18px 14px 50px;
       }
 
+
       .ot-calculator-card {
         padding: 22px 18px;
         border-radius: 16px;
       }
 
+
       .ot-header h1 {
         font-size: 27px;
       }
+
 
       .ot-icon {
         font-size: 36px;
       }
 
+
       .ot-category-grid {
         grid-template-columns: 1fr;
       }
+
 
       .ot-result-grid {
         grid-template-columns: 1fr;
       }
 
+
       .ot-total {
         font-size: 31px;
       }
+
 
       .ot-info-card {
         padding: 22px 18px;
         border-radius: 15px;
       }
 
+
       .ot-info-card h2 {
         font-size: 20px;
       }
+
 
       .ot-rate-table th,
       .ot-rate-table td {
@@ -448,23 +579,37 @@
         font-size: 13px;
       }
 
+
       .calculator-links {
         grid-template-columns: 1fr;
       }
 
+
       .more-calculators-card {
         padding: 22px 18px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
 <main class="ot-page">
 
-  <!-- Back to Salary Calculator -->
-  <a href="index.html" class="ot-back">
+
+  <!-- =========================================
+       BACK LINK
+       ========================================= -->
+
+  <a
+    href="index.html"
+    class="ot-back"
+  >
     ← Back to Salary Calculator
   </a>
 
@@ -475,11 +620,18 @@
 
   <section class="ot-calculator-card">
 
+
     <div class="ot-header">
 
-      <div class="ot-icon">⏱️</div>
+      <div class="ot-icon">
+        ⏱️
+      </div>
 
-      <h1>Malaysia OT Calculator 2026</h1>
+
+      <h1>
+        Malaysia OT Calculator 2026
+      </h1>
+
 
       <p>
         Calculate your estimated overtime pay for normal working days,
@@ -491,7 +643,8 @@
 
     <div class="ot-input-section">
 
-      <!-- Salary -->
+
+      <!-- Monthly Salary -->
 
       <div class="ot-field">
 
@@ -543,14 +696,21 @@
 
       <div class="ot-category-grid">
 
+
         <!-- Normal Day -->
 
         <div class="ot-category">
 
           <label for="normalOT">
+
             Normal Working Day
+
             <br>
-            <small>1.5× hourly rate</small>
+
+            <small>
+              1.5× hourly rate
+            </small>
+
           </label>
 
           <input
@@ -569,9 +729,15 @@
         <div class="ot-category">
 
           <label for="restOT">
+
             Rest Day
+
             <br>
-            <small>2.0× hourly rate</small>
+
+            <small>
+              2.0× hourly rate
+            </small>
+
           </label>
 
           <input
@@ -590,9 +756,15 @@
         <div class="ot-category">
 
           <label for="holidayOT">
+
             Public Holiday
+
             <br>
-            <small>3.0× hourly rate</small>
+
+            <small>
+              3.0× hourly rate
+            </small>
+
           </label>
 
           <input
@@ -604,6 +776,7 @@
           >
 
         </div>
+
 
       </div>
 
@@ -617,6 +790,7 @@
         Calculate OT Pay
       </button>
 
+
     </div>
 
 
@@ -629,7 +803,9 @@
       id="eligibilityWarning"
     >
 
-      <strong>Important:</strong>
+      <strong>
+        Important:
+      </strong>
 
       Under the Employment Act 1955, employees whose monthly wages
       exceed RM4,000 generally are not entitled to statutory overtime,
@@ -649,6 +825,7 @@
       id="resultBox"
     >
 
+
       <div class="ot-result-header">
 
         <div class="ot-result-label">
@@ -667,34 +844,76 @@
 
       <div class="ot-result-grid">
 
-        <div class="ot-result-box">
-          <span>Ordinary Rate of Pay</span>
-          <strong id="dailyRate">RM 0.00</strong>
-        </div>
 
         <div class="ot-result-box">
-          <span>Hourly Rate of Pay</span>
-          <strong id="hourlyRate">RM 0.00</strong>
+
+          <span>
+            Ordinary Rate of Pay
+          </span>
+
+          <strong id="dailyRate">
+            RM 0.00
+          </strong>
+
         </div>
 
-        <div class="ot-result-box">
-          <span>Normal-day OT @ 1.5×</span>
-          <strong id="normalResult">RM 0.00</strong>
-        </div>
 
         <div class="ot-result-box">
-          <span>Rest-day OT @ 2.0×</span>
-          <strong id="restResult">RM 0.00</strong>
+
+          <span>
+            Hourly Rate of Pay
+          </span>
+
+          <strong id="hourlyRate">
+            RM 0.00
+          </strong>
+
         </div>
 
+
         <div class="ot-result-box">
-          <span>Public-holiday OT @ 3.0×</span>
-          <strong id="holidayResult">RM 0.00</strong>
+
+          <span>
+            Normal-day OT @ 1.5×
+          </span>
+
+          <strong id="normalResult">
+            RM 0.00
+          </strong>
+
         </div>
+
+
+        <div class="ot-result-box">
+
+          <span>
+            Rest-day OT @ 2.0×
+          </span>
+
+          <strong id="restResult">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="ot-result-box">
+
+          <span>
+            Public-holiday OT @ 3.0×
+          </span>
+
+          <strong id="holidayResult">
+            RM 0.00
+          </strong>
+
+        </div>
+
 
       </div>
 
     </div>
+
 
   </section>
 
@@ -710,7 +929,10 @@
 
     <div class="ot-info-card">
 
-      <h2>How is Malaysian overtime calculated?</h2>
+      <h2>
+        How is Malaysian overtime calculated?
+      </h2>
+
 
       <p>
         For a monthly-rated employee, the Ordinary Rate of Pay (ORP)
@@ -725,27 +947,64 @@
         <thead>
 
           <tr>
-            <th>Type of Work</th>
-            <th>OT Rate</th>
+
+            <th>
+              Type of Work
+            </th>
+
+            <th>
+              OT Rate
+            </th>
+
           </tr>
 
         </thead>
 
+
         <tbody>
 
           <tr>
-            <td>Normal Working Day</td>
-            <td><strong>1.5×</strong></td>
+
+            <td>
+              Normal Working Day
+            </td>
+
+            <td>
+              <strong>
+                1.5×
+              </strong>
+            </td>
+
           </tr>
 
-          <tr>
-            <td>Rest Day</td>
-            <td><strong>2.0×</strong></td>
-          </tr>
 
           <tr>
-            <td>Public Holiday</td>
-            <td><strong>3.0×</strong></td>
+
+            <td>
+              Rest Day
+            </td>
+
+            <td>
+              <strong>
+                2.0×
+              </strong>
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Public Holiday
+            </td>
+
+            <td>
+              <strong>
+                3.0×
+              </strong>
+            </td>
+
           </tr>
 
         </tbody>
@@ -759,7 +1018,10 @@
 
     <div class="ot-info-card">
 
-      <h2>Example calculation</h2>
+      <h2>
+        Example calculation
+      </h2>
+
 
       <p>
         Suppose your monthly salary is
@@ -768,26 +1030,36 @@
         <strong>8 hours per day</strong>.
       </p>
 
+
       <p>
         Ordinary Rate of Pay:
-        <strong>RM3,000 ÷ 26 = RM115.38</strong>
+        <strong>
+          RM3,000 ÷ 26 = RM115.38
+        </strong>
         per day.
       </p>
 
+
       <p>
         Hourly Rate:
-        <strong>RM115.38 ÷ 8 = RM14.42</strong>
+        <strong>
+          RM115.38 ÷ 8 = RM14.42
+        </strong>
         per hour.
       </p>
+
 
       <p>
         Therefore, 10 hours of normal-day OT would be approximately:
       </p>
 
+
       <p>
+
         <strong>
           RM14.42 × 1.5 × 10 = RM216.35
         </strong>
+
       </p>
 
     </div>
@@ -797,7 +1069,10 @@
 
     <div class="ot-info-card">
 
-      <h2>Who is covered?</h2>
+      <h2>
+        Who is covered?
+      </h2>
+
 
       <p>
         The Employment Act 1955 provides statutory protection to
@@ -805,12 +1080,14 @@
         of Labuan, subject to the applicable provisions.
       </p>
 
+
       <p>
         Employees earning more than RM4,000 per month generally do not
         receive the statutory overtime, rest-day and public-holiday
         payment provisions unless they fall within the applicable
         manual-worker category.
       </p>
+
 
       <p>
         Sabah and Sarawak have separate labour ordinances, so this
@@ -825,11 +1102,16 @@
 
     <div class="ot-info-card">
 
-      <h2>Important information</h2>
+      <h2>
+        Important information
+      </h2>
+
 
       <div class="ot-note">
 
-        <strong>Please note:</strong>
+        <strong>
+          Please note:
+        </strong>
 
         This calculator provides an estimate for informational purposes.
         Actual overtime payments may depend on your employment contract,
@@ -837,6 +1119,7 @@
         labour legislation.
 
       </div>
+
 
       <p class="ot-disclaimer">
 
@@ -859,9 +1142,11 @@
 
       <div class="more-calculators-card">
 
+
         <p class="eyebrow">
           MORE CALCULATORS
         </p>
+
 
         <h2>
           Malaysia calculators
@@ -871,7 +1156,7 @@
         <div class="calculator-links">
 
 
-          <!-- Salary Calculator -->
+          <!-- Salary -->
 
           <a
             href="index.html"
@@ -893,7 +1178,7 @@
           </a>
 
 
-          <!-- OT Calculator -->
+          <!-- OT -->
 
           <a
             href="ot-calculator.html"
@@ -915,12 +1200,53 @@
           </a>
 
 
-          <!-- Salary Increment -->
+          <!-- House -->
 
           <a
-            href="salary-increment.html"
+            href="house-affordability.html"
             class="calculator-link"
           >
+
+            <div class="calculator-link-icon">
+              🏠
+            </div>
+
+            <span class="calculator-link-title">
+              House Affordability
+            </span>
+
+            <span class="calculator-link-description">
+              Estimate how much house you can afford
+            </span>
+
+          </a>
+
+
+          <!-- Car -->
+
+          <a
+            href="car-affordability.html"
+            class="calculator-link"
+          >
+
+            <div class="calculator-link-icon">
+              🚗
+            </div>
+
+            <span class="calculator-link-title">
+              Car Affordability
+            </span>
+
+            <span class="calculator-link-description">
+              Estimate your affordable car price and instalment
+            </span>
+
+          </a>
+
+
+          <!-- Future: Salary Increment -->
+
+          <div class="calculator-link">
 
             <div class="calculator-link-icon">
               📈
@@ -931,63 +1257,15 @@
             </span>
 
             <span class="calculator-link-description">
-              See how a salary increase affects your income
+              Coming soon
             </span>
 
-          </a>
+          </div>
 
 
-        <!-- House Affordability -->
+          <!-- Future: Working Days -->
 
-<a
-  href="house-affordability.html"
-  class="calculator-link"
->
-
-  <div class="calculator-link-icon">
-    🏠
-  </div>
-
-  <span class="calculator-link-title">
-    House Affordability
-  </span>
-
-  <span class="calculator-link-description">
-    Estimate how much house you can afford
-  </span>
-
-</a>
-
-
-<!-- Car Affordability -->
-
-<a
-  href="car-affordability.html"
-  class="calculator-link"
->
-
-  <div class="calculator-link-icon">
-    🚗
-  </div>
-
-  <span class="calculator-link-title">
-    Car Affordability
-  </span>
-
-  <span class="calculator-link-description">
-    Estimate your affordable car price and instalment
-  </span>
-
-</a>
-
-
-          <!-- Working Days -->
-
-          <a
-            href="#"
-            class="calculator-link"
-            onclick="return false;"
-          >
+          <div class="calculator-link">
 
             <div class="calculator-link-icon">
               📅
@@ -998,10 +1276,10 @@
             </span>
 
             <span class="calculator-link-description">
-              Calculate working days and pay periods
+              Coming soon
             </span>
 
-          </a>
+          </div>
 
 
         </div>
@@ -1010,7 +1288,9 @@
 
     </section>
 
+
   </section>
+
 
 </main>
 
@@ -1022,31 +1302,38 @@
 <script>
 
 function money(value) {
+
   return "RM " + value.toFixed(2);
+
 }
 
 
 function calculateOT() {
+
 
   const salary =
     parseFloat(
       document.getElementById("salary").value
     );
 
+
   const hoursPerDay =
     parseFloat(
       document.getElementById("hoursPerDay").value
     );
+
 
   const normalOT =
     parseFloat(
       document.getElementById("normalOT").value
     ) || 0;
 
+
   const restOT =
     parseFloat(
       document.getElementById("restOT").value
     ) || 0;
+
 
   const holidayOT =
     parseFloat(
@@ -1071,6 +1358,7 @@ function calculateOT() {
     );
 
     return;
+
   }
 
 
@@ -1091,8 +1379,10 @@ function calculateOT() {
   const normalPay =
     hourlyRate * 1.5 * normalOT;
 
+
   const restPay =
     hourlyRate * 2 * restOT;
+
 
   const holidayPay =
     hourlyRate * 3 * holidayOT;
@@ -1111,17 +1401,22 @@ function calculateOT() {
   document.getElementById("dailyRate").textContent =
     money(ordinaryRate);
 
+
   document.getElementById("hourlyRate").textContent =
     money(hourlyRate);
+
 
   document.getElementById("normalResult").textContent =
     money(normalPay);
 
+
   document.getElementById("restResult").textContent =
     money(restPay);
 
+
   document.getElementById("holidayResult").textContent =
     money(holidayPay);
+
 
   document.getElementById("totalOT").textContent =
     money(total);
@@ -1153,5 +1448,7 @@ function calculateOT() {
 
 </script>
 
+
 </body>
+
 </html>
