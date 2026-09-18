@@ -1,2024 +1,1594 @@
-<!DOCTYPE html>
-
+```html
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N90MJX0CSD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  gtag('config', 'G-N90MJX0CSD');
-</script>
-  <meta charset="UTF-8">
+  <meta name="description" content="Malaysia House Affordability Calculator 2026. Estimate how much house you can afford based on your income, commitments, DSR, down payment, interest rate and loan tenure.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0f172a">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
+  <link rel="canonical" href="https://mycalculatorhub.github.io/house-affordability.html">
 
->
+  <title>Malaysia House Affordability Calculator 2026 | How Much House Can I Afford?</title>
 
-  <title>
-    Malaysia House Affordability Calculator 2026 | How Much House Can I Afford?
-  </title>
-
-<meta
-name="description"
-content="Use our Malaysia House Affordability Calculator 2026 to estimate how much house you can afford based on income, debts, DSR, down payment, interest rate and loan tenure."
-
->
-
-<meta
-name="robots"
-content="index, follow"
-
->
-
-<meta
-name="theme-color"
-content="#0f172a"
-
->
-
-  <link
-    rel="canonical"
-    href="https://mycalculatorhub.github.io/house-affordability.html"
-  >
-
-  <!-- Open Graph / Social Sharing -->
-
-<meta
-property="og:type"
-content="website"
-
->
-
-<meta
-property="og:title"
-content="Malaysia House Affordability Calculator 2026"
-
->
-
-<meta
-property="og:description"
-content="Estimate how much house you may be able to afford based on income, commitments, DSR, down payment, interest rate and loan tenure."
-
->
-
-<meta
-property="og:url"
-content="https://mycalculatorhub.github.io/house-affordability.html"
-
->
-
-<meta
-property="og:site_name"
-content="Malaysia Calculator Hub"
-
->
+  <meta property="og:title" content="Malaysia House Affordability Calculator 2026">
+  <meta property="og:description" content="Estimate how much house you can afford based on your income, monthly commitments, DSR, down payment, interest rate and loan tenure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mycalculatorhub.github.io/house-affordability.html">
 
   <link rel="stylesheet" href="style.css">
 
-  <style>
-
-    /* =========================================
-       HOUSE AFFORDABILITY PAGE
-       ========================================= */
-
-    .house-page {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 24px 20px 70px;
-    }
-
-    .house-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 22px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    /* Calculator */
-
-    .house-calculator-card {
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 32px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .house-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .house-icon {
-      font-size: 44px;
-      margin-bottom: 8px;
-    }
-
-    .house-header h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      line-height: 1.2;
-    }
-
-    .house-header p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #666;
-      line-height: 1.6;
-      font-size: 15px;
-    }
-
-    /* Fields */
-
-    .house-section-title {
-      font-size: 18px;
-      font-weight: 800;
-      margin: 28px 0 16px;
-    }
-
-    .house-two-column {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .house-field {
-      margin-bottom: 18px;
-    }
-
-    .house-field label {
-      display: block;
-      font-weight: 700;
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
-
-    .house-field input,
-    .house-field select {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 14px 15px;
-      border: 1px solid #d9dfe7;
-      border-radius: 11px;
-      font-size: 16px;
-      background: #fff;
-    }
-
-    .house-field input:focus,
-    .house-field select:focus {
-      outline: none;
-      border-color: #4f7cff;
-      box-shadow: 0 0 0 3px rgba(79,124,255,0.12);
-    }
-
-    .house-help {
-      display: block;
-      margin-top: 6px;
-      color: #777;
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    /* Calculate button */
-
-    .house-button {
-      width: 100%;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 11px;
-      font-size: 17px;
-      font-weight: 800;
-      cursor: pointer;
-      margin-top: 8px;
-      transition: transform 0.15s, opacity 0.15s;
-    }
-
-    .house-button:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
-    }
-
-    .house-button:active {
-      transform: translateY(0);
-    }
-
-    /* Results */
-
-    .house-result {
-      display: none;
-      margin-top: 28px;
-      padding: 24px;
-      border-radius: 16px;
-      background: #f6f8fb;
-      border: 1px solid #e2e7ef;
-    }
-
-    .house-result-header {
-      text-align: center;
-      margin-bottom: 22px;
-    }
-
-    .house-result-label {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #777;
-      margin-bottom: 5px;
-    }
-
-    .house-max-price {
-      font-size: 38px;
-      font-weight: 900;
-      line-height: 1.2;
-    }
-
-    .house-result-subtitle {
-      margin-top: 7px;
-      color: #666;
-      font-size: 13px;
-    }
-
-    .house-result-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .house-result-box {
-      background: #fff;
-      border: 1px solid #e4e8ef;
-      border-radius: 12px;
-      padding: 15px;
-    }
-
-    .house-result-box span {
-      display: block;
-      color: #666;
-      font-size: 13px;
-      margin-bottom: 6px;
-    }
-
-    .house-result-box strong {
-      font-size: 17px;
-    }
-
-    /* DSR status */
-
-    .house-dsr-status {
-      margin-top: 18px;
-      padding: 15px;
-      border-radius: 12px;
-      background: #fff;
-      border: 1px solid #e4e8ef;
-      text-align: center;
-      line-height: 1.5;
-      font-size: 14px;
-    }
-
-    /* Upfront Cash Estimate */
-
-    .house-upfront {
-      display: none;
-      margin-top: 22px;
-      padding: 24px;
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid #e2e7ef;
-    }
-
-    .house-upfront-header {
-      text-align: center;
-      margin-bottom: 22px;
-    }
-
-    .house-upfront-total {
-      font-size: 34px;
-      font-weight: 900;
-      line-height: 1.2;
-      margin-top: 5px;
-    }
-
-    .house-upfront .house-result-grid {
-      margin-top: 10px;
-    }
-
-    @media (max-width: 700px) {
-
-      .house-upfront {
-        padding: 20px 16px;
-      }
-
-      .house-upfront-total {
-        font-size: 29px;
-      }
-
-    }
-
-    /* Information */
-
-    .house-info {
-      margin-top: 28px;
-    }
-
-    .house-info-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 28px 30px;
-      margin-top: 20px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .house-info-card h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .house-info-card p,
-    .house-info-card li {
-      color: #555;
-      line-height: 1.7;
-      font-size: 15px;
-    }
-
-    .house-info-card ul {
-      padding-left: 22px;
-    }
-
-    .house-note {
-      margin-top: 18px;
-      padding: 16px;
-      border-radius: 12px;
-      background: #eef6ff;
-      border: 1px solid #d5e7fb;
-      line-height: 1.6;
-      color: #40556b;
-      font-size: 14px;
-    }
-
-    /* More calculators */
-
-    .more-calculators {
-      margin-top: 35px;
-    }
-
-    .more-calculators-card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 28px 30px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .more-calculators-card .eyebrow {
-      margin: 0 0 5px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: #777;
-      text-transform: uppercase;
-    }
-
-    .more-calculators-card h2 {
-      margin: 0 0 20px;
-      font-size: 22px;
-    }
-
-    .calculator-links {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .calculator-link {
-      display: block;
-      padding: 17px;
-      border-radius: 13px;
-      background: #f7f9fc;
-      border: 1px solid #e4e8ef;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .calculator-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-    }
-
-    .calculator-link.current {
-      border: 2px solid #4f7cff;
-      background: #f4f7ff;
-    }
-
-    .calculator-link-icon {
-      font-size: 25px;
-      margin-bottom: 7px;
-    }
-
-    .calculator-link-title {
-      display: block;
-      font-weight: 800;
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-
-    .calculator-link-description {
-      display: block;
-      color: #777;
-      font-size: 12px;
-      line-height: 1.4;
-    }
-
-    /* Coming Soon */
-
-    .calculator-link.coming-soon {
-      cursor: default;
-      opacity: 0.75;
-    }
-
-    .calculator-link.coming-soon:hover {
-      transform: none;
-      box-shadow: none;
-    }
-
-    .calculator-link.coming-soon .calculator-link-description {
-      color: #888;
-    }
-
-    /* Mobile */
-
-    @media (max-width: 700px) {
-
-      .house-page {
-        padding: 18px 14px 50px;
-      }
-
-      .house-calculator-card {
-        padding: 22px 18px;
-        border-radius: 16px;
-      }
-
-      .house-header h1 {
-        font-size: 27px;
-      }
-
-      .house-icon {
-        font-size: 36px;
-      }
-
-      .house-two-column {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .house-result-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .house-max-price {
-        font-size: 31px;
-      }
-
-      .house-info-card {
-        padding: 22px 18px;
-        border-radius: 15px;
-      }
-
-      .house-info-card h2 {
-        font-size: 20px;
-      }
-
-      .calculator-links {
-        grid-template-columns: 1fr;
-      }
-
-      .more-calculators-card {
-        padding: 22px 18px;
-      }
-
-    }
-
-  </style>
-
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N90MJX0CSD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N90MJX0CSD');
+  </script>
+
+  <!-- Google AdSense - add your publisher code when approved -->
+  <!--
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_CLIENT_ID"
+    crossorigin="anonymous"></script>
+  -->
 </head>
 
 <body>
 
-<main class="house-page">
+<header class="topbar">
+  <div class="nav">
 
-  <!-- Back -->
+    <a class="brand" href="index.html">
+      <span>MY</span> Calculator Hub
+    </a>
 
-  <a href="salary-calculator.html" class="house-back">
-    ← Back to Salary Calculator
-  </a>
+    <nav>
+      <a href="index.html">Calculators</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
 
-  <!-- =========================================
-       CALCULATOR
-       ========================================= -->
-
-  <section class="house-calculator-card">
-
-<div class="house-header">
-
-  <div class="house-icon">
-    🏠
-  </div>
-
-  <h1>
-    Malaysia House Affordability Calculator 2026
-  </h1>
-
-  <p>
-    Estimate how much house you may be able to afford based on
-    your income, existing commitments, down payment, interest
-    rate and loan tenure.
-  </p>
-
-</div>
-
-
-<!-- Income -->
-
-<div class="house-section-title">
-  Income
-</div>
-
-<div class="house-two-column">
-
-  <div class="house-field">
-
-    <label for="monthlyIncome">
-      Your Monthly Gross Income (RM)
-    </label>
-
-    <input
-      id="monthlyIncome"
-      type="number"
-      min="0"
-      step="100"
-      placeholder="Example: 5000"
-    >
+    <button
+      id="themeToggle"
+      class="icon-btn"
+      aria-label="Toggle dark mode"
+      type="button"
+    >☾</button>
 
   </div>
+</header>
 
 
-  <div class="house-field">
+<main id="top">
 
-    <label for="spouseIncome">
-      Spouse Monthly Gross Income (RM)
-    </label>
+  <!-- HERO -->
+  <section class="hero">
 
-    <input
-      id="spouseIncome"
-      type="number"
-      min="0"
-      step="100"
-      placeholder="Optional"
-    >
+    <div class="hero-inner">
 
-    <span class="house-help">
-      Leave at RM0 if applying based on your income only.
-    </span>
-
-  </div>
-
-</div>
-
-
-<!-- Commitments -->
-
-<div class="house-section-title">
-  Existing Monthly Commitments
-</div>
-
-<div class="house-field">
-
-  <label for="monthlyCommitments">
-    Existing Loan / Debt Commitments (RM)
-  </label>
-
-  <input
-    id="monthlyCommitments"
-    type="number"
-    min="0"
-    step="50"
-    value="0"
-    placeholder="Example: 1200"
-  >
-
-  <span class="house-help">
-    Include existing car loans, personal loans, housing loans,
-    credit commitments and other monthly debt obligations.
-  </span>
-
-</div>
-
-
-<!-- Buyer information -->
-
-<div class="house-section-title">
-  Buyer Information
-</div>
-
-<div class="house-two-column">
-
-  <div class="house-field">
-
-    <label for="buyerType">
-      Buyer Type
-    </label>
-
-    <select id="buyerType">
-
-      <option value="malaysian" selected>
-        Malaysian Citizen
-      </option>
-
-      <option value="other">
-        Other Buyer
-      </option>
-
-    </select>
-
-  </div>
-
-
-  <div class="house-field">
-
-    <label for="firstHome">
-      First Residential Home?
-    </label>
-
-    <select id="firstHome">
-
-      <option value="yes" selected>
-        Yes
-      </option>
-
-      <option value="no">
-        No
-      </option>
-
-    </select>
-
-    <span class="house-help">
-      The 2026 first-home stamp-duty exemption may apply
-      subject to the applicable conditions.
-    </span>
-
-  </div>
-
-</div>
-
-
-<!-- Loan assumptions -->
-
-<div class="house-section-title">
-  Home Loan Assumptions
-</div>
-
-<div class="house-two-column">
-
-  <div class="house-field">
-
-    <label for="dsr">
-      Target Maximum DSR
-    </label>
-
-    <select id="dsr">
-
-      <option value="30">
-        30% — Conservative
-      </option>
-
-      <option value="35">
-        35% — Conservative
-      </option>
-
-      <option value="40" selected>
-        40% — Moderate
-      </option>
-
-      <option value="45">
-        45% — Higher
-      </option>
-
-      <option value="50">
-        50% — Aggressive
-      </option>
-
-      <option value="60">
-        60% — Very Aggressive
-      </option>
-
-    </select>
-
-    <span class="house-help">
-      DSR limits vary by bank and borrower. This is an
-      assumption for estimation, not a guaranteed approval limit.
-    </span>
-
-  </div>
-
-
-  <div class="house-field">
-
-    <label for="downPayment">
-      Down Payment
-    </label>
-
-    <select id="downPayment">
-
-      <option value="5">
-        5%
-      </option>
-
-      <option value="10" selected>
-        10%
-      </option>
-
-      <option value="15">
-        15%
-      </option>
-
-      <option value="20">
-        20%
-      </option>
-
-      <option value="30">
-        30%
-      </option>
-
-    </select>
-
-  </div>
-
-</div>
-
-
-<div class="house-two-column">
-
-  <div class="house-field">
-
-    <label for="interestRate">
-      Estimated Interest Rate (%)
-    </label>
-
-    <input
-      id="interestRate"
-      type="number"
-      min="0"
-      max="20"
-      step="0.01"
-      value="4.0"
-    >
-
-    <span class="house-help">
-      Enter the rate you want to use for your estimate.
-    </span>
-
-  </div>
-
-
-  <div class="house-field">
-
-    <label for="loanTenure">
-      Loan Tenure
-    </label>
-
-    <select id="loanTenure">
-
-      <option value="10">
-        10 years
-      </option>
-
-      <option value="15">
-        15 years
-      </option>
-
-      <option value="20">
-        20 years
-      </option>
-
-      <option value="25">
-        25 years
-      </option>
-
-      <option value="30" selected>
-        30 years
-      </option>
-
-      <option value="35">
-        35 years
-      </option>
-
-    </select>
-
-  </div>
-
-</div>
-
-
-<!-- Button -->
-
-<button
-  class="house-button"
-  onclick="calculateHouseAffordability()"
->
-  Calculate House Affordability
-</button>
-
-
-<!-- =========================================
-     RESULTS
-     ========================================= -->
-
-<div
-  class="house-result"
-  id="resultBox"
->
-
-  <div class="house-result-header">
-
-    <div class="house-result-label">
-      Estimated Maximum House Price
-    </div>
-
-    <div
-      class="house-max-price"
-      id="maxHousePrice"
-    >
-      RM 0
-    </div>
-
-    <div class="house-result-subtitle">
-      Based on the assumptions you entered
-    </div>
-
-  </div>
-
-
-  <div class="house-result-grid">
-
-    <div class="house-result-box">
-
-      <span>
-        Estimated Maximum Loan
-      </span>
-
-      <strong id="maxLoan">
-        RM 0
-      </strong>
-
-    </div>
-
-
-    <div class="house-result-box">
-
-      <span>
-        Estimated Down Payment
-      </span>
-
-      <strong id="downPaymentAmount">
-        RM 0
-      </strong>
-
-    </div>
-
-
-    <div class="house-result-box">
-
-      <span>
-        Maximum Housing Payment
-      </span>
-
-      <strong id="maxHousingPayment">
-        RM 0
-      </strong>
-
-    </div>
-
-
-    <div class="house-result-box">
-
-      <span>
-        Estimated Monthly Instalment
-      </span>
-
-      <strong id="monthlyPayment">
-        RM 0
-      </strong>
-
-    </div>
-
-
-    <div class="house-result-box">
-
-      <span>
-        Total Monthly Income
-      </span>
-
-      <strong id="totalIncome">
-        RM 0
-      </strong>
-
-    </div>
-
-
-    <div class="house-result-box">
-
-      <span>
-        Existing Commitments
-      </span>
-
-      <strong id="existingCommitments">
-        RM 0
-      </strong>
-
-    </div>
-
-  </div>
-
-
-  <div
-    class="house-dsr-status"
-    id="dsrStatus"
-  >
-    DSR information
-  </div>
-
-
-  <!-- =========================================
-       UPFRONT CASH ESTIMATE
-       ========================================= -->
-
-  <div
-    class="house-upfront"
-    id="upfrontSection"
-  >
-
-    <div class="house-upfront-header">
-
-      <div class="house-result-label">
-        Estimated Upfront Cash Needed
+      <div class="pill">
+        🇲🇾 Updated for 2026
       </div>
 
-      <div
-        class="house-upfront-total"
-        id="upfrontTotal"
-      >
-        RM 0.00
-      </div>
+      <h1>
+        Malaysia House Affordability Calculator 2026
+      </h1>
 
-      <div class="house-result-subtitle">
-        Estimated amount needed before considering renovation
-        and other optional costs
-      </div>
+      <p>
+        Estimate how much house you can afford based on your income,
+        existing commitments, DSR, down payment, interest rate and loan tenure.
+      </p>
 
-    </div>
-
-
-    <div class="house-result-grid">
-
-      <div class="house-result-box">
-
-        <span>
-          Down Payment
-        </span>
-
-        <strong id="upfrontDownPayment">
-          RM 0.00
-        </strong>
-
-      </div>
-
-
-      <div class="house-result-box">
-
-        <span>
-          Estimated SPA / Transfer Legal Fee
-        </span>
-
-        <strong id="spaLegalFee">
-          RM 0.00
-        </strong>
-
-      </div>
-
-
-      <div class="house-result-box">
-
-        <span>
-          Estimated Loan Legal Fee
-        </span>
-
-        <strong id="loanLegalFee">
-          RM 0.00
-        </strong>
-
-      </div>
-
-
-      <div class="house-result-box">
-
-        <span>
-          Transfer Stamp Duty
-        </span>
-
-        <strong id="transferStampDuty">
-          RM 0.00
-        </strong>
-
-      </div>
-
-
-      <div class="house-result-box">
-
-        <span>
-          Loan Stamp Duty
-        </span>
-
-        <strong id="loanStampDuty">
-          RM 0.00
-        </strong>
-
-      </div>
-
-
-      <div class="house-result-box">
-
-        <span>
-          Estimated Other / Disbursement Buffer
-        </span>
-
-        <strong id="otherCosts">
-          RM 0.00
-        </strong>
-
-      </div>
+      <a class="hero-btn" href="#calculator">
+        Calculate my house budget ↓
+      </a>
 
     </div>
-
-
-    <div
-      class="house-note"
-      id="stampDutyNote"
-    >
-      Stamp-duty estimate will appear here.
-    </div>
-
-  </div>
-
-</div>
 
   </section>
 
-  <!-- =========================================
-       INFORMATION
-       ========================================= -->
 
-  <section class="house-info">
+  <!-- AD -->
+  <section class="ad-slot" aria-label="Advertisement">
+    <span>Advertisement</span>
 
-<div class="house-info-card">
-
-  <h2>
-    How does the House Affordability Calculator work?
-  </h2>
-
-  <p>
-    The calculator estimates your maximum affordable monthly
-    housing payment based on your selected debt-service ratio
-    (DSR).
-  </p>
-
-  <p>
-    It then uses your selected interest rate and loan tenure to
-    estimate the loan amount that could be supported by that
-    monthly payment.
-  </p>
-
-  <p>
-    Finally, the calculator adds your selected down payment
-    assumption to estimate a potential maximum property price.
-  </p>
-
-</div>
+    <!-- AdSense ad unit goes here -->
+  </section>
 
 
-<div class="house-info-card">
+  <!-- CALCULATOR -->
+  <section id="calculator" class="section">
 
-  <h2>
-    What is DSR?
-  </h2>
+    <div class="calculator-grid">
 
-  <p>
-    DSR stands for <strong>Debt Service Ratio</strong>. It compares
-    your monthly debt obligations with your monthly income.
-  </p>
+      <!-- INPUT CARD -->
+      <div class="card input-card">
 
-  <p>
-    For example, if your monthly income is RM5,000 and your total
-    monthly debt payments are RM2,000:
-  </p>
+        <div class="section-head">
 
-  <p>
-    <strong>
-      DSR = RM2,000 ÷ RM5,000 × 100 = 40%
-    </strong>
-  </p>
+          <div>
+            <div class="eyebrow">
+              HOUSE AFFORDABILITY
+            </div>
 
-  <div class="house-note">
+            <h2>
+              Your details
+            </h2>
+          </div>
 
-    <strong>Important:</strong>
-    There is no single DSR percentage that guarantees home-loan
-    approval for every Malaysian borrower. Banks may use
-    different criteria depending on the borrower, income,
-    existing debts, property and loan application.
+          <span class="year-badge">
+            2026
+          </span>
 
-  </div>
-
-</div>
-
-
-<div class="house-info-card">
-
-  <h2>
-    What should I include in existing commitments?
-  </h2>
-
-  <p>
-    Enter your existing monthly debt repayments, such as:
-  </p>
-
-  <ul>
-
-    <li>
-      Car loan
-    </li>
-
-    <li>
-      Personal loan
-    </li>
-
-    <li>
-      Existing housing loan
-    </li>
-
-    <li>
-      Other financing commitments
-    </li>
-
-    <li>
-      Relevant recurring credit obligations
-    </li>
-
-  </ul>
-
-  <p>
-    The more accurate your commitments are, the more useful the
-    affordability estimate will be.
-  </p>
-
-</div>
-
-
-<div class="house-info-card">
-
-  <h2>
-    Why does the interest rate matter?
-  </h2>
-
-  <p>
-    A higher interest rate increases the monthly repayment for
-    the same loan amount. This means your estimated affordable
-    house price can decrease when the assumed interest rate
-    increases.
-  </p>
-
-  <p>
-    Because home-loan rates can change, you can enter different
-    interest rates to see how sensitive your affordability is.
-  </p>
-
-</div>
-
-
-<div class="house-info-card">
-
-  <h2>
-    Important information
-  </h2>
-
-  <div class="house-note">
-
-    <strong>Estimate only:</strong>
-    This calculator is intended for general financial planning
-    and educational purposes. It does not represent a loan
-    approval, financial advice or a guarantee from any bank.
-
-    Actual loan eligibility may depend on your credit history,
-    income stability, age, employment status, existing
-    commitments, bank policies, property type, loan-to-value
-    requirements and other factors.
-
-  </div>
-
-</div>
-
-
-<!-- =========================================
-     MORE CALCULATORS
-     ========================================= -->
-
-<section class="more-calculators">
-
-  <div class="more-calculators-card">
-
-    <p class="eyebrow">
-      MORE CALCULATORS
-    </p>
-
-    <h2>
-      Malaysia calculators
-    </h2>
-
-
-    <div class="calculator-links">
-
-
-      <!-- Salary -->
-
-      <a
-        href="salary-calculator.html"
-        class="calculator-link"
-      >
-
-        <div class="calculator-link-icon">
-          💰
         </div>
 
-        <span class="calculator-link-title">
-          Salary Calculator
-        </span>
 
-        <span class="calculator-link-description">
-          Calculate your estimated take-home pay
-        </span>
+        <!-- MONTHLY INCOME -->
+        <label for="monthlyIncome">
+          Monthly income
+        </label>
 
-      </a>
+        <div class="input-wrap">
+          <span>RM</span>
 
-
-      <!-- OT -->
-
-      <a
-        href="ot-calculator.html"
-        class="calculator-link"
-      >
-
-        <div class="calculator-link-icon">
-          ⏱️
+          <input
+            id="monthlyIncome"
+            type="number"
+            min="0"
+            step="100"
+            value="5000"
+            inputmode="decimal"
+            autocomplete="off"
+          >
         </div>
 
-        <span class="calculator-link-title">
-          OT Calculator
-        </span>
 
-        <span class="calculator-link-description">
-          Calculate your overtime pay
-        </span>
+        <!-- SPOUSE INCOME -->
+        <label for="spouseIncome">
+          Spouse monthly income
+        </label>
 
-      </a>
+        <div class="input-wrap">
+          <span>RM</span>
 
-
-      <!-- Working Days -->
-
-      <a
-        href="working-days.html"
-        class="calculator-link"
-      >
-
-        <div class="calculator-link-icon">
-          📅
+          <input
+            id="spouseIncome"
+            type="number"
+            min="0"
+            step="100"
+            value="0"
+            inputmode="decimal"
+            autocomplete="off"
+          >
         </div>
 
-        <span class="calculator-link-title">
-          Working Days
-        </span>
 
-        <span class="calculator-link-description">
-          Calculate working days between dates
-        </span>
+        <!-- COMMITMENTS -->
+        <label for="monthlyCommitments">
+          Existing monthly commitments
+        </label>
 
-      </a>
+        <div class="input-wrap">
+          <span>RM</span>
 
-
-      <!-- Salary Increment -->
-
-      <a
-        href="salary-increment.html"
-        class="calculator-link"
-      >
-
-        <div class="calculator-link-icon">
-          📈
+          <input
+            id="monthlyCommitments"
+            type="number"
+            min="0"
+            step="100"
+            value="1000"
+            inputmode="decimal"
+            autocomplete="off"
+          >
         </div>
 
-        <span class="calculator-link-title">
-          Salary Increment
-        </span>
 
-        <span class="calculator-link-description">
-          Calculate your new salary after an increment
-        </span>
+        <!-- BUYER TYPE -->
+        <label for="buyerType">
+          Buyer type
+        </label>
 
-      </a>
+        <select id="buyerType">
+
+          <option value="malaysian" selected>
+            Malaysian
+          </option>
+
+          <option value="other">
+            Other
+          </option>
+
+        </select>
 
 
-      <!-- House -->
+        <!-- FIRST HOME -->
+        <label for="firstHome">
+          Is this your first home?
+        </label>
 
-      <a
-        href="house-affordability.html"
-        class="calculator-link current"
-      >
+        <select id="firstHome">
 
-        <div class="calculator-link-icon">
-          🏠
+          <option value="yes" selected>
+            Yes
+          </option>
+
+          <option value="no">
+            No
+          </option>
+
+        </select>
+
+
+        <!-- DSR -->
+        <label for="dsr">
+          Target debt-to-service ratio (DSR)
+        </label>
+
+        <select id="dsr">
+
+          <option value="30">
+            30% — Conservative
+          </option>
+
+          <option value="35">
+            35%
+          </option>
+
+          <option value="40" selected>
+            40%
+          </option>
+
+          <option value="45">
+            45%
+          </option>
+
+          <option value="50">
+            50%
+          </option>
+
+          <option value="60">
+            60% — Higher
+          </option>
+
+        </select>
+
+
+        <!-- DOWN PAYMENT -->
+        <label for="downPayment">
+          Down payment
+        </label>
+
+        <select id="downPayment">
+
+          <option value="5">
+            5%
+          </option>
+
+          <option value="10" selected>
+            10%
+          </option>
+
+          <option value="15">
+            15%
+          </option>
+
+          <option value="20">
+            20%
+          </option>
+
+          <option value="30">
+            30%
+          </option>
+
+        </select>
+
+
+        <!-- INTEREST -->
+        <label for="interestRate">
+          Interest rate
+        </label>
+
+        <div class="input-wrap">
+
+          <input
+            id="interestRate"
+            type="number"
+            min="0"
+            step="0.1"
+            value="4.0"
+            inputmode="decimal"
+            autocomplete="off"
+          >
+
+          <span>%</span>
+
         </div>
 
-        <span class="calculator-link-title">
-          House Affordability
-        </span>
 
-        <span class="calculator-link-description">
-          Estimate how much house you can afford
-        </span>
+        <!-- TENURE -->
+        <label for="loanTenure">
+          Loan tenure
+        </label>
 
-      </a>
+        <select id="loanTenure">
+
+          <option value="10">
+            10 years
+          </option>
+
+          <option value="15">
+            15 years
+          </option>
+
+          <option value="20">
+            20 years
+          </option>
+
+          <option value="25">
+            25 years
+          </option>
+
+          <option value="30" selected>
+            30 years
+          </option>
+
+          <option value="35">
+            35 years
+          </option>
+
+        </select>
 
 
-      <!-- Car Affordability -->
+        <button
+          id="calculateHouseBtn"
+          class="calculate-btn"
+          type="button"
+        >
+          Calculate house affordability
+        </button>
 
-      <a
-        href="car-affordability.html"
-        class="calculator-link"
-      >
+      </div>
 
-        <div class="calculator-link-icon">
-          🚗
+
+      <!-- RESULT CARD -->
+      <div class="card result-card" id="results">
+
+        <div class="result-top">
+
+          <div>
+
+            <div class="eyebrow">
+              ESTIMATED HOUSE BUDGET
+            </div>
+
+            <div
+              id="maxHousePrice"
+              class="take-home"
+            >
+              RM 0.00
+            </div>
+
+            <div class="mini-chip">
+              maximum estimated house price
+            </div>
+
+          </div>
+
         </div>
 
-        <span class="calculator-link-title">
-          Car Affordability
-        </span>
 
-        <span class="calculator-link-description">
-          Estimate your affordable car price and instalment
-        </span>
+        <!-- RESULT BREAKDOWN -->
+        <div class="breakdown">
 
-      </a>
+          <div class="breakdown-row">
+
+            <span>
+              Total monthly income
+            </span>
+
+            <strong id="resultTotalIncome">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Existing commitments
+            </span>
+
+            <strong id="resultCommitments">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Maximum total debt
+            </span>
+
+            <strong id="resultMaxDebt">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Maximum housing payment
+            </span>
+
+            <strong id="maxHousingPayment">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Estimated maximum loan
+            </span>
+
+            <strong id="maxLoan">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Estimated down payment
+            </span>
+
+            <strong id="resultDownPayment">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Estimated monthly instalment
+            </span>
+
+            <strong id="monthlyPayment">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Estimated upfront costs
+            </span>
+
+            <strong id="upfrontCosts">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Estimated cash needed upfront
+            </span>
+
+            <strong id="totalUpfront">
+              RM 0.00
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- ANNUAL / DSR GRID -->
+        <div class="annual-grid">
+
+          <div>
+
+            <span>
+              Final DSR
+            </span>
+
+            <strong id="finalDsr">
+              0%
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Loan financing
+            </span>
+
+            <strong id="financingRate">
+              90%
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <p
+          id="houseStatus"
+          class="result-note"
+        >
+          Enter your details and calculate your estimated house budget.
+        </p>
+
+
+        <!-- COST DETAILS -->
+        <details class="employer">
+
+          <summary>
+            View estimated upfront cost breakdown
+          </summary>
+
+          <div class="breakdown">
+
+            <div class="breakdown-row">
+
+              <span>
+                SPA / transfer legal fee
+              </span>
+
+              <strong id="legalFee">
+                RM 0.00
+              </strong>
+
+            </div>
+
+
+            <div class="breakdown-row">
+
+              <span>
+                Transfer stamp duty
+              </span>
+
+              <strong id="transferStampDuty">
+                RM 0.00
+              </strong>
+
+            </div>
+
+
+            <div class="breakdown-row">
+
+              <span>
+                Loan stamp duty
+              </span>
+
+              <strong id="loanStampDuty">
+                RM 0.00
+              </strong>
+
+            </div>
+
+
+            <div class="breakdown-row">
+
+              <span>
+                Other estimated costs
+              </span>
+
+              <strong id="otherCosts">
+                RM 0.00
+              </strong>
+
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <!-- SHARE -->
+        <button
+          id="shareHouseBtn"
+          class="share-btn"
+          type="button"
+        >
+          ↗ Share this calculation
+        </button>
+
+
+        <p class="disclaimer">
+          This calculator provides an estimate for planning purposes only.
+          Actual home-loan approval, financing margin, interest rate,
+          legal fees, stamp duty and other costs may vary depending on
+          your bank, property and personal circumstances.
+        </p>
+
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+
+    <div class="content-card">
+
+      <div class="eyebrow">
+        HOW IT WORKS
+      </div>
+
+      <h2>
+        How the house affordability calculator works
+      </h2>
+
+      <div class="info-grid">
+
+        <article>
+
+          <h3>
+            1. Income
+          </h3>
+
+          <p>
+            Enter your monthly income. You can also include a spouse's
+            monthly income when assessing a joint affordability scenario.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            2. Existing commitments
+          </h3>
+
+          <p>
+            Include your existing monthly debt commitments such as car loans,
+            personal loans, credit facilities and other regular repayments.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            3. Target DSR
+          </h3>
+
+          <p>
+            Your target debt-service ratio determines how much of your
+            combined income is allocated to debt repayments.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            4. Loan amount
+          </h3>
+
+          <p>
+            The calculator estimates the maximum loan supported by your
+            available monthly housing payment, interest rate and loan tenure.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            5. Down payment
+          </h3>
+
+          <p>
+            Your selected down payment determines the estimated purchase
+            price that can be supported by the calculated loan amount.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            6. Upfront costs
+          </h3>
+
+          <p>
+            The calculator also estimates selected legal fees, transfer stamp
+            duty, loan stamp duty and other initial costs so you can see the
+            potential cash required at the start of the purchase.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+
+    <div class="content-card">
+
+      <div class="eyebrow">
+        ABOUT
+      </div>
+
+      <h2>
+        Malaysia House Affordability Calculator
+      </h2>
+
+      <p>
+        The Malaysia House Affordability Calculator is designed to help you
+        estimate a practical home budget using income, existing commitments
+        and basic home-loan assumptions.
+      </p>
+
+      <p>
+        The calculator considers your target DSR, down payment, interest rate
+        and loan tenure to estimate a maximum house price and monthly
+        instalment.
+      </p>
+
+      <p>
+        It also provides an estimate of selected upfront costs associated
+        with a property purchase. Actual costs can vary depending on the
+        property, transaction structure, professional fees and applicable
+        rules at the time of purchase.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIVACY -->
+  <section class="section" id="privacy">
+
+    <div class="content-card">
+
+      <div class="eyebrow">
+        PRIVACY
+      </div>
+
+      <h2>
+        Privacy
+      </h2>
+
+      <p>
+        Last updated: 3 September 2026
+      </p>
+
+      <h3>
+        Calculator data
+      </h3>
+
+      <p>
+        The figures entered into this calculator are processed in your
+        browser to produce the calculation. We do not require you to create
+        an account to use the calculator.
+      </p>
+
+      <h3>
+        Cookies and advertising
+      </h3>
+
+      <p>
+        Malaysia Calculator Hub may use cookies and similar technologies when
+        advertising services such as Google AdSense are enabled.
+      </p>
+
+      <h3>
+        Analytics
+      </h3>
+
+      <p>
+        We may use Google Analytics to understand general website traffic and
+        improve the website.
+      </p>
+
+      <h3>
+        Contact
+      </h3>
+
+      <p>
+        If you have questions about this website or its privacy practices,
+        please use the contact information provided on the website when
+        available.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <section class="section">
+
+    <div class="content-card">
+
+      <div class="eyebrow">
+        DISCLAIMER
+      </div>
+
+      <h2>
+        House Affordability Calculator Disclaimer
+      </h2>
+
+      <p>
+        This calculator is provided for general information and personal
+        financial planning purposes only. The results are estimates and
+        should not be treated as financial advice.
+      </p>
+
+      <p>
+        Actual home-loan approval and financing terms can vary depending on
+        the bank, lender, property, applicant's income, credit profile,
+        existing commitments and other lending criteria.
+      </p>
+
+      <p>
+        Legal fees, stamp duties, financing margins and other property
+        transaction costs may also change. Always confirm the actual amounts
+        with your bank, lawyer or other relevant professional before making
+        a property purchase.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MORE CALCULATORS -->
+  <section class="section">
+
+    <div class="content-card">
+
+      <div class="eyebrow">
+        MORE CALCULATORS
+      </div>
+
+      <h2>
+        Malaysia calculators
+      </h2>
+
+      <div class="coming-grid">
+
+
+        <a
+          href="index.html"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div>
+
+            <div style="font-size:28px;">
+              🏠
+            </div>
+
+            <b>
+              Calculator Hub
+            </b>
+
+            <small>
+              Explore all Malaysia calculators
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="salary-calculator.html"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div>
+
+            <div style="font-size:28px;">
+              💰
+            </div>
+
+            <b>
+              Salary Calculator
+            </b>
+
+            <small>
+              Estimate your monthly take-home pay
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="ot-calculator.html"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div>
+
+            <div style="font-size:28px;">
+              ⏱️
+            </div>
+
+            <b>
+              OT Calculator
+            </b>
+
+            <small>
+              Calculate your overtime pay
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="car-affordability.html"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div>
+
+            <div style="font-size:28px;">
+              🚗
+            </div>
+
+            <b>
+              Car Affordability
+            </b>
+
+            <small>
+              Estimate a comfortable car budget
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="salary-increment.html"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div>
+
+            <div style="font-size:28px;">
+              📈
+            </div>
+
+            <b>
+              Salary Increment
+            </b>
+
+            <small>
+              See your salary increase
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="working-days.html"
+          style="text-decoration:none;color:inherit;"
+        >
+
+          <div>
+
+            <div style="font-size:28px;">
+              📅
+            </div>
+
+            <b>
+              Working Days
+            </b>
+
+            <small>
+              Calculate working days and pay periods
+            </small>
+
+          </div>
+
+        </a>
+
+
+      </div>
+
+    </div>
 
   </section>
 
 </main>
 
-<!-- =========================================
-     CALCULATION ENGINE
-     ========================================= -->
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-inner">
+
+    <b>
+      Malaysia Calculator Hub
+    </b>
+
+    <span>
+      Independent • Practical • Malaysia-focused
+    </span>
+
+    <span>
+      © 2026 Malaysia Calculator Hub
+    </span>
+
+  </div>
+
+</footer>
+
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-function formatMoney(value) {
+  const $ = (id) => document.getElementById(id);
 
-  return "RM " + value.toLocaleString(
-    "en-MY",
-    {
+  const money = (value) => {
+    return "RM " + Number(value || 0).toLocaleString("en-MY", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
+    });
+  };
+
+
+  /* =========================
+     DARK MODE
+     ========================= */
+
+  const themeToggle = $("themeToggle");
+
+  function updateThemeButton() {
+
+    if (document.body.classList.contains("dark")) {
+      themeToggle.textContent = "☀";
+    } else {
+      themeToggle.textContent = "☾";
+    }
+
+  }
+
+  if (localStorage.getItem("mch-theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  updateThemeButton();
+
+  themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+      "mch-theme",
+      document.body.classList.contains("dark")
+        ? "dark"
+        : "light"
+    );
+
+    updateThemeButton();
+
+  });
+
+
+  /* =========================
+     LEGAL FEE
+     ========================= */
+
+  function estimateLegalFee(amount) {
+
+    if (amount <= 0) {
+      return 0;
+    }
+
+    let fee = 0;
+
+    if (amount <= 500000) {
+
+      fee = amount * 0.0125;
+
+    } else {
+
+      fee =
+        500000 * 0.0125 +
+        (amount - 500000) * 0.01;
+
+    }
+
+    return Math.max(500, fee);
+
+  }
+
+
+  /* =========================
+     TRANSFER STAMP DUTY
+     ========================= */
+
+  function calculateTransferStampDuty(amount) {
+
+    if (amount <= 0) {
+      return 0;
+    }
+
+    let duty = 0;
+
+    if (amount <= 100000) {
+
+      duty = amount * 0.01;
+
+    } else if (amount <= 500000) {
+
+      duty =
+        100000 * 0.01 +
+        (amount - 100000) * 0.02;
+
+    } else if (amount <= 1000000) {
+
+      duty =
+        100000 * 0.01 +
+        400000 * 0.02 +
+        (amount - 500000) * 0.03;
+
+    } else {
+
+      duty =
+        100000 * 0.01 +
+        400000 * 0.02 +
+        500000 * 0.03 +
+        (amount - 1000000) * 0.04;
+
+    }
+
+    return duty;
+
+  }
+
+
+  /* =========================
+     HOUSE AFFORDABILITY
+     ========================= */
+
+  function calculateHouse() {
+
+    const income = Math.max(
+      0,
+      Number($("monthlyIncome").value) || 0
+    );
+
+    const spouseIncome = Math.max(
+      0,
+      Number($("spouseIncome").value) || 0
+    );
+
+    const commitments = Math.max(
+      0,
+      Number($("monthlyCommitments").value) || 0
+    );
+
+    const buyerType =
+      $("buyerType").value;
+
+    const firstHome =
+      $("firstHome").value;
+
+    const targetDSR =
+      Number($("dsr").value) / 100;
+
+    const downPaymentRate =
+      Number($("downPayment").value) / 100;
+
+    const interestRate =
+      Math.max(
+        0,
+        Number($("interestRate").value) || 0
+      ) / 100;
+
+    const tenure =
+      Math.max(
+        1,
+        Number($("loanTenure").value) || 1
+      );
+
+
+    /* Combined income */
+
+    const totalIncome =
+      income + spouseIncome;
+
+
+    /* Maximum total debt */
+
+    const maxTotalDebt =
+      totalIncome * targetDSR;
+
+
+    /* Maximum available housing payment */
+
+    const maxHousingPayment =
+      Math.max(
+        0,
+        maxTotalDebt - commitments
+      );
+
+
+    /*
+      Assumed 90% financing.
+      Down payment selection is used to
+      convert maximum loan into maximum
+      estimated house price.
+    */
+
+    const financingMargin =
+      1 - downPaymentRate;
+
+
+    /* Loan calculation */
+
+    const months =
+      tenure * 12;
+
+    const monthlyRate =
+      interestRate / 12;
+
+    let maxLoan = 0;
+
+    if (maxHousingPayment > 0) {
+
+      if (monthlyRate === 0) {
+
+        maxLoan =
+          maxHousingPayment * months;
+
+      } else {
+
+        maxLoan =
+          maxHousingPayment *
+          (
+            1 -
+            Math.pow(
+              1 + monthlyRate,
+              -months
+            )
+          ) /
+          monthlyRate;
+
+      }
+
+    }
+
+
+    /* Maximum house price */
+
+    let maxHousePrice = 0;
+
+    if (financingMargin > 0) {
+
+      maxHousePrice =
+        maxLoan / financingMargin;
+
+    }
+
+
+    /* Down payment */
+
+    const estimatedDownPayment =
+      maxHousePrice * downPaymentRate;
+
+
+    /* Actual estimated monthly payment */
+
+    const monthlyPayment =
+      maxHousingPayment;
+
+
+    /* Final DSR */
+
+    const finalDSR =
+      totalIncome > 0
+        ? (
+            (
+              commitments +
+              monthlyPayment
+            ) /
+            totalIncome
+          ) * 100
+        : 0;
+
+
+    /* =========================
+       UPFRONT COSTS
+       ========================= */
+
+    const legalFee =
+      estimateLegalFee(maxHousePrice);
+
+    let transferStampDuty =
+      calculateTransferStampDuty(maxHousePrice);
+
+    let loanStampDuty =
+      maxLoan * 0.005;
+
+
+    /*
+      First-home exemption assumption
+      retained from the previous calculator:
+      Malaysian first-home buyer and
+      property value <= RM500,000.
+    */
+
+    if (
+      buyerType === "malaysian" &&
+      firstHome === "yes" &&
+      maxHousePrice <= 500000
+    ) {
+
+      transferStampDuty = 0;
+      loanStampDuty = 0;
+
+    }
+
+
+    const otherCosts =
+      maxHousePrice > 0
+        ? 1500
+        : 0;
+
+
+    const upfrontCosts =
+      legalFee +
+      transferStampDuty +
+      loanStampDuty +
+      otherCosts;
+
+
+    const totalUpfront =
+      estimatedDownPayment +
+      upfrontCosts;
+
+
+    /* =========================
+       DISPLAY
+       ========================= */
+
+    $("maxHousePrice").textContent =
+      money(maxHousePrice);
+
+    $("resultTotalIncome").textContent =
+      money(totalIncome);
+
+    $("resultCommitments").textContent =
+      money(commitments);
+
+    $("resultMaxDebt").textContent =
+      money(maxTotalDebt);
+
+    $("maxHousingPayment").textContent =
+      money(maxHousingPayment);
+
+    $("maxLoan").textContent =
+      money(maxLoan);
+
+    $("resultDownPayment").textContent =
+      money(estimatedDownPayment);
+
+    $("monthlyPayment").textContent =
+      money(monthlyPayment);
+
+    $("upfrontCosts").textContent =
+      money(upfrontCosts);
+
+    $("totalUpfront").textContent =
+      money(totalUpfront);
+
+    $("finalDsr").textContent =
+      finalDSR.toFixed(1) + "%";
+
+    $("financingRate").textContent =
+      (financingMargin * 100).toFixed(0) + "%";
+
+
+    $("legalFee").textContent =
+      money(legalFee);
+
+    $("transferStampDuty").textContent =
+      money(transferStampDuty);
+
+    $("loanStampDuty").textContent =
+      money(loanStampDuty);
+
+    $("otherCosts").textContent =
+      money(otherCosts);
+
+
+    /* =========================
+       STATUS
+       ========================= */
+
+    let statusText = "";
+
+    if (totalIncome <= 0) {
+
+      statusText =
+        "Enter your monthly income to estimate your house affordability.";
+
+    } else if (maxHousingPayment <= 0) {
+
+      statusText =
+        "Based on the information entered, there is no remaining monthly debt capacity for a housing payment.";
+
+    } else if (finalDSR <= 35) {
+
+      statusText =
+        "Your estimated housing payment results in a DSR of " +
+        finalDSR.toFixed(1) +
+        "%. This is within the conservative range used by this calculator.";
+
+    } else if (finalDSR <= 45) {
+
+      statusText =
+        "Your estimated housing payment results in a DSR of " +
+        finalDSR.toFixed(1) +
+        "%. Consider your other living expenses, savings and financial goals before committing.";
+
+    } else {
+
+      statusText =
+        "Your estimated housing payment results in a DSR of " +
+        finalDSR.toFixed(1) +
+        "%. A lower-priced property, larger down payment or longer tenure may reduce the monthly burden.";
+
+    }
+
+
+    $("houseStatus").textContent =
+      statusText;
+
+  }
+
+
+  /* =========================
+     CALCULATE BUTTON
+     ========================= */
+
+  $("calculateHouseBtn").addEventListener(
+    "click",
+    calculateHouse
+  );
+
+
+  /* =========================
+     AUTO UPDATE
+     ========================= */
+
+  [
+    "monthlyIncome",
+    "spouseIncome",
+    "monthlyCommitments",
+    "buyerType",
+    "firstHome",
+    "dsr",
+    "downPayment",
+    "interestRate",
+    "loanTenure"
+  ].forEach(function (id) {
+
+    $(id).addEventListener(
+      "input",
+      calculateHouse
+    );
+
+    $(id).addEventListener(
+      "change",
+      calculateHouse
+    );
+
+  });
+
+
+  /* =========================
+     SHARE
+     ========================= */
+
+  $("shareHouseBtn").addEventListener(
+    "click",
+    async function () {
+
+      const text =
+        "Malaysia House Affordability Calculator 2026\n" +
+        "Estimated maximum house price: " +
+        $("maxHousePrice").textContent +
+        "\n" +
+        "Estimated monthly payment: " +
+        $("monthlyPayment").textContent +
+        "\n" +
+        "Estimated upfront cash: " +
+        $("totalUpfront").textContent +
+        "\n" +
+        "DSR: " +
+        $("finalDsr").textContent +
+        "\n" +
+        location.href.split("#")[0];
+
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+        $("shareHouseBtn").textContent =
+          "✓ Calculation copied";
+
+        setTimeout(function () {
+
+          $("shareHouseBtn").textContent =
+            "↗ Share this calculation";
+
+        }, 1800);
+
+      } catch (error) {
+
+        prompt(
+          "Copy this calculation:",
+          text
+        );
+
+      }
+
     }
   );
 
-}
 
+  /* =========================
+     INITIAL CALCULATION
+     ========================= */
 
-/* =========================================
-   LEGAL FEE ESTIMATE
-   Standard SRO 2023 scale
-   ========================================= */
+  calculateHouse();
 
-function estimateLegalFee(amount) {
-
-  if (amount <= 0) {
-    return 0;
-  }
-
-  let fee = 0;
-
-  if (amount <= 500000) {
-
-    fee = amount * 0.0125;
-
-  } else if (amount <= 7500000) {
-
-    fee =
-      500000 * 0.0125 +
-      (amount - 500000) * 0.01;
-
-  } else {
-
-    fee =
-      500000 * 0.0125 +
-      7000000 * 0.01 +
-      (amount - 7500000) * 0.01;
-
-  }
-
-  return Math.max(fee, 500);
-
-}
-
-
-/* =========================================
-   PROPERTY TRANSFER STAMP DUTY
-   Malaysian citizen / PR style tiered estimate
-   ========================================= */
-
-function calculateTransferStampDuty(propertyValue) {
-
-  let duty = 0;
-
-  if (propertyValue <= 100000) {
-
-    duty = propertyValue * 0.01;
-
-  } else if (propertyValue <= 500000) {
-
-    duty =
-      100000 * 0.01 +
-      (propertyValue - 100000) * 0.02;
-
-  } else if (propertyValue <= 1000000) {
-
-    duty =
-      100000 * 0.01 +
-      400000 * 0.02 +
-      (propertyValue - 500000) * 0.03;
-
-  } else {
-
-    duty =
-      100000 * 0.01 +
-      400000 * 0.02 +
-      500000 * 0.03 +
-      (propertyValue - 1000000) * 0.04;
-
-  }
-
-  return duty;
-
-}
-
-
-/* =========================================
-   LOAN STAMP DUTY
-   ========================================= */
-
-function calculateLoanStampDuty(loanAmount) {
-
-  return loanAmount * 0.005;
-
-}
-
-
-/* =========================================
-   MAIN CALCULATOR
-   ========================================= */
-
-function calculateHouseAffordability() {
-
-  /* =========================================
-     GET INPUTS
-     ========================================= */
-
-  const income =
-    parseFloat(
-      document.getElementById("monthlyIncome").value
-    ) || 0;
-
-
-  const spouseIncome =
-    parseFloat(
-      document.getElementById("spouseIncome").value
-    ) || 0;
-
-
-  const commitments =
-    parseFloat(
-      document.getElementById("monthlyCommitments").value
-    ) || 0;
-
-
-  const dsr =
-    parseFloat(
-      document.getElementById("dsr").value
-    ) / 100;
-
-
-  const downPaymentPercent =
-    parseFloat(
-      document.getElementById("downPayment").value
-    ) / 100;
-
-
-  const annualInterestRate =
-    parseFloat(
-      document.getElementById("interestRate").value
-    );
-
-
-  const tenureYears =
-    parseInt(
-      document.getElementById("loanTenure").value
-    );
-
-
-  const buyerType =
-    document.getElementById("buyerType").value;
-
-
-  const firstHome =
-    document.getElementById("firstHome").value;
-
-
-  /* =========================================
-     VALIDATION
-     ========================================= */
-
-  if (income <= 0) {
-
-    alert(
-      "Please enter your monthly gross income."
-    );
-
-    return;
-
-  }
-
-
-  if (
-    annualInterestRate < 0 ||
-    isNaN(annualInterestRate)
-  ) {
-
-    alert(
-      "Please enter a valid interest rate."
-    );
-
-    return;
-
-  }
-
-
-  if (commitments < 0) {
-
-    alert(
-      "Existing commitments cannot be negative."
-    );
-
-    return;
-
-  }
-
-
-  /* =========================================
-     TOTAL INCOME
-     ========================================= */
-
-  const totalIncome =
-    income + spouseIncome;
-
-
-  /* =========================================
-     MAXIMUM TOTAL DEBT
-     ========================================= */
-
-  const maximumTotalDebt =
-    totalIncome * dsr;
-
-
-  /* =========================================
-     MAXIMUM HOUSING PAYMENT
-     ========================================= */
-
-  const maximumHousingPayment =
-    Math.max(
-      0,
-      maximumTotalDebt - commitments
-    );
-
-
-  /* =========================================
-     LOAN CALCULATION
-     ========================================= */
-
-  const monthlyInterestRate =
-    annualInterestRate / 100 / 12;
-
-
-  const numberOfPayments =
-    tenureYears * 12;
-
-
-  let maximumLoan = 0;
-
-
-  if (maximumHousingPayment > 0) {
-
-    if (monthlyInterestRate === 0) {
-
-      maximumLoan =
-        maximumHousingPayment *
-        numberOfPayments;
-
-    } else {
-
-      maximumLoan =
-        maximumHousingPayment *
-        (
-          1 -
-          Math.pow(
-            1 + monthlyInterestRate,
-            -numberOfPayments
-          )
-        ) /
-        monthlyInterestRate;
-
-    }
-
-  }
-
-
-  /* =========================================
-     HOUSE PRICE
-     ========================================= */
-
-  let maximumHousePrice = 0;
-
-
-  if (maximumLoan > 0) {
-
-    maximumHousePrice =
-      maximumLoan /
-      (1 - downPaymentPercent);
-
-  }
-
-
-  /* =========================================
-     DOWN PAYMENT
-     ========================================= */
-
-  const downPaymentAmount =
-    maximumHousePrice *
-    downPaymentPercent;
-
-
-  /* =========================================
-     MONTHLY PAYMENT
-     ========================================= */
-
-  let monthlyPayment = 0;
-
-
-  if (maximumLoan > 0) {
-
-    if (monthlyInterestRate === 0) {
-
-      monthlyPayment =
-        maximumLoan /
-        numberOfPayments;
-
-    } else {
-
-      monthlyPayment =
-        maximumLoan *
-        (
-          monthlyInterestRate *
-          Math.pow(
-            1 + monthlyInterestRate,
-            numberOfPayments
-          )
-        ) /
-        (
-          Math.pow(
-            1 + monthlyInterestRate,
-            numberOfPayments
-          ) - 1
-        );
-
-    }
-
-  }
-
-
-  /* =========================================
-     DISPLAY MAIN RESULTS
-     ========================================= */
-
-  document.getElementById(
-    "maxHousePrice"
-  ).textContent =
-    formatMoney(maximumHousePrice);
-
-
-  document.getElementById(
-    "maxLoan"
-  ).textContent =
-    formatMoney(maximumLoan);
-
-
-  document.getElementById(
-    "downPaymentAmount"
-  ).textContent =
-    formatMoney(downPaymentAmount);
-
-
-  document.getElementById(
-    "maxHousingPayment"
-  ).textContent =
-    formatMoney(maximumHousingPayment);
-
-
-  document.getElementById(
-    "monthlyPayment"
-  ).textContent =
-    formatMoney(monthlyPayment);
-
-
-  document.getElementById(
-    "totalIncome"
-  ).textContent =
-    formatMoney(totalIncome);
-
-
-  document.getElementById(
-    "existingCommitments"
-  ).textContent =
-    formatMoney(commitments);
-
-
-  /* =========================================
-     DSR STATUS
-     ========================================= */
-
-  const finalDSR =
-    totalIncome > 0
-      ? (
-          (commitments + monthlyPayment) /
-          totalIncome
-        ) * 100
-      : 0;
-
-
-  let statusText;
-
-
-  if (maximumHousingPayment <= 0) {
-
-    statusText =
-      "⚠️ Based on the assumptions entered, there is currently no estimated monthly capacity available for an additional housing loan.";
-
-  } else {
-
-    statusText =
-      "Estimated DSR after the new home loan: " +
-      finalDSR.toFixed(1) +
-      "%.";
-
-
-    if (finalDSR <= 40) {
-
-      statusText +=
-        " This falls within the target DSR used for this calculation.";
-
-    } else if (finalDSR <= 50) {
-
-      statusText +=
-        " This is a relatively high DSR. Actual bank assessment may differ.";
-
-    } else {
-
-      statusText +=
-        " This is a high DSR and may make loan approval more difficult.";
-
-    }
-
-  }
-
-
-  document.getElementById(
-    "dsrStatus"
-  ).textContent =
-    statusText;
-
-
-  /* =========================================
-     UPFRONT COST CALCULATION
-     ========================================= */
-
-  const spaLegalFee =
-    estimateLegalFee(maximumHousePrice);
-
-
-  const loanLegalFee =
-    estimateLegalFee(maximumLoan);
-
-
-  let transferStampDuty =
-    calculateTransferStampDuty(
-      maximumHousePrice
-    );
-
-
-  let loanStampDuty =
-    calculateLoanStampDuty(
-      maximumLoan
-    );
-
-
-  /* =========================================
-     FIRST HOME STAMP DUTY EXEMPTION
-     ========================================= */
-
-  let exemptionApplied = false;
-
-
-  if (
-    buyerType === "malaysian" &&
-    firstHome === "yes" &&
-    maximumHousePrice <= 500000
-  ) {
-
-    transferStampDuty = 0;
-    loanStampDuty = 0;
-
-    exemptionApplied = true;
-
-  }
-
-
-  /* =========================================
-     OTHER COST BUFFER
-     =========================================
-
-     This is intentionally conservative and clearly
-     labelled as an estimate for miscellaneous
-     disbursements / searches / registration-type costs.
-
-  */
-
-  let otherCosts = 1500;
-
-
-  if (maximumHousePrice <= 0) {
-
-    otherCosts = 0;
-
-  }
-
-
-  /* =========================================
-     TOTAL UPFRONT CASH
-     ========================================= */
-
-  const upfrontTotal =
-    downPaymentAmount +
-    spaLegalFee +
-    loanLegalFee +
-    transferStampDuty +
-    loanStampDuty +
-    otherCosts;
-
-
-  /* =========================================
-     DISPLAY UPFRONT RESULTS
-     ========================================= */
-
-  document.getElementById(
-    "upfrontDownPayment"
-  ).textContent =
-    formatMoney(downPaymentAmount);
-
-
-  document.getElementById(
-    "spaLegalFee"
-  ).textContent =
-    formatMoney(spaLegalFee);
-
-
-  document.getElementById(
-    "loanLegalFee"
-  ).textContent =
-    formatMoney(loanLegalFee);
-
-
-  document.getElementById(
-    "transferStampDuty"
-  ).textContent =
-    formatMoney(transferStampDuty);
-
-
-  document.getElementById(
-    "loanStampDuty"
-  ).textContent =
-    formatMoney(loanStampDuty);
-
-
-  document.getElementById(
-    "otherCosts"
-  ).textContent =
-    formatMoney(otherCosts);
-
-
-  document.getElementById(
-    "upfrontTotal"
-  ).textContent =
-    formatMoney(upfrontTotal);
-
-
-  /* =========================================
-     STAMP DUTY MESSAGE
-     ========================================= */
-
-  let stampNote = "";
-
-
-  if (exemptionApplied) {
-
-    stampNote =
-      "🎉 Estimated transfer and loan stamp duty: RM0.00. " +
-      "The calculator has applied the 2026–2027 first residential home " +
-      "stamp-duty exemption because the selected buyer is a Malaysian " +
-      "citizen, the property is marked as a first home, and the estimated " +
-      "property price is RM500,000 or below. Eligibility conditions apply.";
-
-  } else if (buyerType === "other") {
-
-    stampNote =
-      "⚠️ This estimate does not apply the Malaysian first-home stamp-duty " +
-      "exemption. Stamp-duty treatment for non-Malaysian buyers can differ " +
-      "and may be substantially higher.";
-
-  } else {
-
-    stampNote =
-      "Stamp-duty figures are estimates based on the applicable property " +
-      "transfer and loan stamp-duty assumptions. Exemptions, remissions, " +
-      "property valuation and transaction details can affect the actual amount.";
-
-  }
-
-
-  document.getElementById(
-    "stampDutyNote"
-  ).textContent =
-    stampNote;
-
-
-  /* =========================================
-     SHOW RESULTS
-     ========================================= */
-
-  document.getElementById(
-    "resultBox"
-  ).style.display =
-    "block";
-
-
-  document.getElementById(
-    "upfrontSection"
-  ).style.display =
-    "block";
-
-}
-
+});
 </script>
 
 </body>
 </html>
+```
