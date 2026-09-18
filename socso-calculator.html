@@ -3,2390 +3,1336 @@
 <head>
   <meta charset="utf-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N90MJX0CSD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag(){
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-N90MJX0CSD');
   </script>
 
-  <meta
-    name="description"
-    content="Malaysia SOCSO Calculator 2026. Calculate PERKESO employee and employer contributions, including LINDUNG 24 JAM with opt-in and opt-out options."
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Malaysia SOCSO Calculator 2026. Estimate employee and employer SOCSO contributions, including optional LINDUNG 24 JAM coverage.">
   <meta name="robots" content="index, follow">
-
   <meta name="theme-color" content="#0f172a">
 
-  <link
-    rel="canonical"
-    href="https://mycalculatorhub.github.io/socso-calculator.html"
-  >
+  <link rel="canonical" href="https://mycalculatorhub.github.io/socso-calculator.html">
 
-  <meta
-    property="og:title"
-    content="Malaysia SOCSO Calculator 2026 | PERKESO"
-  >
+  <title>Malaysia SOCSO Calculator 2026 | PERKESO Contribution</title>
 
-  <meta
-    property="og:description"
-    content="Calculate Malaysia SOCSO and PERKESO contributions, including LINDUNG 24 JAM."
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:url"
-    content="https://mycalculatorhub.github.io/socso-calculator.html"
-  >
-
-  <meta
-    property="og:site_name"
-    content="MY Calculator Hub"
-  >
-
-  <title>
-    Malaysia SOCSO Calculator 2026 | PERKESO
-  </title>
+  <meta property="og:title" content="Malaysia SOCSO Calculator 2026">
+  <meta property="og:description" content="Calculate Malaysia SOCSO and LINDUNG 24 JAM contributions for employees and employers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mycalculatorhub.github.io/socso-calculator.html">
 
   <link rel="stylesheet" href="style.css">
 
   <!-- Google AdSense
   <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_CLIENT_ID"
     crossorigin="anonymous"></script>
   -->
-
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-       ========================= -->
+<header class="topbar">
+  <div class="nav">
 
-  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span>MY</span> Calculator Hub
+    </a>
 
-    <div class="nav">
+    <nav>
+      <a href="index.html">Calculators</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
 
-      <a class="brand" href="index.html">
-        <span>MY</span> Calculator Hub
+    <button id="themeToggle"
+            class="icon-btn"
+            aria-label="Toggle dark mode">
+      ☾
+    </button>
+
+  </div>
+</header>
+
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="pill">
+        🇲🇾 Updated for 2026
+      </div>
+
+      <h1>Malaysia SOCSO Calculator 2026</h1>
+
+      <p>
+        Estimate your monthly SOCSO (PERKESO) contribution,
+        including LINDUNG 24 JAM where applicable.
+      </p>
+
+      <a class="hero-btn" href="#calculator">
+        Calculate SOCSO ↓
       </a>
 
-      <nav>
-        <a href="index.html">Calculators</a>
-        <a href="#how">How it works</a>
-        <a href="#about">About</a>
-        <a href="#privacy">Privacy</a>
-      </nav>
+    </div>
+  </section>
 
-      <button
-        id="themeToggle"
-        class="icon-btn"
-        aria-label="Toggle dark mode"
-        type="button">
-        ☾
-      </button>
+
+  <!-- AD -->
+  <section class="ad-slot" aria-label="Advertisement">
+    <span>Advertisement</span>
+
+    <!-- AdSense unit goes here -->
+  </section>
+
+
+  <!-- CALCULATOR -->
+  <section id="calculator" class="section">
+
+    <div class="calculator-grid">
+
+      <!-- INPUT CARD -->
+      <div class="card input-card">
+
+        <div class="section-head">
+
+          <div>
+            <div class="eyebrow">SOCSO CALCULATOR</div>
+            <h2>Enter your details</h2>
+          </div>
+
+          <div class="year-badge">2026</div>
+
+        </div>
+
+
+        <!-- Salary -->
+        <div class="field">
+
+          <label for="monthlySalary">
+            Monthly salary / wages
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              id="monthlySalary"
+              type="number"
+              min="0"
+              step="0.01"
+              value="3250"
+              inputmode="decimal"
+            >
+          </div>
+
+          <small>
+            Contributions are subject to the RM6,000 monthly wage ceiling.
+          </small>
+
+        </div>
+
+
+        <!-- Employee Type -->
+        <div class="field">
+
+          <label for="employeeType">
+            Employee type
+          </label>
+
+          <select id="employeeType">
+
+            <option value="local">
+              Malaysian / Permanent Resident
+            </option>
+
+            <option value="foreign">
+              Foreign worker
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- Category -->
+        <div class="field" id="categoryField">
+
+          <label for="socsoCategory">
+            SOCSO contribution category
+          </label>
+
+          <select id="socsoCategory">
+
+            <option value="first">
+              First Category
+            </option>
+
+            <option value="second">
+              Second Category
+            </option>
+
+          </select>
+
+          <small>
+            First Category covers invalidity and employment injury.
+            Second Category covers employment injury.
+          </small>
+
+        </div>
+
+
+        <!-- LINDUNG -->
+        <div class="field" id="lindungField">
+
+          <label for="lindungStatus">
+            LINDUNG 24 JAM
+          </label>
+
+          <select id="lindungStatus">
+
+            <option value="out">
+              Opted out
+            </option>
+
+            <option value="in">
+              Opted in
+            </option>
+
+          </select>
+
+          <small id="lindungHelp">
+            For local employees, LINDUNG 24 JAM is voluntary.
+            Contributions are fully borne by the employee.
+          </small>
+
+        </div>
+
+
+        <button
+          id="calculateBtn"
+          class="calculate-btn"
+          type="button">
+          Calculate SOCSO
+        </button>
+
+      </div>
+
+
+      <!-- RESULT CARD -->
+      <div class="card result-card" id="results">
+
+        <div class="result-top">
+
+          <div>
+            <div class="eyebrow">
+              ESTIMATED CONTRIBUTION
+            </div>
+
+            <div class="take-home" id="employeeTotal">
+              RM 16.25
+            </div>
+          </div>
+
+          <div class="mini-chip">
+            per month
+          </div>
+
+        </div>
+
+
+        <div class="breakdown">
+
+          <div class="breakdown-row">
+            <span>Employee SOCSO</span>
+            <strong id="employeeSocso">RM 16.25</strong>
+          </div>
+
+          <div class="breakdown-row">
+            <span>LINDUNG 24 JAM</span>
+            <strong id="lindungContribution">RM 0.00</strong>
+          </div>
+
+          <div class="breakdown-row">
+            <span>Employee total</span>
+            <strong id="employeeContribution">RM 16.25</strong>
+          </div>
+
+          <div class="breakdown-row">
+            <span>Employer contribution</span>
+            <strong id="employerContribution">RM 56.85</strong>
+          </div>
+
+          <div class="breakdown-row">
+            <span>Total contribution</span>
+            <strong id="totalContribution">RM 73.10</strong>
+          </div>
+
+        </div>
+
+
+        <div class="annual-grid">
+
+          <div>
+            <span>Employee / year</span>
+            <strong id="annualEmployee">
+              RM 195.00
+            </strong>
+          </div>
+
+          <div>
+            <span>Employer / year</span>
+            <strong id="annualEmployer">
+              RM 682.20
+            </strong>
+          </div>
+
+          <div>
+            <span>Total / year</span>
+            <strong id="annualTotal">
+              RM 877.20
+            </strong>
+          </div>
+
+        </div>
+
+
+        <p class="result-note" id="resultNote">
+          LINDUNG 24 JAM is not included because the employee has opted out.
+        </p>
+
+
+        <details class="employer">
+
+          <summary>
+            Contribution details
+          </summary>
+
+          <div class="details-content">
+
+            <div class="breakdown-row">
+              <span>Employer invalidity</span>
+              <strong id="employerInvalidity">RM 16.25</strong>
+            </div>
+
+            <div class="breakdown-row">
+              <span>Employer employment injury</span>
+              <strong id="employerEmploymentInjury">RM 40.60</strong>
+            </div>
+
+            <div class="breakdown-row">
+              <span>Employee invalidity</span>
+              <strong id="employeeInvalidity">RM 16.25</strong>
+            </div>
+
+            <div class="breakdown-row">
+              <span>Employee non-employment injury</span>
+              <strong id="employeeNonEmployment">
+                RM 0.00
+              </strong>
+            </div>
+
+          </div>
+
+        </details>
+
+
+        <button
+          id="shareBtn"
+          class="share-btn"
+          type="button">
+          Share calculation
+        </button>
+
+
+        <p class="disclaimer">
+          This calculator provides an estimate based on the PERKESO
+          statutory contribution schedules. Actual payroll deductions
+          may depend on the employee's registered status and applicable
+          contribution rules.
+        </p>
+
+      </div>
 
     </div>
 
-  </header>
+  </section>
 
 
-  <!-- =========================
-       MAIN
-       ========================= -->
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
 
-  <main id="top">
+    <div class="content-card">
+
+      <div class="eyebrow">HOW IT WORKS</div>
+
+      <h2>How SOCSO contributions are calculated</h2>
+
+      <div class="info-grid">
+
+        <article>
+          <div class="info-icon">💰</div>
+          <h3>1. Enter your wages</h3>
+          <p>
+            Enter your monthly wages. PERKESO contributions are subject
+            to the RM6,000 monthly wage ceiling.
+          </p>
+        </article>
+
+        <article>
+          <div class="info-icon">🇲🇾</div>
+          <h3>2. Select employee type</h3>
+          <p>
+            Local employees and foreign workers have different
+            contribution arrangements.
+          </p>
+        </article>
+
+        <article>
+          <div class="info-icon">📋</div>
+          <h3>3. Select category</h3>
+          <p>
+            The First Category includes invalidity and employment injury
+            protection. The Second Category covers employment injury.
+          </p>
+        </article>
+
+        <article>
+          <div class="info-icon">🛡️</div>
+          <h3>4. LINDUNG 24 JAM</h3>
+          <p>
+            Local employees can choose whether to participate.
+            The contribution is fully borne by the employee.
+          </p>
+        </article>
+
+        <article>
+          <div class="info-icon">📊</div>
+          <h3>5. Statutory wage bands</h3>
+          <p>
+            The calculator uses the statutory wage-band contribution
+            amounts instead of a simple percentage approximation.
+          </p>
+        </article>
+
+        <article>
+          <div class="info-icon">🧮</div>
+          <h3>6. View the result</h3>
+          <p>
+            The calculator shows employee contribution, employer
+            contribution and the combined monthly and annual totals.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         HERO
-         ========================= -->
+  <!-- LINDUNG -->
+  <section class="section">
 
-    <section class="hero">
+    <div class="content-card">
 
-      <div class="hero-inner">
+      <div class="eyebrow">LINDUNG 24 JAM</div>
 
-        <div class="pill">
-          🇲🇾 Updated for 2026
-        </div>
+      <h2>Optional protection for local employees</h2>
 
-        <h1>
-          Malaysia SOCSO Calculator 2026
-        </h1>
+      <p>
+        LINDUNG 24 JAM provides protection for non-employment injuries,
+        including qualifying accidents outside working hours.
+      </p>
 
-        <p>
-          Calculate your employee and employer SOCSO
-          (PERKESO) contributions, including LINDUNG 24 JAM.
-        </p>
+      <p>
+        For local employees, participation is voluntary and the
+        contribution is fully paid by the employee. The Phase 1
+        contribution rate is 0.75%, subject to the statutory wage ceiling.
+      </p>
 
-        <a
-          class="hero-btn"
-          href="#calculator">
-          Calculate my SOCSO ↓
+      <p>
+        Foreign workers are subject to mandatory non-employment injury
+        protection under the applicable PERKESO rules.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXAMPLES -->
+  <section class="section">
+
+    <div class="content-card">
+
+      <div class="eyebrow">EXAMPLES</div>
+
+      <h2>Example calculations</h2>
+
+      <div class="info-grid">
+
+        <article>
+          <h3>RM3,250 — Opted out</h3>
+          <p>
+            Employee SOCSO: RM16.25<br>
+            LINDUNG 24 JAM: RM0.00<br>
+            Employer: RM56.85<br>
+            Total: RM73.10
+          </p>
+        </article>
+
+        <article>
+          <h3>RM3,250 — Opted in</h3>
+          <p>
+            Employee SOCSO: RM16.25<br>
+            LINDUNG 24 JAM: RM24.35<br>
+            Employer: RM56.85<br>
+            Total: RM97.45
+          </p>
+        </article>
+
+        <article>
+          <h3>RM6,000 — Opted in</h3>
+          <p>
+            Employee SOCSO: RM29.75<br>
+            LINDUNG 24 JAM: RM44.65<br>
+            Employer: RM104.15<br>
+            Total: RM178.55
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+
+    <div class="content-card">
+
+      <div class="eyebrow">ABOUT</div>
+
+      <h2>Malaysia Calculator Hub</h2>
+
+      <p>
+        Malaysia Calculator Hub provides practical calculators designed
+        around common Malaysian employment, salary, finance, housing,
+        engineering and everyday calculations.
+      </p>
+
+      <p>
+        This SOCSO calculator is intended as a convenient estimation
+        tool and should not replace official PERKESO payroll guidance.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIVACY -->
+  <section class="section" id="privacy">
+
+    <div class="content-card">
+
+      <div class="eyebrow">PRIVACY</div>
+
+      <h2>Privacy</h2>
+
+      <p>
+        Calculator inputs are processed in your browser and are not
+        intentionally sent to Malaysia Calculator Hub's servers.
+      </p>
+
+      <p>
+        The website may use Google Analytics and, when enabled,
+        Google AdSense. These services may use cookies or similar
+        technologies according to their respective policies.
+      </p>
+
+      <p>
+        Last updated: 18 September 2026
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <section class="section">
+
+    <div class="content-card">
+
+      <div class="eyebrow">DISCLAIMER</div>
+
+      <h2>Calculator Disclaimer</h2>
+
+      <p>
+        This calculator is provided for informational and estimation
+        purposes only. While reasonable care has been taken to use
+        current statutory contribution schedules, payroll systems may
+        apply additional rules or adjustments.
+      </p>
+
+      <p>
+        For official contribution requirements, employers and employees
+        should refer to PERKESO.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MORE CALCULATORS -->
+  <section class="section">
+
+    <div class="content-card">
+
+      <div class="eyebrow">MORE CALCULATORS</div>
+
+      <h2>Malaysia calculators</h2>
+
+      <div class="coming-grid">
+
+        <a href="salary-calculator.html"
+           style="text-decoration:none;color:inherit;">
+          <div>
+            <span>💵</span>
+            <b>Salary Calculator</b>
+            <small>Take-home pay</small>
+          </div>
+        </a>
+
+        <a href="epf-calculator.html"
+           style="text-decoration:none;color:inherit;">
+          <div>
+            <span>🏦</span>
+            <b>EPF Calculator</b>
+            <small>Employee & employer EPF</small>
+          </div>
+        </a>
+
+        <a href="ot-calculator.html"
+           style="text-decoration:none;color:inherit;">
+          <div>
+            <span>⏱️</span>
+            <b>OT Calculator</b>
+            <small>Overtime pay</small>
+          </div>
+        </a>
+
+        <a href="salary-increment.html"
+           style="text-decoration:none;color:inherit;">
+          <div>
+            <span>📈</span>
+            <b>Salary Increment</b>
+            <small>Calculate your new salary</small>
+          </div>
+        </a>
+
+        <a href="house-affordability.html"
+           style="text-decoration:none;color:inherit;">
+          <div>
+            <span>🏠</span>
+            <b>House Affordability</b>
+            <small>Estimate affordable home price</small>
+          </div>
+        </a>
+
+        <a href="car-affordability.html"
+           style="text-decoration:none;color:inherit;">
+          <div>
+            <span>🚗</span>
+            <b>Car Affordability</b>
+            <small>Estimate affordable car price</small>
+          </div>
         </a>
 
       </div>
 
-    </section>
-
-
-    <!-- =========================
-         ADVERTISEMENT
-         ========================= -->
-
-    <section
-      class="ad-slot"
-      aria-label="Advertisement">
-
-      <span>
-        Advertisement
-      </span>
-
-      <!-- AdSense unit goes here -->
-
-    </section>
-
-
-    <!-- =========================
-         CALCULATOR
-         ========================= -->
-
-    <section
-      id="calculator"
-      class="section">
-
-      <div class="calculator-grid">
-
-
-        <!-- =====================
-             INPUT CARD
-             ===================== -->
-
-        <div class="card input-card">
-
-          <div class="section-head">
-
-            <div>
-
-              <div class="eyebrow">
-                SOCSO / PERKESO
-              </div>
-
-              <h2>
-                Enter your details
-              </h2>
-
-            </div>
-
-            <span class="year-badge">
-              2026
-            </span>
-
-          </div>
-
-
-          <!-- Salary -->
-
-          <div class="field-group">
-
-            <div class="label-row">
-
-              <label for="salary">
-                Monthly salary
-              </label>
-
-              <span class="help">
-                RM
-              </span>
-
-            </div>
-
-            <input
-              type="number"
-              id="salary"
-              min="0"
-              step="0.01"
-              value="3250"
-              placeholder="e.g. 3250">
-
-          </div>
-
-
-          <!-- Age -->
-
-          <div class="field-group">
-
-            <div class="label-row">
-
-              <label for="age">
-                Employee age
-              </label>
-
-              <span class="help">
-                Years
-              </span>
-
-            </div>
-
-            <input
-              type="number"
-              id="age"
-              min="14"
-              max="100"
-              step="1"
-              value="30"
-              placeholder="e.g. 30">
-
-          </div>
-
-
-          <!-- Worker type -->
-
-          <div class="field-group">
-
-            <div class="label-row">
-
-              <label>
-                Employee type
-              </label>
-
-            </div>
-
-
-            <div class="radio-grid">
-
-              <label class="radio-card">
-
-                <input
-                  type="radio"
-                  name="workerType"
-                  value="local"
-                  checked>
-
-                <span>
-
-                  <strong>
-                    Malaysian / PR
-                  </strong>
-
-                  <small>
-                    Local employee / permanent resident
-                  </small>
-
-                </span>
-
-              </label>
-
-
-              <label class="radio-card">
-
-                <input
-                  type="radio"
-                  name="workerType"
-                  value="foreign">
-
-                <span>
-
-                  <strong>
-                    Foreign worker
-                  </strong>
-
-                  <small>
-                    Foreign employee
-                  </small>
-
-                </span>
-
-              </label>
-
-            </div>
-
-          </div>
-
-
-          <!-- Contribution category -->
-
-          <div
-            class="field-group"
-            id="categoryGroup">
-
-            <div class="label-row">
-
-              <label for="category">
-                SOCSO contribution category
-              </label>
-
-            </div>
-
-            <select id="category">
-
-              <option value="first" selected>
-                First Category — Invalidity + Employment Injury
-              </option>
-
-              <option value="second">
-                Second Category — Employment Injury
-              </option>
-
-            </select>
-
-            <small class="field-help">
-              If you are unsure, check your PERKESO registration or
-              payroll record. Age alone does not determine every
-              category situation.
-            </small>
-
-          </div>
-
-
-          <!-- LINDUNG -->
-
-          <div
-            class="field-group"
-            id="lindungGroup">
-
-            <div class="label-row">
-
-              <label>
-                LINDUNG 24 JAM
-              </label>
-
-            </div>
-
-
-            <div class="radio-grid">
-
-              <label class="radio-card">
-
-                <input
-                  type="radio"
-                  name="lindung"
-                  value="yes"
-                  checked>
-
-                <span>
-
-                  <strong>
-                    Opted in
-                  </strong>
-
-                  <small>
-                    Include the Phase 1 employee contribution
-                  </small>
-
-                </span>
-
-              </label>
-
-
-              <label class="radio-card">
-
-                <input
-                  type="radio"
-                  name="lindung"
-                  value="no">
-
-                <span>
-
-                  <strong>
-                    Opted out
-                  </strong>
-
-                  <small>
-                    No LINDUNG 24 JAM employee contribution
-                  </small>
-
-                </span>
-
-              </label>
-
-            </div>
-
-
-            <p
-              class="result-note"
-              id="lindungInfo">
-
-              For local employees, LINDUNG 24 JAM participation
-              is voluntary. Phase 1 employee contribution is 0.75%.
-
-            </p>
-
-          </div>
-
-
-          <!-- Foreign worker message -->
-
-          <div
-            class="result-note"
-            id="foreignMessage"
-            style="display:none;">
-
-            LINDUNG 24 JAM is mandatory for foreign workers.
-            The Phase 1 employee contribution is 0.75%.
-
-          </div>
-
-
-          <button
-            type="button"
-            class="calculate-btn"
-            id="calculateBtn">
-
-            Calculate SOCSO
-
-          </button>
-
-        </div>
-
-
-        <!-- =====================
-             RESULT CARD
-             ===================== -->
-
-        <div
-          class="card result-card"
-          id="results">
-
-          <div class="result-top">
-
-            <div>
-
-              <div class="eyebrow">
-                ESTIMATED CONTRIBUTION
-              </div>
-
-              <h2>
-                Monthly SOCSO
-              </h2>
-
-            </div>
-
-            <span class="mini-chip">
-              PERKESO
-            </span>
-
-          </div>
-
-
-          <!-- Main total -->
-
-          <div class="take-home">
-
-            <span>
-              Total contribution
-            </span>
-
-            <strong id="totalContribution">
-              RM97.45
-            </strong>
-
-          </div>
-
-
-          <!-- Breakdown -->
-
-          <div class="breakdown">
-
-
-            <div class="row">
-
-              <span>
-                Employee SOCSO
-              </span>
-
-              <strong id="employeeSocso">
-                RM16.25
-              </strong>
-
-            </div>
-
-
-            <div
-              class="row"
-              id="lindungRow">
-
-              <span>
-                LINDUNG 24 JAM
-              </span>
-
-              <strong id="lindungContribution">
-                RM24.35
-              </strong>
-
-            </div>
-
-
-            <div class="row">
-
-              <span>
-                Employee total
-              </span>
-
-              <strong id="employeeTotal">
-                RM40.60
-              </strong>
-
-            </div>
-
-
-            <div class="row">
-
-              <span>
-                Employer contribution
-              </span>
-
-              <strong id="employerContribution">
-                RM56.85
-              </strong>
-
-            </div>
-
-
-            <div class="row total">
-
-              <span>
-                Total contribution
-              </span>
-
-              <strong id="totalContributionBottom">
-                RM97.45
-              </strong>
-
-            </div>
-
-          </div>
-
-
-          <!-- Annual -->
-
-          <div class="annual-grid">
-
-            <div class="mini-card">
-
-              <span>
-                Employee / year
-              </span>
-
-              <strong id="employeeAnnual">
-                RM487.20
-              </strong>
-
-            </div>
-
-
-            <div class="mini-card">
-
-              <span>
-                Employer / year
-              </span>
-
-              <strong id="employerAnnual">
-                RM682.20
-              </strong>
-
-            </div>
-
-
-            <div class="mini-card">
-
-              <span>
-                Total / year
-              </span>
-
-              <strong id="totalAnnual">
-                RM1,169.40
-              </strong>
-
-            </div>
-
-          </div>
-
-
-          <p
-            class="result-note"
-            id="resultNote">
-
-            Based on the current Phase 1 PERKESO contribution schedule.
-
-          </p>
-
-
-          <details class="employer">
-
-            <summary>
-              What does my employer pay?
-            </summary>
-
-            <p id="employerExplanation">
-
-              The employer contribution is paid separately by your
-              employer to PERKESO. LINDUNG 24 JAM is fully borne by
-              the employee.
-
-            </p>
-
-          </details>
-
-
-          <button
-            type="button"
-            class="share-btn"
-            id="shareBtn">
-
-            Share calculator
-
-          </button>
-
-
-          <p class="disclaimer">
-
-            This calculator is an estimate for informational
-            purposes. Actual contributions should be checked against
-            the latest PERKESO contribution schedule and your payroll
-            records.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         HOW IT WORKS
-         ========================= -->
-
-    <section
-      class="section"
-      id="how">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          HOW IT WORKS
-        </div>
-
-        <h2>
-          How SOCSO contributions are calculated
-        </h2>
-
-
-        <div class="info-grid">
-
-
-          <article>
-
-            <h3>
-              1. Monthly wages
-            </h3>
-
-            <p>
-              Enter your monthly wages. PERKESO uses statutory wage
-              bands rather than simply calculating a percentage from
-              the exact salary.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              2. RM6,000 ceiling
-            </h3>
-
-            <p>
-              The current insured monthly wage ceiling is RM6,000.
-              Salaries above RM6,000 use the RM6,000 contribution
-              band.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              3. First Category
-            </h3>
-
-            <p>
-              The First Category covers Invalidity, Employment Injury
-              and Non-Employment Injury when LINDUNG 24 JAM applies.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              4. Second Category
-            </h3>
-
-            <p>
-              The Second Category covers Employment Injury and
-              Non-Employment Injury, with the applicable employee
-              contribution for LINDUNG 24 JAM.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              5. LINDUNG 24 JAM
-            </h3>
-
-            <p>
-              LINDUNG 24 JAM provides protection for eligible
-              non-employment accidents. For local employees,
-              participation is voluntary.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              6. Employee vs employer
-            </h3>
-
-            <p>
-              The calculator separates the amount deducted from the
-              employee from the contribution paid by the employer.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         LINDUNG SECTION
-         ========================= -->
-
-    <section class="section">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          LINDUNG 24 JAM
-        </div>
-
-        <h2>
-          What happens if you opt out?
-        </h2>
-
-
-        <div class="info-grid">
-
-
-          <article>
-
-            <h3>
-              Malaysian / PR — Opted in
-            </h3>
-
-            <p>
-              The Phase 1 LINDUNG 24 JAM contribution of
-              <strong>0.75%</strong> is added to the employee's
-              contribution.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              Malaysian / PR — Opted out
-            </h3>
-
-            <p>
-              The LINDUNG 24 JAM contribution is
-              <strong>RM0.00</strong>. The normal applicable SOCSO
-              contribution continues separately.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              Foreign workers
-            </h3>
-
-            <p>
-              LINDUNG 24 JAM is mandatory for foreign workers.
-              The Phase 1 employee contribution is
-              <strong>0.75%</strong>.
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              Phase 1
-            </h3>
-
-            <p>
-              The current Phase 1 rate is 0.75% for the first two
-              years. Later phases increase to 1.00% and then 1.25%.
-            </p>
-
-          </article>
-
-
-        </div>
-
-
-        <p class="result-note">
-
-          LINDUNG 24 JAM contributions are fully borne by the
-          employee. Employers do not pay the LINDUNG 24 JAM share.
-
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         EXAMPLES
-         ========================= -->
-
-    <section class="section">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          EXAMPLES
-        </div>
-
-        <h2>
-          Example calculations
-        </h2>
-
-
-        <div class="info-grid">
-
-
-          <article>
-
-            <h3>
-              RM3,250 · Local · Opted in
-            </h3>
-
-            <p>
-              Employee SOCSO:
-              <strong>RM16.25</strong>
-            </p>
-
-            <p>
-              LINDUNG 24 JAM:
-              <strong>RM24.35</strong>
-            </p>
-
-            <p>
-              Employer:
-              <strong>RM56.85</strong>
-            </p>
-
-            <p>
-              Total:
-              <strong>RM97.45</strong>
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              RM3,250 · Local · Opted out
-            </h3>
-
-            <p>
-              Employee SOCSO:
-              <strong>RM16.25</strong>
-            </p>
-
-            <p>
-              LINDUNG 24 JAM:
-              <strong>RM0.00</strong>
-            </p>
-
-            <p>
-              Employer:
-              <strong>RM56.85</strong>
-            </p>
-
-            <p>
-              Total:
-              <strong>RM73.10</strong>
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              RM6,000 · Local · Opted in
-            </h3>
-
-            <p>
-              Employee SOCSO:
-              <strong>RM29.75</strong>
-            </p>
-
-            <p>
-              LINDUNG 24 JAM:
-              <strong>RM44.65</strong>
-            </p>
-
-            <p>
-              Employer:
-              <strong>RM104.15</strong>
-            </p>
-
-            <p>
-              Total:
-              <strong>RM178.55</strong>
-            </p>
-
-          </article>
-
-
-          <article>
-
-            <h3>
-              RM6,000 · Local · Opted out
-            </h3>
-
-            <p>
-              Employee SOCSO:
-              <strong>RM29.75</strong>
-            </p>
-
-            <p>
-              LINDUNG 24 JAM:
-              <strong>RM0.00</strong>
-            </p>
-
-            <p>
-              Employer:
-              <strong>RM104.15</strong>
-            </p>
-
-            <p>
-              Total:
-              <strong>RM133.90</strong>
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-         ========================= -->
-
-    <section
-      class="section"
-      id="about">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          ABOUT
-        </div>
-
-        <h2>
-          About the Malaysia SOCSO Calculator
-        </h2>
-
-        <p>
-          The Malaysia SOCSO Calculator provides an estimate of
-          employee and employer contributions under the Employees'
-          Social Security Act 1969 (Act 4).
-        </p>
-
-        <p>
-          The calculator uses the current 2026 Phase 1 contribution
-          schedule and the RM6,000 monthly wage ceiling.
-        </p>
-
-        <p>
-          LINDUNG 24 JAM is shown separately so users can understand
-          the difference between normal SOCSO contributions and the
-          additional non-employment injury contribution.
-        </p>
-
-        <p>
-          Official source:
-          <a
-            href="https://www.perkeso.gov.my/en/contribution-rate/"
-            target="_blank"
-            rel="noopener noreferrer">
-            PERKESO Contribution Rate
-          </a>
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PRIVACY
-         ========================= -->
-
-    <section
-      class="section"
-      id="privacy">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          PRIVACY
-        </div>
-
-        <h2>
-          Your calculation data
-        </h2>
-
-        <p>
-          Salary, age and other information entered into this
-          calculator are processed locally in your browser to
-          generate the calculation.
-        </p>
-
-        <p>
-          MY Calculator Hub does not require an account to use
-          this calculator.
-        </p>
-
-        <p>
-          The website may use analytics and advertising services
-          that have their own privacy policies.
-        </p>
-
-        <p>
-          Last updated:
-          <strong>18 September 2026</strong>
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         DISCLAIMER
-         ========================= -->
-
-    <section class="section">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          DISCLAIMER
-        </div>
-
-        <h2>
-          Calculator Disclaimer
-        </h2>
-
-        <p>
-          This calculator is provided for informational and
-          estimation purposes only. It is not a replacement for
-          official PERKESO calculations, employer payroll systems,
-          professional advice or legal advice.
-        </p>
-
-        <p>
-          Actual contributions can depend on the employee's
-          circumstances, applicable statutory category, wage
-          definition, registration history and the latest
-          PERKESO requirements.
-        </p>
-
-        <p>
-          Always check the latest information published by PERKESO
-          if you require an official contribution amount.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         MORE CALCULATORS
-         ========================= -->
-
-    <section class="section">
-
-      <div class="content-card">
-
-        <div class="eyebrow">
-          MORE CALCULATORS
-        </div>
-
-        <h2>
-          Malaysia calculators
-        </h2>
-
-
-        <div class="coming-grid">
-
-
-          <a
-            href="index.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              🏠
-              <b>Calculator Hub</b>
-              <small>Explore all Malaysia calculators</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="salary-calculator.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              💰
-              <b>Salary Calculator</b>
-              <small>Calculate your Malaysia take-home salary</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="epf-calculator.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              🏦
-              <b>EPF Calculator</b>
-              <small>Calculate employee and employer EPF</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="ot-calculator.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              ⏱️
-              <b>OT Calculator</b>
-              <small>Calculate your overtime pay</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="house-affordability.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              🏠
-              <b>House Affordability</b>
-              <small>Estimate how much house you can afford</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="car-affordability.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              🚗
-              <b>Car Affordability</b>
-              <small>Estimate a comfortable car budget</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="salary-increment.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              📈
-              <b>Salary Increment</b>
-              <small>Calculate your salary increase</small>
-            </div>
-
-          </a>
-
-
-          <a
-            href="working-days.html"
-            style="text-decoration:none;color:inherit;">
-
-            <div>
-              📅
-              <b>Working Days</b>
-              <small>Calculate working days</small>
-            </div>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-       ========================= -->
-
-  <footer>
-
-    <div class="footer-inner">
-
-      <b>
-        Malaysia Calculator Hub
-      </b>
-
-      <span>
-        Independent • Practical • Malaysia-focused
-      </span>
-
-      <span>
-        © 2026 Malaysia Calculator Hub
-      </span>
-
     </div>
 
-  </footer>
-
-
-  <!-- Existing site JavaScript -->
-  <script src="script.js"></script>
-
-
-  <!-- =========================
-       SOCSO CALCULATOR JAVASCRIPT
-       ========================= -->
-
-  <script>
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      function () {
-
-
-        const salaryInput =
-          document.getElementById("salary");
-
-        const ageInput =
-          document.getElementById("age");
-
-        const categoryInput =
-          document.getElementById("category");
-
-        const calculateBtn =
-          document.getElementById("calculateBtn");
-
-        const lindungGroup =
-          document.getElementById("lindungGroup");
-
-        const categoryGroup =
-          document.getElementById("categoryGroup");
-
-        const foreignMessage =
-          document.getElementById("foreignMessage");
-
-        const lindungInfo =
-          document.getElementById("lindungInfo");
-
-        const lindungRow =
-          document.getElementById("lindungRow");
-
-
-        const totalContribution =
-          document.getElementById("totalContribution");
-
-        const totalContributionBottom =
-          document.getElementById(
-            "totalContributionBottom"
-          );
-
-        const employeeSocso =
-          document.getElementById("employeeSocso");
-
-        const lindungContribution =
-          document.getElementById(
-            "lindungContribution"
-          );
-
-        const employeeTotal =
-          document.getElementById("employeeTotal");
-
-        const employerContribution =
-          document.getElementById(
-            "employerContribution"
-          );
-
-        const employeeAnnual =
-          document.getElementById("employeeAnnual");
-
-        const employerAnnual =
-          document.getElementById("employerAnnual");
-
-        const totalAnnual =
-          document.getElementById("totalAnnual");
-
-        const resultNote =
-          document.getElementById("resultNote");
-
-        const employerExplanation =
-          document.getElementById(
-            "employerExplanation"
-          );
-
-        const shareBtn =
-          document.getElementById("shareBtn");
-
-        const themeToggle =
-          document.getElementById("themeToggle");
-
-
-        function money(value) {
-
-          return "RM" +
-            Number(value).toLocaleString(
-              "en-MY",
-              {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
-              }
-            );
-
-        }
-
-
-        function round2(value) {
-
-          return Math.round(
-            (value + Number.EPSILON) * 100
-          ) / 100;
-
-        }
-
-
-        function getWorkerType() {
-
-          const selected =
-            document.querySelector(
-              'input[name="workerType"]:checked'
-            );
-
-          return selected
-            ? selected.value
-            : "local";
-
-        }
-
-
-        function getLindungChoice() {
-
-          const selected =
-            document.querySelector(
-              'input[name="lindung"]:checked'
-            );
-
-          return selected
-            ? selected.value
-            : "yes";
-
-        }
-
-
-        /*
-         * =========================================
-         * CURRENT PERKESO FIRST PHASE SCHEDULE
-         * =========================================
-         *
-         * The 2026 Act A1788 First Phase table
-         * contains:
-         *
-         * Employer:
-         *   Invalidity
-         *   Employment Injury
-         *
-         * Employee:
-         *   Invalidity
-         *   Non-Employment Injury
-         *
-         * Non-Employment Injury = LINDUNG 24 JAM.
-         *
-         * The schedule is statutory and is therefore
-         * represented here rather than using simple
-         * percentage multiplication.
-         *
-         * RM6,000 is the contribution ceiling.
-         */
-
-
-        function firstCategory(wage) {
-
-
-          const w =
-            Math.min(
-              Math.max(wage, 0),
-              6000
-            );
-
-
-          /*
-           * Special statutory bands
-           * up to RM200.
-           *
-           * [upper wage,
-           *  employer invalidity,
-           *  employer employment injury,
-           *  employee invalidity,
-           *  employee non-employment injury]
-           */
-
-          const special = [
-
-            [30, 0.10, 0.30, 0.10, 0.20],
-
-            [50, 0.20, 0.50, 0.20, 0.30],
-
-            [70, 0.30, 0.80, 0.30, 0.50],
-
-            [100, 0.40, 1.10, 0.40, 0.65],
-
-            [140, 0.60, 1.50, 0.60, 0.90],
-
-            [200, 0.85, 2.10, 0.85, 1.25]
-
-          ];
-
-
-          for (
-            let i = 0;
-            i < special.length;
-            i++
-          ) {
-
-            if (w <= special[i][0]) {
-
-              return {
-
-                employerInvalidity:
-                  special[i][1],
-
-                employerEmployment:
-                  special[i][2],
-
-                employeeInvalidity:
-                  special[i][3],
-
-                lindung:
-                  special[i][4]
-
-              };
-
-            }
-
-          }
-
-
-          /*
-           * From >RM200 through RM6,000,
-           * the statutory table follows the
-           * published 100-RM contribution bands.
-           *
-           * band 7 = >RM200 to RM300
-           */
-
-          let band =
-            Math.ceil(w / 100);
-
-
-          if (band < 7) {
-            band = 7;
-          }
-
-          if (band > 60) {
-            band = 60;
-          }
-
-
-          const k =
-            band - 7;
-
-
-          /*
-           * Employer Invalidity:
-           *
-           * 1.25 at band 7,
-           * then +0.50 each band.
-           */
-
-          const employerInvalidity =
-            1.25 +
-            (0.50 * k);
-
-
-          /*
-           * Employee Invalidity
-           * follows the same schedule.
-           */
-
-          const employeeInvalidity =
-            employerInvalidity;
-
-
-          /*
-           * Employer Employment Injury:
-           *
-           * 3.10 at band 7.
-           *
-           * The statutory table alternates
-           * +1.30 and +1.20.
-           */
-
-          const employerEmployment =
-            3.10 +
-            (
-              1.30 *
-              Math.ceil(k / 2)
-            ) +
-            (
-              1.20 *
-              Math.floor(k / 2)
-            );
-
-
-          /*
-           * LINDUNG 24 JAM:
-           *
-           * 1.85 at band 7.
-           *
-           * The statutory Phase 1 schedule
-           * alternates +0.80 and +0.70.
-           */
-
-          const lindung =
-            1.85 +
-            (
-              0.80 *
-              Math.ceil(k / 2)
-            ) +
-            (
-              0.70 *
-              Math.floor(k / 2)
-            );
-
-
-          return {
-
-            employerInvalidity:
-              round2(employerInvalidity),
-
-            employerEmployment:
-              round2(employerEmployment),
-
-            employeeInvalidity:
-              round2(employeeInvalidity),
-
-            lindung:
-              round2(lindung)
-
-          };
-
-        }
-
-
-        /*
-         * =========================================
-         * SECOND CATEGORY
-         * =========================================
-         *
-         * Employer:
-         *   Employment Injury
-         *
-         * Employee:
-         *   Non-Employment Injury
-         *
-         * Phase 1.
-         */
-
-
-        function secondCategory(wage) {
-
-
-          const w =
-            Math.min(
-              Math.max(wage, 0),
-              6000
-            );
-
-
-          const special = [
-
-            [30, 0.30, 0.20],
-
-            [50, 0.50, 0.30],
-
-            [70, 0.80, 0.50],
-
-            [100, 1.10, 0.65],
-
-            [140, 1.50, 0.90],
-
-            [200, 2.10, 1.25]
-
-          ];
-
-
-          for (
-            let i = 0;
-            i < special.length;
-            i++
-          ) {
-
-            if (w <= special[i][0]) {
-
-              return {
-
-                employerEmployment:
-                  special[i][1],
-
-                lindung:
-                  special[i][2]
-
-              };
-
-            }
-
-          }
-
-
-          let band =
-            Math.ceil(w / 100);
-
-
-          if (band < 7) {
-            band = 7;
-          }
-
-          if (band > 60) {
-            band = 60;
-          }
-
-
-          const k =
-            band - 7;
-
-
-          /*
-           * Employer Employment Injury:
-           *
-           * 3.10 at band 7,
-           * alternating +1.30 / +1.20.
-           */
-
-          const employerEmployment =
-            3.10 +
-            (
-              1.30 *
-              Math.ceil(k / 2)
-            ) +
-            (
-              1.20 *
-              Math.floor(k / 2)
-            );
-
-
-          /*
-           * Employee LINDUNG 24 JAM:
-           *
-           * 1.85 at band 7,
-           * alternating +0.80 / +0.70.
-           */
-
-          const lindung =
-            1.85 +
-            (
-              0.80 *
-              Math.ceil(k / 2)
-            ) +
-            (
-              0.70 *
-              Math.floor(k / 2)
-            );
-
-
-          return {
-
-            employerEmployment:
-              round2(employerEmployment),
-
-            lindung:
-              round2(lindung)
-
-          };
-
-        }
-
-
-        /*
-         * =========================================
-         * DISPLAY / INPUT LOGIC
-         * =========================================
-         */
-
-
-        function updateWorkerInterface() {
-
-
-          const worker =
-            getWorkerType();
-
-
-          if (worker === "foreign") {
-
-            /*
-             * Foreign workers:
-             * LINDUNG is mandatory.
-             */
-
-            lindungGroup.style.display =
-              "none";
-
-            foreignMessage.style.display =
-              "block";
-
-            categoryGroup.style.display =
-              "none";
-
-          } else {
-
-            /*
-             * Local workers:
-             * LINDUNG opt-in / opt-out.
-             */
-
-            lindungGroup.style.display =
-              "block";
-
-            foreignMessage.style.display =
-              "none";
-
-            categoryGroup.style.display =
-              "block";
-
-            lindungInfo.textContent =
-              "For local employees, LINDUNG 24 JAM participation is voluntary. Phase 1 employee contribution is 0.75%.";
-
-          }
-
-
-          updateResults();
-
-        }
-
-
-        function updateResults() {
-
-
-          const wage =
-            parseFloat(
-              salaryInput.value
-            ) || 0;
-
-
-          const age =
-            parseInt(
-              ageInput.value,
-              10
-            ) || 0;
-
-
-          if (wage <= 0) {
-
-            totalContribution.textContent =
-              money(0);
-
-            totalContributionBottom.textContent =
-              money(0);
-
-            employeeSocso.textContent =
-              money(0);
-
-            lindungContribution.textContent =
-              money(0);
-
-            employeeTotal.textContent =
-              money(0);
-
-            employerContribution.textContent =
-              money(0);
-
-            employeeAnnual.textContent =
-              money(0);
-
-            employerAnnual.textContent =
-              money(0);
-
-            totalAnnual.textContent =
-              money(0);
-
-            resultNote.textContent =
-              "Enter a monthly salary to calculate SOCSO.";
-
-            return;
-
-          }
-
-
-          const worker =
-            getWorkerType();
-
-
-          let employeeSocsoValue =
-            0;
-
-          let lindungValue =
-            0;
-
-          let employerValue =
-            0;
-
-
-          /*
-           * ======================================
-           * FOREIGN WORKER
-           * ======================================
-           */
-
-          if (worker === "foreign") {
-
-
-            const result =
-              firstCategory(wage);
-
-
-            /*
-             * Foreign worker:
-             *
-             * Employer:
-             * Employment Injury
-             * + Invalidity
-             *
-             * Employee:
-             * Invalidity
-             * + mandatory LINDUNG 24 JAM
-             */
-
-
-            employeeSocsoValue =
-              result.employeeInvalidity;
-
-
-            lindungValue =
-              result.lindung;
-
-
-            employerValue =
-              result.employerInvalidity +
-              result.employerEmployment;
-
-
-            resultNote.textContent =
-              "Foreign worker calculation. LINDUNG 24 JAM is mandatory and the Phase 1 employee contribution is included.";
-
-
-            employerExplanation.textContent =
-              "The employer pays the Employment Injury and Invalidity portions. The foreign worker pays the Invalidity and mandatory LINDUNG 24 JAM portions.";
-
-
-          }
-
-
-          /*
-           * ======================================
-           * LOCAL EMPLOYEE
-           * ======================================
-           */
-
-          else {
-
-
-            const category =
-              categoryInput.value;
-
-
-            const lindungChoice =
-              getLindungChoice();
-
-
-            if (
-              category === "second"
-            ) {
-
-
-              const result =
-                secondCategory(wage);
-
-
-              /*
-               * Second Category:
-               *
-               * Employer:
-               * Employment Injury
-               *
-               * Employee:
-               * LINDUNG 24 JAM
-               */
-
-
-              employeeSocsoValue =
-                0;
-
-
-              employerValue =
-                result.employerEmployment;
-
-
-              /*
-               * LINDUNG is optional for
-               * local employees.
-               */
-
-              if (
-                lindungChoice === "yes"
-              ) {
-
-                lindungValue =
-                  result.lindung;
-
-              } else {
-
-                lindungValue =
-                  0;
-
-              }
-
-
-              resultNote.textContent =
-                lindungChoice === "yes"
-                  ? "Second Category contribution with LINDUNG 24 JAM included."
-                  : "Second Category contribution with LINDUNG 24 JAM opted out.";
-
-
-              employerExplanation.textContent =
-                "The employer pays the Employment Injury contribution. LINDUNG 24 JAM is fully borne by the employee if the employee participates.";
-
-
-            }
-
-
-            else {
-
-
-              const result =
-                firstCategory(wage);
-
-
-              /*
-               * First Category:
-               *
-               * Employer:
-               * Invalidity + Employment Injury
-               *
-               * Employee:
-               * Invalidity
-               * + optional LINDUNG 24 JAM
-               */
-
-
-              employeeSocsoValue =
-                result.employeeInvalidity;
-
-
-              employerValue =
-                result.employerInvalidity +
-                result.employerEmployment;
-
-
-              if (
-                lindungChoice === "yes"
-              ) {
-
-                lindungValue =
-                  result.lindung;
-
-              } else {
-
-                lindungValue =
-                  0;
-
-              }
-
-
-              resultNote.textContent =
-                lindungChoice === "yes"
-                  ? "First Category contribution with Phase 1 LINDUNG 24 JAM included."
-                  : "First Category contribution with LINDUNG 24 JAM opted out.";
-
-
-              employerExplanation.textContent =
-                "The employer pays the Invalidity and Employment Injury contributions. LINDUNG 24 JAM is fully borne by the employee if the employee participates.";
-
-            }
-
-          }
-
-
-          const employeeTotalValue =
-            employeeSocsoValue +
-            lindungValue;
-
-
-          const totalValue =
-            employeeTotalValue +
-            employerValue;
-
-
-          /*
-           * Update results
-           */
-
-          employeeSocso.textContent =
-            money(employeeSocsoValue);
-
-
-          lindungContribution.textContent =
-            money(lindungValue);
-
-
-          employeeTotal.textContent =
-            money(employeeTotalValue);
-
-
-          employerContribution.textContent =
-            money(employerValue);
-
-
-          totalContribution.textContent =
-            money(totalValue);
-
-
-          totalContributionBottom.textContent =
-            money(totalValue);
-
-
-          employeeAnnual.textContent =
-            money(
-              employeeTotalValue * 12
-            );
-
-
-          employerAnnual.textContent =
-            money(
-              employerValue * 12
-            );
-
-
-          totalAnnual.textContent =
-            money(
-              totalValue * 12
-            );
-
-
-          /*
-           * Age note.
-           *
-           * Age is displayed for user context,
-           * but category selection remains explicit
-           * because age alone does not establish
-           * every contribution-category situation.
-           */
-
-          if (age >= 60) {
-
-            resultNote.textContent +=
-              " Note: employees aged 60+ may be subject to Second Category rules depending on their PERKESO registration circumstances.";
-
-          }
-
-        }
-
-
-        /*
-         * =========================================
-         * EVENTS
-         * =========================================
-         */
-
-
-        salaryInput.addEventListener(
-          "input",
-          updateResults
-        );
-
-
-        ageInput.addEventListener(
-          "input",
-          updateResults
-        );
-
-
-        categoryInput.addEventListener(
-          "change",
-          updateResults
-        );
-
-
-        document
-          .querySelectorAll(
-            'input[name="workerType"]'
-          )
-          .forEach(
-            function (radio) {
-
-              radio.addEventListener(
-                "change",
-                updateWorkerInterface
-              );
-
-            }
-          );
-
-
-        document
-          .querySelectorAll(
-            'input[name="lindung"]'
-          )
-          .forEach(
-            function (radio) {
-
-              radio.addEventListener(
-                "change",
-                updateResults
-              );
-
-            }
-          );
-
-
-        calculateBtn.addEventListener(
-          "click",
-          updateResults
-        );
-
-
-        /*
-         * =========================================
-         * SHARE
-         * =========================================
-         */
-
-
-        if (shareBtn) {
-
-          shareBtn.addEventListener(
-            "click",
-            async function () {
-
-
-              const shareData = {
-
-                title:
-                  "Malaysia SOCSO Calculator 2026",
-
-                text:
-                  "Calculate your SOCSO and LINDUNG 24 JAM contribution with MY Calculator Hub.",
-
-                url:
-                  window.location.href
-
-              };
-
-
-              try {
-
-
-                if (
-                  navigator.share
-                ) {
-
-                  await navigator.share(
-                    shareData
-                  );
-
-                }
-
-
-                else {
-
-                  await navigator.clipboard.writeText(
-                    window.location.href
-                  );
-
-
-                  const oldText =
-                    shareBtn.textContent;
-
-
-                  shareBtn.textContent =
-                    "Link copied!";
-
-
-                  setTimeout(
-                    function () {
-
-                      shareBtn.textContent =
-                        oldText;
-
-                    },
-                    1800
-                  );
-
-                }
-
-
-              } catch (error) {
-
-                /*
-                 * User cancelled sharing.
-                 */
-
-              }
-
-            }
-          );
-
-        }
-
-
-        /*
-         * =========================================
-         * DARK MODE
-         * =========================================
-         */
-
-
-        const savedTheme =
-          localStorage.getItem(
-            "mch-theme"
-          );
-
-
-        if (
-          savedTheme === "dark"
-        ) {
-
-          document.body.classList.add(
-            "dark"
-          );
-
-        }
-
-
-        if (themeToggle) {
-
-          themeToggle.addEventListener(
-            "click",
-            function () {
-
-
-              document.body.classList.toggle(
-                "dark"
-              );
-
-
-              localStorage.setItem(
-                "mch-theme",
-
-                document.body.classList.contains(
-                  "dark"
-                )
-                  ? "dark"
-                  : "light"
-
-              );
-
-            }
-          );
-
-        }
-
-
-        /*
-         * Initial calculation
-         */
-
-        updateWorkerInterface();
-
-        updateResults();
-
-      }
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <b>Malaysia Calculator Hub</b>
+
+    <span>
+      Independent • Practical • Malaysia-focused
+    </span>
+
+    <span>
+      © 2026 Malaysia Calculator Hub
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<!-- SOCSO CALCULATOR LOGIC -->
+<script>
+
+(function () {
+
+  /*
+   * PERKESO / SOCSO
+   * 2026 FIRST PHASE
+   *
+   * Source:
+   * Employees' Social Security (Amendment) Act 2026,
+   * Third Schedule, First Category / First Phase
+   *
+   * Wage bands:
+   * <= RM30
+   * >RM30 <=RM50
+   * >RM50 <=RM70
+   * >RM70 <=RM100
+   * >RM100 <=RM140
+   * >RM140 <=RM200
+   * >RM200 <=RM300
+   * then RM100 bands until RM6,000.
+   */
+
+  const bandUpper = [
+    30, 50, 70, 100, 140, 200,
+    300, 400, 500, 600, 700, 800, 900, 1000,
+    1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800,
+    1900, 2000, 2100, 2200, 2300, 2400, 2500, 2600,
+    2700, 2800, 2900, 3000, 3100, 3200, 3300, 3400,
+    3500, 3600, 3700, 3800, 3900, 4000, 4100, 4200,
+    4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000,
+    5100, 5200, 5300, 5400, 5500, 5600, 5700, 5800,
+    5900, 6000
+  ];
+
+
+  /*
+   * Employer invalidity contribution.
+   * Employee invalidity contribution uses the same statutory amount.
+   */
+  const invalidity = [
+    0.10,
+    0.20,
+    0.30,
+    0.40,
+    0.60,
+    0.85,
+
+    1.25, 1.75, 2.25, 2.75, 3.25, 3.75, 4.25,
+    4.75, 5.25, 5.75, 6.25, 6.75, 7.25, 7.75,
+    8.25, 8.75, 9.25, 9.75, 10.25, 10.75, 11.25,
+    11.75, 12.25, 12.75, 13.25, 13.75, 14.25, 14.75,
+    15.25, 15.75, 16.25, 16.75, 17.25, 17.75, 18.25,
+    18.75, 19.25, 19.75, 20.25, 20.75, 21.25, 21.75,
+    22.25, 22.75, 23.25, 23.75, 24.25, 24.75, 25.25,
+    25.75, 26.25, 26.75, 27.25, 27.75, 28.25, 28.75,
+    29.25, 29.75
+  ];
+
+
+  /*
+   * Employer Employment Injury contribution.
+   */
+  const employmentInjury = [
+    0.30,
+    0.50,
+    0.80,
+    1.10,
+    1.50,
+    2.10,
+
+    3.10,
+    4.40,
+    5.60,
+    6.90,
+    8.10,
+    9.40,
+    10.60,
+    11.90,
+    13.10,
+    14.40,
+    15.60,
+    16.90,
+    18.10,
+    19.40,
+    20.60,
+    21.90,
+    23.10,
+    24.40,
+    25.60,
+    26.90,
+    28.10,
+    29.40,
+    30.60,
+    31.90,
+    33.10,
+    34.40,
+    35.60,
+    36.90,
+    38.10,
+    39.40,
+    40.60,
+    41.90,
+    43.10,
+    44.40,
+    45.60,
+    46.90,
+    48.10,
+    49.40,
+    50.60,
+    51.90,
+    53.10,
+    54.40,
+    55.60,
+    56.90,
+    58.10,
+    59.40,
+    60.60,
+    61.90,
+    63.10,
+    64.40,
+    65.60,
+    66.90,
+    68.10,
+    69.40,
+    70.60,
+    71.90,
+    73.10,
+    74.40
+  ];
+
+
+  /*
+   * First Phase employee Non-Employment Injury / LINDUNG 24 JAM.
+   */
+  const nonEmploymentInjury = [
+    0.20,
+    0.30,
+    0.50,
+    0.65,
+    0.90,
+    1.25,
+
+    1.85,
+    2.65,
+    3.35,
+    4.15,
+    4.85,
+    5.65,
+    6.35,
+    7.15,
+    7.85,
+    8.65,
+    9.35,
+    10.15,
+    10.85,
+    11.65,
+    12.35,
+    13.15,
+    13.85,
+    14.65,
+    15.35,
+    16.15,
+    16.85,
+    17.65,
+    18.35,
+    19.15,
+    19.85,
+    20.65,
+    21.35,
+    22.15,
+    22.85,
+    23.65,
+    24.35,
+    25.15,
+    25.85,
+    26.65,
+    27.35,
+    28.15,
+    28.85,
+    29.65,
+    30.35,
+    31.15,
+    31.85,
+    32.65,
+    33.35,
+    34.15,
+    34.85,
+    35.65,
+    36.35,
+    37.15,
+    37.85,
+    38.65,
+    39.35,
+    40.15,
+    40.85,
+    41.65,
+    42.35,
+    43.15,
+    43.85,
+    44.65
+  ];
+
+
+  const salaryInput = document.getElementById("monthlySalary");
+  const employeeType = document.getElementById("employeeType");
+  const category = document.getElementById("socsoCategory");
+  const lindungStatus = document.getElementById("lindungStatus");
+
+  const categoryField = document.getElementById("categoryField");
+  const lindungField = document.getElementById("lindungField");
+  const lindungHelp = document.getElementById("lindungHelp");
+
+
+  function money(value) {
+    return "RM " + Number(value || 0).toLocaleString("en-MY", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  }
+
+
+  function getBandIndex(wage) {
+
+    const cappedWage = Math.min(
+      Math.max(Number(wage) || 0, 0),
+      6000
     );
 
-  </script>
+    for (let i = 0; i < bandUpper.length; i++) {
+
+      if (cappedWage <= bandUpper[i]) {
+        return i;
+      }
+
+    }
+
+    return bandUpper.length - 1;
+  }
+
+
+  function calculateLocal(wage) {
+
+    const index = getBandIndex(wage);
+
+    const employerInvalidity = invalidity[index];
+    const employerEmploymentInjury = employmentInjury[index];
+
+    let employeeInvalidity = 0;
+    let employeeNonEmployment = 0;
+
+    if (category.value === "first") {
+
+      employeeInvalidity = invalidity[index];
+
+      /*
+       * Local employees may opt out of LINDUNG 24 JAM.
+       * If opted out, the statutory non-employment injury
+       * contribution is not included.
+       */
+      if (lindungStatus.value === "in") {
+        employeeNonEmployment = nonEmploymentInjury[index];
+      }
+
+    } else {
+
+      /*
+       * Second Category:
+       * no employee Invalidity contribution.
+       * LINDUNG remains separately optional for local employees.
+       */
+      employeeInvalidity = 0;
+
+      if (lindungStatus.value === "in") {
+        employeeNonEmployment = nonEmploymentInjury[index];
+      }
+
+    }
+
+    const employeeSocso =
+      employeeInvalidity;
+
+    const employeeTotal =
+      employeeInvalidity +
+      employeeNonEmployment;
+
+    const employerTotal =
+      employerInvalidity +
+      employerEmploymentInjury;
+
+    const total =
+      employeeTotal +
+      employerTotal;
+
+    return {
+      employerInvalidity,
+      employerEmploymentInjury,
+      employeeInvalidity,
+      employeeNonEmployment,
+      employeeSocso,
+      employeeTotal,
+      employerTotal,
+      total
+    };
+
+  }
+
+
+  function calculateForeign(wage) {
+
+    /*
+     * PERKESO official foreign worker rates:
+     *
+     * Employer:
+     * Employment Injury = 1.25%
+     *
+     * Foreign worker:
+     * Invalidity = 0.50%
+     * Non-Employment Injury = 0.75% Phase 1
+     *
+     * Contributions are subject to the RM6,000 ceiling.
+     */
+
+    const cappedWage =
+      Math.min(Math.max(Number(wage) || 0, 0), 6000);
+
+    const employerEmploymentInjury =
+      cappedWage * 0.0125;
+
+    const employeeInvalidity =
+      cappedWage * 0.005;
+
+    const employeeNonEmployment =
+      cappedWage * 0.0075;
+
+    const employerInvalidity = 0;
+
+    const employeeSocso =
+      employeeInvalidity;
+
+    const employeeTotal =
+      employeeInvalidity +
+      employeeNonEmployment;
+
+    const employerTotal =
+      employerEmploymentInjury;
+
+    const total =
+      employeeTotal +
+      employerTotal;
+
+    return {
+      employerInvalidity,
+      employerEmploymentInjury,
+      employeeInvalidity,
+      employeeNonEmployment,
+      employeeSocso,
+      employeeTotal,
+      employerTotal,
+      total
+    };
+
+  }
+
+
+  function updateFieldsForEmployeeType() {
+
+    const foreign =
+      employeeType.value === "foreign";
+
+    if (foreign) {
+
+      categoryField.style.display = "none";
+      lindungField.style.display = "none";
+
+    } else {
+
+      categoryField.style.display = "";
+      lindungField.style.display = "";
+
+    }
+
+  }
+
+
+  function calculate() {
+
+    const wage =
+      Math.max(Number(salaryInput.value) || 0, 0);
+
+    let result;
+
+    if (employeeType.value === "foreign") {
+
+      result = calculateForeign(wage);
+
+    } else {
+
+      result = calculateLocal(wage);
+
+    }
+
+
+    document.getElementById("employeeSocso").textContent =
+      money(result.employeeSocso);
+
+    document.getElementById("lindungContribution").textContent =
+      money(result.employeeNonEmployment);
+
+    document.getElementById("employeeContribution").textContent =
+      money(result.employeeTotal);
+
+    document.getElementById("employerContribution").textContent =
+      money(result.employerTotal);
+
+    document.getElementById("totalContribution").textContent =
+      money(result.total);
+
+    document.getElementById("employeeTotal").textContent =
+      money(result.employeeTotal);
+
+
+    document.getElementById("annualEmployee").textContent =
+      money(result.employeeTotal * 12);
+
+    document.getElementById("annualEmployer").textContent =
+      money(result.employerTotal * 12);
+
+    document.getElementById("annualTotal").textContent =
+      money(result.total * 12);
+
+
+    document.getElementById("employerInvalidity").textContent =
+      money(result.employerInvalidity);
+
+    document.getElementById("employerEmploymentInjury").textContent =
+      money(result.employerEmploymentInjury);
+
+    document.getElementById("employeeInvalidity").textContent =
+      money(result.employeeInvalidity);
+
+    document.getElementById("employeeNonEmployment").textContent =
+      money(result.employeeNonEmployment);
+
+
+    const note =
+      document.getElementById("resultNote");
+
+
+    if (employeeType.value === "foreign") {
+
+      note.textContent =
+        "Foreign workers are subject to mandatory LINDUNG 24 JAM protection under the applicable PERKESO rules.";
+
+      lindungHelp.textContent =
+        "Foreign worker LINDUNG 24 JAM is mandatory under the applicable PERKESO rules.";
+
+    } else if (lindungStatus.value === "in") {
+
+      note.textContent =
+        "LINDUNG 24 JAM is included in the employee contribution.";
+
+      lindungHelp.textContent =
+        "LINDUNG 24 JAM is included. The contribution is fully borne by the employee.";
+
+    } else {
+
+      note.textContent =
+        "LINDUNG 24 JAM is not included because the employee has opted out.";
+
+      lindungHelp.textContent =
+        "For local employees, LINDUNG 24 JAM is voluntary. Select Opted in if the employee participates.";
+
+    }
+
+
+    /*
+     * Update salary note for ceiling.
+     */
+    const salarySmall =
+      salaryInput.parentElement.parentElement.querySelector("small");
+
+    if (wage > 6000) {
+
+      salarySmall.textContent =
+        "Your salary exceeds RM6,000, so the statutory contribution calculation uses the RM6,000 wage ceiling.";
+
+    } else {
+
+      salarySmall.textContent =
+        "Contributions are subject to the RM6,000 monthly wage ceiling.";
+
+    }
+
+  }
+
+
+  function shareCalculation() {
+
+    const wage =
+      Number(salaryInput.value) || 0;
+
+    const employee =
+      document.getElementById("employeeContribution").textContent;
+
+    const employer =
+      document.getElementById("employerContribution").textContent;
+
+    const total =
+      document.getElementById("totalContribution").textContent;
+
+    const type =
+      employeeType.value === "foreign"
+        ? "Foreign worker"
+        : "Malaysian / Permanent Resident";
+
+    const text =
+      "Malaysia SOCSO Calculator 2026\n\n" +
+      "Monthly salary: RM " + wage.toFixed(2) + "\n" +
+      "Employee type: " + type + "\n" +
+      "Employee contribution: " + employee + "\n" +
+      "Employer contribution: " + employer + "\n" +
+      "Total contribution: " + total + "\n\n" +
+      "Malaysia Calculator Hub";
+
+    if (navigator.clipboard) {
+
+      navigator.clipboard.writeText(text).then(function () {
+
+        const button =
+          document.getElementById("shareBtn");
+
+        const original =
+          button.textContent;
+
+        button.textContent =
+          "Copied!";
+
+        setTimeout(function () {
+          button.textContent = original;
+        }, 1600);
+
+      });
+
+    } else {
+
+      alert(text);
+
+    }
+
+  }
+
+
+  document.getElementById("calculateBtn")
+    .addEventListener("click", calculate);
+
+  document.getElementById("shareBtn")
+    .addEventListener("click", shareCalculation);
+
+
+  salaryInput.addEventListener("input", calculate);
+
+  employeeType.addEventListener("change", function () {
+    updateFieldsForEmployeeType();
+    calculate();
+  });
+
+  category.addEventListener("change", calculate);
+
+  lindungStatus.addEventListener("change", calculate);
+
+
+  /*
+   * Dark mode support.
+   * Kept local to this calculator so script.js does not need modification.
+   */
+  const themeToggle =
+    document.getElementById("themeToggle");
+
+  function applyTheme(theme) {
+
+    if (theme === "dark") {
+
+      document.documentElement.classList.add("dark");
+      themeToggle.textContent = "☀";
+
+    } else {
+
+      document.documentElement.classList.remove("dark");
+      themeToggle.textContent = "☾";
+
+    }
+
+  }
+
+
+  const savedTheme =
+    localStorage.getItem("mch-theme");
+
+  if (savedTheme) {
+
+    applyTheme(savedTheme);
+
+  } else {
+
+    applyTheme(
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    );
+
+  }
+
+
+  themeToggle.addEventListener("click", function () {
+
+    const dark =
+      document.documentElement.classList.toggle("dark");
+
+    const theme =
+      dark ? "dark" : "light";
+
+    localStorage.setItem("mch-theme", theme);
+
+    applyTheme(theme);
+
+  });
+
+
+  /*
+   * Initial calculation
+   */
+  updateFieldsForEmployeeType();
+  calculate();
+
+})();
+
+</script>
 
 </body>
 </html>
