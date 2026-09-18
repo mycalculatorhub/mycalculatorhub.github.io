@@ -1,22 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Malaysia EIS Calculator 2026. Calculate employee and employer Employment Insurance System (EIS) contributions based on Malaysian PERKESO contribution rates.">
+  <meta name="description" content="Malaysia EIS Calculator 2026. Calculate employee and employer Employment Insurance System (SIP / LINDUNG KERJAYA) contributions using the current PERKESO contribution schedule and RM6,000 wage ceiling.">
 
   <meta name="robots" content="index, follow">
-
   <meta name="theme-color" content="#0f172a">
 
   <link rel="canonical" href="https://mycalculatorhub.github.io/eis-calculator.html">
 
-  <title>Malaysia EIS Calculator 2026 | PERKESO EIS Contribution Calculator</title>
+  <title>Malaysia EIS Calculator 2026 | SIP Contribution Calculator</title>
 
-  <meta property="og:title" content="Malaysia EIS Calculator 2026">
-  <meta property="og:description" content="Calculate Malaysia Employment Insurance System (EIS) contributions for employees and employers.">
+  <meta property="og:title" content="Malaysia EIS Calculator 2026 | SIP Contribution Calculator">
+  <meta property="og:description" content="Calculate Malaysian EIS employee and employer contributions using the current PERKESO schedule.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mycalculatorhub.github.io/eis-calculator.html">
 
@@ -30,12 +28,17 @@
     gtag('js', new Date());
     gtag('config', 'G-N90MJX0CSD');
   </script>
+
+  <!-- Google AdSense - add your publisher code after approval -->
+
 </head>
 
 <body>
 
 <header class="topbar">
+
   <div class="nav">
+
     <a class="brand" href="index.html">
       <span>MY</span> Calculator Hub
     </a>
@@ -47,28 +50,47 @@
       <a href="#privacy">Privacy</a>
     </nav>
 
-    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+    <button
+      id="themeToggle"
+      class="icon-btn"
+      aria-label="Toggle dark mode"
+      type="button"
+    >
       ☾
     </button>
+
   </div>
+
 </header>
 
 
-<main>
+<main id="top">
 
   <!-- HERO -->
   <section class="hero">
-    <div class="pill">🇲🇾 Updated for 2026</div>
 
-    <h1>Malaysia EIS Calculator 2026</h1>
+    <div class="hero-inner">
 
-    <p>
-      Calculate your monthly Employment Insurance System (EIS) contribution
-      for employees and employers based on Malaysia's current PERKESO
-      contribution schedule.
-    </p>
+      <div class="pill">
+        🇲🇾 Updated for 2026
+      </div>
 
-    <a href="#calculator" class="hero-btn">Calculate EIS</a>
+      <h1>
+        Malaysia EIS Calculator 2026
+      </h1>
+
+      <p>
+        Calculate your monthly Employment Insurance System
+        (EIS / SIP / LINDUNG KERJAYA) contribution paid by you
+        and your employer.
+      </p>
+
+      <a class="hero-btn" href="#calculator">
+        Calculate EIS contribution ↓
+      </a>
+
+    </div>
+
   </section>
 
 
@@ -79,133 +101,352 @@
 
 
   <!-- CALCULATOR -->
-  <section class="section" id="calculator">
-
-    <div class="section-heading">
-      <h2>EIS Contribution Calculator</h2>
-      <p>
-        Enter your monthly wages and employment details to estimate your
-        employee and employer EIS contributions.
-      </p>
-    </div>
-
+  <section id="calculator" class="section">
 
     <div class="calculator-grid">
+
 
       <!-- INPUT CARD -->
       <div class="card input-card">
 
-        <h3>Your Details</h3>
+        <div class="section-head">
 
-        <div class="form-group">
+          <div>
 
-          <label for="wages">
-            Monthly Wages (RM)
-          </label>
+            <div class="eyebrow">
+              EIS / LINDUNG KERJAYA
+            </div>
+
+            <h2>
+              Your details
+            </h2>
+
+          </div>
+
+          <span class="year-badge">
+            2026
+          </span>
+
+        </div>
+
+
+        <!-- MONTHLY WAGES -->
+        <label for="eisSalary">
+          Monthly wages
+        </label>
+
+        <div class="input-wrap">
+
+          <span>RM</span>
 
           <input
+            id="eisSalary"
             type="number"
-            id="wages"
             min="0"
             step="0.01"
-            placeholder="e.g. 5000"
+            value="5000"
+            inputmode="decimal"
+            autocomplete="off"
           >
 
         </div>
 
+        <small>
+          EIS contributions are capped at the RM6,000 monthly wage ceiling.
+        </small>
 
-        <div class="form-group">
 
-          <label for="age">
-            Age
-          </label>
+        <!-- AGE -->
+        <label for="eisAge">
+          Age
+        </label>
 
-          <input
-            type="number"
-            id="age"
-            min="0"
-            max="100"
-            placeholder="e.g. 28"
-          >
+        <input
+          id="eisAge"
+          type="number"
+          min="0"
+          max="100"
+          value="30"
+          inputmode="numeric"
+        >
+
+
+        <!-- EMPLOYMENT STATUS -->
+        <label for="eisEmployment">
+          Employment status
+        </label>
+
+        <select id="eisEmployment">
+
+          <option value="private" selected>
+            Private-sector employee
+          </option>
+
+          <option value="government">
+            Permanent government employee
+          </option>
+
+          <option value="domestic">
+            Domestic worker
+          </option>
+
+          <option value="self">
+            Self-employed
+          </option>
+
+        </select>
+
+
+        <!-- PRIOR CONTRIBUTION -->
+        <div
+          id="priorBox"
+          class="field-group"
+          style="display:none"
+        >
+
+          <div class="label-row">
+
+            <span>
+              For age 57–59
+            </span>
+
+            <span class="help">
+              Prior EIS contributions before age 57?
+            </span>
+
+          </div>
+
+
+          <div class="radio-grid">
+
+            <label class="radio-card">
+
+              <input
+                type="radio"
+                name="priorEis"
+                value="yes"
+                checked
+              >
+
+              <span>
+
+                <b>
+                  Yes
+                </b>
+
+                <small>
+                  Contributions existed
+                </small>
+
+              </span>
+
+            </label>
+
+
+            <label class="radio-card">
+
+              <input
+                type="radio"
+                name="priorEis"
+                value="no"
+              >
+
+              <span>
+
+                <b>
+                  No
+                </b>
+
+                <small>
+                  No prior contributions
+                </small>
+
+              </span>
+
+            </label>
+
+          </div>
 
         </div>
 
 
-        <div class="form-group">
-
-          <label for="employmentStatus">
-            Employment Status
-          </label>
-
-          <select id="employmentStatus">
-
-            <option value="private">
-              Private-sector employee
-            </option>
-
-            <option value="government">
-              Permanent government employee
-            </option>
-
-            <option value="domestic">
-              Domestic worker
-            </option>
-
-            <option value="self">
-              Self-employed
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group" id="priorContributionGroup">
-
-          <label for="priorContribution">
-            If aged 57–59, did you contribute to EIS before age 57?
-          </label>
-
-          <select id="priorContribution">
-
-            <option value="yes">
-              Yes
-            </option>
-
-            <option value="no">
-              No
-            </option>
-
-          </select>
-
-          <small>
-            This question is relevant to the special EIS exemption for
-            certain employees aged 57 and above.
-          </small>
-
-        </div>
-
-
-        <button class="hero-btn" onclick="calculateEIS()">
-          Calculate EIS
+        <!-- CALCULATE BUTTON -->
+        <button
+          id="calculateEisBtn"
+          class="calculate-btn"
+          type="button"
+        >
+          Calculate EIS contribution
         </button>
+
+
+        <!-- ELIGIBILITY NOTICE -->
+        <div
+          id="eligibilityNotice"
+          class="notice hidden"
+        ></div>
 
       </div>
 
 
       <!-- RESULT CARD -->
-      <div class="card result-card">
+      <div
+        class="card result-card"
+        id="results"
+      >
 
-        <h3>Your EIS Contribution</h3>
+        <div class="result-top">
 
-        <div id="resultArea">
+          <div>
 
-          <p class="result-note">
-            Enter your details and click <strong>Calculate EIS</strong>
-            to see your contribution.
-          </p>
+            <div class="eyebrow">
+              MONTHLY EIS CONTRIBUTION
+            </div>
+
+            <div
+              id="employeeResult"
+              class="take-home"
+            >
+              RM 9.90
+            </div>
+
+            <div class="mini-chip">
+              employee deduction
+            </div>
+
+          </div>
 
         </div>
+
+
+        <!-- BREAKDOWN -->
+        <div class="breakdown">
+
+          <div class="breakdown-row">
+
+            <span>
+              Monthly wages
+            </span>
+
+            <strong id="resultSalary">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Employee EIS
+            </span>
+
+            <strong id="employeeContribution">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Employer EIS
+            </span>
+
+            <strong id="employerContribution">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Total EIS contribution
+            </span>
+
+            <strong id="totalContribution">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div class="breakdown-row">
+
+            <span>
+              Contribution wage used
+            </span>
+
+            <strong id="wageUsed">
+              RM 0.00
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- ANNUAL -->
+        <div class="annual-grid">
+
+          <div>
+
+            <span>
+              Annual employee contribution
+            </span>
+
+            <strong id="annualEmployee">
+              RM 0.00
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Annual employer contribution
+            </span>
+
+            <strong id="annualEmployer">
+              RM 0.00
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- STATUS -->
+        <p
+          id="eisStatus"
+          class="result-note"
+        >
+          Enter your details and calculate your EIS contribution.
+        </p>
+
+
+        <!-- SHARE -->
+        <button
+          id="shareEisBtn"
+          class="share-btn"
+          type="button"
+        >
+          ↗ Share this calculation
+        </button>
+
+
+        <p class="disclaimer">
+
+          This calculator estimates statutory EIS contributions.
+          Benefit eligibility after loss of employment is a separate
+          matter and depends on the Employment Insurance System Act
+          and PERKESO requirements.
+
+        </p>
 
       </div>
 
@@ -215,37 +456,112 @@
 
 
   <!-- HOW IT WORKS -->
-  <section class="section" id="how">
-
-    <div class="section-heading">
-      <h2>How Malaysia EIS Works</h2>
-    </div>
+  <section
+    class="section"
+    id="how"
+  >
 
     <div class="content-card">
 
-      <p>
-        The Employment Insurance System (EIS) is administered by PERKESO
-        under Malaysia's Employment Insurance System Act 2017.
-      </p>
+      <div class="eyebrow">
+        HOW IT WORKS
+      </div>
 
-      <p>
-        For eligible employees, both the employee and employer contribute
-        to EIS each month.
-      </p>
+      <h2>
+        How the EIS calculator works
+      </h2>
 
-      <ul>
-        <li>Employee contribution: 0.2% based on the statutory contribution schedule.</li>
-        <li>Employer contribution: 0.2% based on the statutory contribution schedule.</li>
-        <li>Total contribution: 0.4%.</li>
-        <li>The contribution wage ceiling is RM6,000 per month.</li>
-        <li>For wages above RM6,000, the contribution remains capped at the RM6,000 rate.</li>
-      </ul>
 
-      <p>
-        EIS contributions are calculated using the official statutory
-        contribution schedule rather than simply multiplying the exact
-        salary by 0.2%.
-      </p>
+      <div class="info-grid">
+
+
+        <article>
+
+          <h3>
+            1. Enter your wages
+          </h3>
+
+          <p>
+            Enter your monthly wages. For contribution purposes,
+            wages above RM6,000 use the statutory RM6,000 ceiling.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            2. Check age eligibility
+          </h3>
+
+          <p>
+            Employees aged 18 to 60 are generally required to
+            contribute. Employees aged 57 and above with no prior
+            EIS contributions before age 57 are exempt.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            3. Employee contribution
+          </h3>
+
+          <p>
+            The employee share is 0.2%, with the actual deduction
+            determined by the statutory Second Schedule contribution table.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            4. Employer contribution
+          </h3>
+
+          <p>
+            The employer pays an equal 0.2% share, using the same
+            statutory contribution schedule.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            5. Wage ceiling
+          </h3>
+
+          <p>
+            The EIS contribution ceiling is RM6,000.
+            The maximum employee and employer contribution is
+            RM11.90 each per month.
+          </p>
+
+        </article>
+
+
+        <article>
+
+          <h3>
+            6. EIS is not PCB
+          </h3>
+
+          <p>
+            EIS is a social insurance contribution, not an income-tax
+            deduction. It is separate from EPF, SOCSO and PCB.
+          </p>
+
+        </article>
+
+
+      </div>
 
     </div>
 
@@ -255,41 +571,53 @@
   <!-- CONTRIBUTION TABLE -->
   <section class="section">
 
-    <div class="section-heading">
+    <div class="content-card">
 
-      <h2>Malaysia EIS Contribution Table 2026</h2>
+      <div class="eyebrow">
+        CONTRIBUTION TABLE
+      </div>
+
+      <h2>
+        EIS contribution schedule 2026
+      </h2>
 
       <p>
-        Employee and employer contributions are equal under the standard
-        EIS contribution schedule.
+        The calculator uses the statutory PERKESO Act 800 schedule.
+        Employee and employer shares are equal.
       </p>
 
-    </div>
 
+      <div style="overflow-x:auto">
 
-    <div class="card">
-
-      <div style="overflow-x:auto;">
-
-        <table style="width:100%; border-collapse:collapse;">
+        <table
+          style="width:100%;border-collapse:collapse"
+        >
 
           <thead>
 
             <tr>
 
-              <th style="padding:12px; text-align:left;">
-                Monthly Wages
+              <th
+                style="text-align:left;padding:8px"
+              >
+                Monthly wages
               </th>
 
-              <th style="padding:12px; text-align:right;">
+              <th
+                style="text-align:right;padding:8px"
+              >
                 Employee
               </th>
 
-              <th style="padding:12px; text-align:right;">
+              <th
+                style="text-align:right;padding:8px"
+              >
                 Employer
               </th>
 
-              <th style="padding:12px; text-align:right;">
+              <th
+                style="text-align:right;padding:8px"
+              >
                 Total
               </th>
 
@@ -297,7 +625,8 @@
 
           </thead>
 
-          <tbody id="eisTableBody"></tbody>
+
+          <tbody id="eisTable"></tbody>
 
         </table>
 
@@ -309,35 +638,38 @@
 
 
   <!-- ABOUT -->
-  <section class="section" id="about">
-
-    <div class="section-heading">
-      <h2>About This EIS Calculator</h2>
-    </div>
+  <section
+    class="section"
+    id="about"
+  >
 
     <div class="content-card">
 
+      <div class="eyebrow">
+        ABOUT
+      </div>
+
+      <h2>
+        Malaysia EIS Calculator
+      </h2>
+
       <p>
-        This Malaysia EIS Calculator is designed to provide a quick estimate
-        of Employment Insurance System contributions for eligible employees
-        and employers.
+        The Employment Insurance System (EIS), also known as SIP
+        or LINDUNG KERJAYA, is administered by PERKESO under the
+        Employment Insurance System Act 2017 (Act 800).
       </p>
 
       <p>
-        The calculator uses the statutory EIS contribution schedule and
-        applies the RM6,000 monthly wage ceiling.
+        PERKESO states that private-sector employees aged 18 to 60
+        are generally covered, subject to the statutory exceptions.
+        Contributions are shared equally between employee and employer.
       </p>
 
       <p>
-        EIS eligibility can depend on factors such as employment type and
-        age. Permanent government employees, domestic workers and
-        self-employed persons are generally outside the standard EIS
-        coverage.
-      </p>
-
-      <p>
-        Employees aged 18 to 60 are generally covered, subject to the
-        applicable statutory rules and exemptions.
+        <b>
+          We are not affiliated with PERKESO or any Malaysian
+          government agency.
+        </b>
       </p>
 
     </div>
@@ -346,23 +678,55 @@
 
 
   <!-- PRIVACY -->
-  <section class="section" id="privacy">
-
-    <div class="section-heading">
-      <h2>Privacy</h2>
-    </div>
+  <section
+    class="section"
+    id="privacy"
+  >
 
     <div class="content-card">
 
-      <p>
-        This calculator performs calculations directly in your browser.
-        The salary, age and other information entered into the calculator
-        are not sent to our server by this page.
-      </p>
+      <div class="eyebrow">
+        PRIVACY
+      </div>
+
+      <h2>
+        Privacy
+      </h2>
 
       <p>
-        Malaysia Calculator Hub may use Google Analytics to understand
-        general website traffic and improve the website.
+        Last updated: 18 September 2026
+      </p>
+
+
+      <h3>
+        Calculator data
+      </h3>
+
+      <p>
+        The figures entered into this calculator are processed in
+        your browser to produce the calculation. We do not require
+        an account.
+      </p>
+
+
+      <h3>
+        Cookies and advertising
+      </h3>
+
+      <p>
+        Malaysia Calculator Hub may use cookies and similar
+        technologies when advertising services such as Google
+        AdSense are enabled.
+      </p>
+
+
+      <h3>
+        Analytics
+      </h3>
+
+      <p>
+        We may use Google Analytics to understand general website
+        traffic and improve the website.
       </p>
 
     </div>
@@ -373,22 +737,28 @@
   <!-- DISCLAIMER -->
   <section class="section">
 
-    <div class="section-heading">
-      <h2>Disclaimer</h2>
-    </div>
-
     <div class="content-card">
 
+      <div class="eyebrow">
+        DISCLAIMER
+      </div>
+
+      <h2>
+        EIS Calculator Disclaimer
+      </h2>
+
       <p>
-        This calculator is provided for informational and estimation
-        purposes only. Actual EIS contributions may depend on the latest
-        legislation, official contribution schedules and individual
-        circumstances.
+        This calculator is provided for general information and
+        planning purposes only. It is not an official PERKESO
+        calculator and does not constitute legal, payroll or
+        financial advice.
       </p>
 
       <p>
-        Always refer to the latest information published by PERKESO or
-        your employer/payroll department for official contribution amounts.
+        Actual payroll contributions should be checked against
+        your payslip and the latest PERKESO contribution schedule.
+        EIS contribution eligibility and EIS benefit eligibility
+        are not the same thing.
       </p>
 
     </div>
@@ -399,83 +769,237 @@
   <!-- MORE CALCULATORS -->
   <section class="section">
 
-    <div class="section-heading">
+    <div class="content-card">
 
-      <h2>More Malaysia Calculators</h2>
+      <div class="eyebrow">
+        MORE CALCULATORS
+      </div>
 
-      <p>
-        Explore more free calculators for Malaysian employees and households.
-      </p>
-
-    </div>
-
-
-    <div class="calculator-grid">
-
-      <a href="index.html" class="card calculator-link">
-        <h3>Malaysia Salary Calculator 2026</h3>
-        <p>
-          Estimate take-home salary after EPF, SOCSO, EIS and other
-          deductions.
-        </p>
-      </a>
+      <h2>
+        Malaysia calculators
+      </h2>
 
 
-      <a href="ot-calculator.html" class="card calculator-link">
-        <h3>Malaysia OT Calculator 2026</h3>
-        <p>
-          Calculate overtime pay based on Malaysian employment rules.
-        </p>
-      </a>
+      <div class="coming-grid">
 
 
-      <a href="house-affordability-calculator.html" class="card calculator-link">
-        <h3>House Affordability Calculator</h3>
-        <p>
-          Estimate an affordable property price based on income and
-          commitments.
-        </p>
-      </a>
+        <a
+          href="index.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              🏠
+            </div>
+
+            <b>
+              Calculator Hub
+            </b>
+
+            <small>
+              Explore all Malaysia calculators
+            </small>
+
+          </div>
+
+        </a>
 
 
-      <a href="car-affordability-calculator.html" class="card calculator-link">
-        <h3>Car Affordability Calculator</h3>
-        <p>
-          Estimate monthly car payments and affordability.
-        </p>
-      </a>
+        <a
+          href="salary-calculator.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              💰
+            </div>
+
+            <b>
+              Salary Calculator
+            </b>
+
+            <small>
+              Estimate your monthly take-home pay
+            </small>
+
+          </div>
+
+        </a>
 
 
-      <a href="salary-increment-calculator.html" class="card calculator-link">
-        <h3>Salary Increment Calculator</h3>
-        <p>
-          Calculate your new salary after an increment.
-        </p>
-      </a>
+        <a
+          href="ot-calculator.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              ⏱️
+            </div>
+
+            <b>
+              OT Calculator
+            </b>
+
+            <small>
+              Calculate your overtime pay
+            </small>
+
+          </div>
+
+        </a>
 
 
-      <a href="working-days-calculator.html" class="card calculator-link">
-        <h3>Working Days Calculator</h3>
-        <p>
-          Calculate working days between two dates.
-        </p>
-      </a>
+        <a
+          href="house-affordability.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              🏠
+            </div>
+
+            <b>
+              House Affordability
+            </b>
+
+            <small>
+              Estimate how much house you can afford
+            </small>
+
+          </div>
+
+        </a>
 
 
-      <a href="epf-calculator.html" class="card calculator-link">
-        <h3>EPF Calculator 2026</h3>
-        <p>
-          Calculate employee and employer KWSP contributions.
-        </p>
-      </a>
+        <a
+          href="car-affordability.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              🚗
+            </div>
+
+            <b>
+              Car Affordability
+            </b>
+
+            <small>
+              Estimate a comfortable car budget
+            </small>
+
+          </div>
+
+        </a>
 
 
-      <a href="socso-calculator.html" class="card calculator-link">
-        <h3>SOCSO Calculator 2026</h3>
-        <p>
-          Calculate PERKESO SOCSO employee and employer contributions.
-        </p>
-      </a>
+        <a
+          href="salary-increment.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              📈
+            </div>
+
+            <b>
+              Salary Increment
+            </b>
+
+            <small>
+              See your salary increase
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="working-days.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              📅
+            </div>
+
+            <b>
+              Working Days
+            </b>
+
+            <small>
+              Calculate working days and pay periods
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="epf-calculator.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              💼
+            </div>
+
+            <b>
+              EPF Calculator
+            </b>
+
+            <small>
+              Estimate employee and employer EPF
+            </small>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="socso-calculator.html"
+          style="text-decoration:none;color:inherit"
+        >
+
+          <div>
+
+            <div style="font-size:28px">
+              🛡️
+            </div>
+
+            <b>
+              SOCSO Calculator
+            </b>
+
+            <small>
+              Calculate PERKESO contributions
+            </small>
+
+          </div>
+
+        </a>
+
+
+      </div>
 
     </div>
 
@@ -485,17 +1009,21 @@
 
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer>
 
   <div class="footer-inner">
 
-    <p>
-      © 2026 Malaysia Calculator Hub. All rights reserved.
-    </p>
+    <b>
+      Malaysia Calculator Hub
+    </b>
 
-    <p>
-      Free Malaysia calculators for salary, EPF, SOCSO, EIS, loans and more.
-    </p>
+    <span>
+      Independent • Practical • Malaysia-focused
+    </span>
+
+    <span>
+      © 2026 Malaysia Calculator Hub
+    </span>
 
   </div>
 
@@ -504,317 +1032,381 @@
 
 <script>
 
+document.addEventListener('DOMContentLoaded', function() {
+
+  const $ = id => document.getElementById(id);
+
+
   /*
-   * ============================================================
-   * MALAYSIA EIS CONTRIBUTION SCHEDULE
-   * ============================================================
-   *
-   * The EIS contribution is based on the statutory wage bands.
+   * Currency formatting
+   */
+  const money = v =>
+    'RM ' +
+    Number(v || 0).toLocaleString(
+      'en-MY',
+      {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }
+    );
+
+
+  /*
+   * ==========================================================
+   * MALAYSIA EIS CONTRIBUTION TABLE
+   * ==========================================================
    *
    * Employee contribution = Employer contribution.
    *
-   * Maximum contribution:
-   * RM11.90 employee
-   * RM11.90 employer
-   * RM23.80 total
+   * Maximum:
+   * Employee = RM11.90
+   * Employer = RM11.90
+   * Total    = RM23.80
    *
-   * Wage ceiling: RM6,000
+   * Wage ceiling = RM6,000
    */
 
 
-  const eisBands = [
+  const bands = [
 
-    { min: 0, max: 30, contribution: 0.05 },
-    { min: 30, max: 50, contribution: 0.10 },
-    { min: 50, max: 70, contribution: 0.15 },
-    { min: 70, max: 100, contribution: 0.20 },
-    { min: 100, max: 140, contribution: 0.25 },
-    { min: 140, max: 200, contribution: 0.35 },
-    { min: 200, max: 300, contribution: 0.50 },
-    { min: 300, max: 400, contribution: 0.70 },
-    { min: 400, max: 500, contribution: 0.90 },
-    { min: 500, max: 600, contribution: 1.10 },
-    { min: 600, max: 700, contribution: 1.30 },
-    { min: 700, max: 800, contribution: 1.50 },
-    { min: 800, max: 900, contribution: 1.70 },
-    { min: 900, max: 1000, contribution: 1.90 },
-    { min: 1000, max: 1100, contribution: 2.10 },
-    { min: 1100, max: 1200, contribution: 2.30 },
-    { min: 1200, max: 1300, contribution: 2.50 },
-    { min: 1300, max: 1400, contribution: 2.70 },
-    { min: 1400, max: 1500, contribution: 2.90 },
-    { min: 1500, max: 1600, contribution: 3.10 },
-    { min: 1600, max: 1700, contribution: 3.30 },
-    { min: 1700, max: 1800, contribution: 3.50 },
-    { min: 1800, max: 1900, contribution: 3.70 },
-    { min: 1900, max: 2000, contribution: 3.90 },
-    { min: 2000, max: 2100, contribution: 4.10 },
-    { min: 2100, max: 2200, contribution: 4.30 },
-    { min: 2200, max: 2300, contribution: 4.50 },
-    { min: 2300, max: 2400, contribution: 4.70 },
-    { min: 2400, max: 2500, contribution: 4.90 },
-    { min: 2500, max: 2600, contribution: 5.10 },
-    { min: 2600, max: 2700, contribution: 5.30 },
-    { min: 2700, max: 2800, contribution: 5.50 },
-    { min: 2800, max: 2900, contribution: 5.70 },
-    { min: 2900, max: 3000, contribution: 5.90 },
-    { min: 3000, max: 3100, contribution: 6.10 },
-    { min: 3100, max: 3200, contribution: 6.30 },
-    { min: 3200, max: 3300, contribution: 6.50 },
-    { min: 3300, max: 3400, contribution: 6.70 },
-    { min: 3400, max: 3500, contribution: 6.90 },
-    { min: 3500, max: 3600, contribution: 7.10 },
-    { min: 3600, max: 3700, contribution: 7.30 },
-    { min: 3700, max: 3800, contribution: 7.50 },
-    { min: 3800, max: 3900, contribution: 7.70 },
-    { min: 3900, max: 4000, contribution: 7.90 },
-    { min: 4000, max: 4100, contribution: 8.10 },
-    { min: 4100, max: 4200, contribution: 8.30 },
-    { min: 4200, max: 4300, contribution: 8.50 },
-    { min: 4300, max: 4400, contribution: 8.70 },
-    { min: 4400, max: 4500, contribution: 8.90 },
-    { min: 4500, max: 4600, contribution: 9.10 },
-    { min: 4600, max: 4700, contribution: 9.30 },
-    { min: 4700, max: 4800, contribution: 9.50 },
-    { min: 4800, max: 4900, contribution: 9.70 },
-    { min: 4900, max: 5000, contribution: 9.90 },
-    { min: 5000, max: 5100, contribution: 10.10 },
-    { min: 5100, max: 5200, contribution: 10.30 },
-    { min: 5200, max: 5300, contribution: 10.50 },
-    { min: 5300, max: 5400, contribution: 10.70 },
-    { min: 5400, max: 5500, contribution: 10.90 },
-    { min: 5500, max: 5600, contribution: 11.10 },
-    { min: 5600, max: 5700, contribution: 11.30 },
-    { min: 5700, max: 5800, contribution: 11.50 },
-    { min: 5800, max: 5900, contribution: 11.70 },
-    { min: 5900, max: 6000, contribution: 11.90 }
+    [30, 0.05],
+    [50, 0.10],
+    [70, 0.15],
+    [100, 0.20],
+    [140, 0.25],
+    [200, 0.35],
+    [300, 0.50],
+    [400, 0.70],
+    [500, 0.90],
+    [600, 1.10],
+    [700, 1.30],
+    [800, 1.50],
+    [900, 1.70],
+    [1000, 1.90]
 
   ];
 
 
   /*
-   * Get EIS contribution.
+   * RM1,000–RM6,000 bands
    */
-  function getEISContribution(wages) {
+  for (
+    let max = 1100, contribution = 2.10;
+    max <= 6000;
+    max += 100, contribution += 0.20
+  ) {
 
-    if (wages <= 0) {
-      return 0;
-    }
-
-    /*
-     * EIS wage ceiling is RM6,000.
-     */
-    const cappedWages = Math.min(wages, 6000);
-
-
-    for (const band of eisBands) {
-
-      if (
-        cappedWages > band.min &&
-        cappedWages <= band.max
-      ) {
-
-        return band.contribution;
-
-      }
-
-    }
-
-
-    /*
-     * Handle exactly RM30.
-     */
-    if (cappedWages === 30) {
-      return 0.05;
-    }
-
-
-    return 11.90;
+    bands.push([
+      max,
+      Number(contribution.toFixed(2))
+    ]);
 
   }
 
 
   /*
-   * Determine whether the employee is eligible.
+   * Get contribution.
    */
-  function checkEligibility(age, employmentStatus, priorContribution) {
+  function contribution(salary) {
 
-    if (employmentStatus !== "private") {
-
-      return {
-        eligible: false,
-        reason:
-          "This employment category is generally not covered by EIS."
-      };
-
-    }
+    const wage =
+      Math.min(
+        Math.max(salary, 0),
+        6000
+      );
 
 
-    /*
-     * EIS generally covers employees aged 18 to 60.
-     */
-    if (age < 18) {
-
-      return {
-        eligible: false,
-        reason:
-          "Employees below age 18 are generally not covered by EIS."
-      };
-
-    }
-
-
-    if (age > 60) {
-
-      return {
-        eligible: false,
-        reason:
-          "Employees above age 60 are generally not covered by EIS."
-      };
-
-    }
-
-
-    /*
-     * Special rule for employees aged 57 and above
-     * who had not contributed before reaching age 57.
-     */
-    if (
-      age >= 57 &&
-      age < 60 &&
-      priorContribution === "no"
-    ) {
-
-      return {
-        eligible: false,
-        reason:
-          "Employees aged 57 to 59 who had not contributed to EIS before age 57 are exempt under the applicable rules."
-      };
-
-    }
+    const band =
+      bands.find(
+        x => wage <= x[0]
+      ) ||
+      bands[bands.length - 1];
 
 
     return {
-      eligible: true,
-      reason:
-        "Eligible for EIS contribution based on the information entered."
+
+      wage: wage,
+
+      share: band[1]
+
     };
 
   }
 
 
   /*
-   * Main calculation.
+   * Contribution table labels.
    */
-  function calculateEIS() {
+  function label(i) {
 
-    const wages =
-      parseFloat(document.getElementById("wages").value);
-
-    const age =
-      parseInt(document.getElementById("age").value);
-
-    const employmentStatus =
-      document.getElementById("employmentStatus").value;
-
-    const priorContribution =
-      document.getElementById("priorContribution").value;
+    const max =
+      bands[i][0];
 
 
-    const resultArea =
-      document.getElementById("resultArea");
+    if (i === 0) {
 
-
-    /*
-     * Validate wages.
-     */
-    if (
-      isNaN(wages) ||
-      wages < 0
-    ) {
-
-      resultArea.innerHTML = `
-        <p class="result-note">
-          Please enter a valid monthly wage.
-        </p>
-      `;
-
-      return;
+      return 'Up to RM30';
 
     }
 
 
-    /*
-     * Validate age.
-     */
-    if (
-      isNaN(age) ||
-      age < 0
-    ) {
+    return (
+      '> RM' +
+      bands[i - 1][0].toLocaleString('en-MY') +
+      ' – RM' +
+      max.toLocaleString('en-MY')
+    );
 
-      resultArea.innerHTML = `
-        <p class="result-note">
-          Please enter a valid age.
-        </p>
-      `;
-
-      return;
-
-    }
+  }
 
 
-    const eligibility =
-      checkEligibility(
-        age,
-        employmentStatus,
-        priorContribution
+  /*
+   * Build contribution table.
+   */
+  bands.forEach(function(b, i) {
+
+    const tr =
+      document.createElement('tr');
+
+
+    tr.innerHTML = `
+
+      <td style="padding:7px">
+        ${label(i)}
+      </td>
+
+      <td style="text-align:right;padding:7px">
+        ${money(b[1])}
+      </td>
+
+      <td style="text-align:right;padding:7px">
+        ${money(b[1])}
+      </td>
+
+      <td style="text-align:right;padding:7px">
+        ${money(b[1] * 2)}
+      </td>
+
+    `;
+
+
+    $('eisTable').appendChild(tr);
+
+  });
+
+
+  /*
+   * ==========================================================
+   * DARK MODE
+   * ==========================================================
+   */
+
+  const themeToggle =
+    $('themeToggle');
+
+
+  if (
+    localStorage.getItem('mch-theme') === 'dark'
+  ) {
+
+    document.body.classList.add('dark');
+
+  }
+
+
+  function updateThemeIcon() {
+
+    themeToggle.textContent =
+      document.body.classList.contains('dark')
+        ? '☀'
+        : '☾';
+
+  }
+
+
+  updateThemeIcon();
+
+
+  themeToggle.addEventListener(
+    'click',
+    function() {
+
+      document.body.classList.toggle('dark');
+
+
+      localStorage.setItem(
+        'mch-theme',
+        document.body.classList.contains('dark')
+          ? 'dark'
+          : 'light'
       );
 
 
+      updateThemeIcon();
+
+    }
+  );
+
+
+  /*
+   * ==========================================================
+   * AGE 57–59 QUESTION
+   * ==========================================================
+   */
+
+  function priorVisibility() {
+
+    const age =
+      Number($('eisAge').value) || 0;
+
+
+    $('priorBox').style.display =
+      (
+        age >= 57 &&
+        age < 60
+      )
+        ? 'block'
+        : 'none';
+
+  }
+
+
+  /*
+   * ==========================================================
+   * CALCULATE EIS
+   * ==========================================================
+   */
+
+  function calculate() {
+
+    const salary =
+      Math.max(
+        0,
+        Number($('eisSalary').value) || 0
+      );
+
+
+    const age =
+      Number($('eisAge').value) || 0;
+
+
+    const employment =
+      $('eisEmployment').value;
+
+
+    const selectedPrior =
+      document.querySelector(
+        'input[name="priorEis"]:checked'
+      );
+
+
+    const prior =
+      selectedPrior
+        ? selectedPrior.value
+        : 'yes';
+
+
+    priorVisibility();
+
+
+    $('eligibilityNotice')
+      .classList
+      .add('hidden');
+
+
     /*
-     * If not eligible.
+     * Check eligibility.
      */
-    if (!eligibility.eligible) {
+    if (
 
-      resultArea.innerHTML = `
+      age < 18 ||
 
-        <div class="breakdown">
+      age > 60 ||
 
-          <div class="breakdown-row">
-            <span>Monthly Wages</span>
-            <strong>RM ${formatMoney(wages)}</strong>
-          </div>
+      employment !== 'private' ||
 
-          <div class="breakdown-row">
-            <span>Employee EIS</span>
-            <strong>RM 0.00</strong>
-          </div>
+      (
+        age >= 57 &&
+        age < 60 &&
+        prior === 'no'
+      )
 
-          <div class="breakdown-row">
-            <span>Employer EIS</span>
-            <strong>RM 0.00</strong>
-          </div>
-
-          <div class="breakdown-row">
-            <span>Total EIS</span>
-            <strong>RM 0.00</strong>
-          </div>
-
-        </div>
+    ) {
 
 
-        <p class="result-note">
-          <strong>Status:</strong><br>
-          ${eligibility.reason}
-        </p>
+      $('employeeResult').textContent =
+        'RM 0.00';
 
 
-        <p class="disclaimer">
-          This is an informational estimate. Refer to PERKESO for
-          official eligibility and contribution requirements.
-        </p>
+      $('resultSalary').textContent =
+        money(salary);
 
-      `;
+
+      [
+        'employeeContribution',
+        'employerContribution',
+        'totalContribution',
+        'annualEmployee',
+        'annualEmployer'
+      ].forEach(function(id) {
+
+        $(id).textContent =
+          'RM 0.00';
+
+      });
+
+
+      $('wageUsed').textContent =
+        money(
+          Math.min(
+            salary,
+            6000
+          )
+        );
+
+
+      let msg;
+
+
+      if (
+        employment !== 'private'
+      ) {
+
+        msg =
+          'EIS does not apply to permanent government employees, domestic workers or self-employed persons.';
+
+      }
+
+      else if (
+        age < 18 ||
+        age > 60
+      ) {
+
+        msg =
+          'EIS generally applies to employees aged 18 to 60.';
+
+      }
+
+      else {
+
+        msg =
+          'Employees aged 57 and above with no prior EIS contributions before age 57 are exempt.';
+
+      }
+
+
+      $('eisStatus').textContent =
+        msg;
+
+
+      $('eligibilityNotice').textContent =
+        msg;
+
+
+      $('eligibilityNotice')
+        .classList
+        .remove('hidden');
+
 
       return;
 
@@ -824,288 +1416,71 @@
     /*
      * Calculate contribution.
      */
-    const contribution =
-      getEISContribution(wages);
+    const r =
+      contribution(salary);
 
 
-    const employeeContribution =
-      contribution;
+    const employee =
+      r.share;
 
-    const employerContribution =
-      contribution;
 
-    const totalContribution =
-      employeeContribution + employerContribution;
+    const employer =
+      r.share;
 
 
-    const annualEmployee =
-      employeeContribution * 12;
-
-    const annualEmployer =
-      employerContribution * 12;
-
-
-    const contributionWage =
-      Math.min(wages, 6000);
-
-
-    resultArea.innerHTML = `
-
-      <div class="breakdown">
-
-        <div class="breakdown-row">
-          <span>Monthly Wages</span>
-          <strong>
-            RM ${formatMoney(wages)}
-          </strong>
-        </div>
-
-
-        <div class="breakdown-row">
-          <span>Employee EIS</span>
-          <strong>
-            RM ${formatMoney(employeeContribution)}
-          </strong>
-        </div>
-
-
-        <div class="breakdown-row">
-          <span>Employer EIS</span>
-          <strong>
-            RM ${formatMoney(employerContribution)}
-          </strong>
-        </div>
-
-
-        <div class="breakdown-row">
-          <span>Total EIS</span>
-          <strong>
-            RM ${formatMoney(totalContribution)}
-          </strong>
-        </div>
-
-
-        <div class="breakdown-row">
-          <span>Contribution Wage Used</span>
-          <strong>
-            RM ${formatMoney(contributionWage)}
-          </strong>
-        </div>
-
-      </div>
-
-
-      <div class="annual-grid">
-
-        <div>
-          <span>Annual Employee</span>
-          <strong>
-            RM ${formatMoney(annualEmployee)}
-          </strong>
-        </div>
-
-
-        <div>
-          <span>Annual Employer</span>
-          <strong>
-            RM ${formatMoney(annualEmployer)}
-          </strong>
-        </div>
-
-      </div>
-
-
-      <p class="result-note">
-
-        <strong>Status:</strong>
-        Eligible for EIS contribution based on the information entered.
-
-      </p>
-
-
-      <button
-        class="share-btn"
-        onclick="shareResult()"
-      >
-        Share Result
-      </button>
-
-
-      <p class="disclaimer">
-        EIS contributions use the statutory contribution schedule.
-        Wages above RM6,000 are subject to the maximum contribution
-        rate of RM11.90 for the employee and RM11.90 for the employer.
-      </p>
-
-    `;
-
-  }
-
-
-  /*
-   * Format money.
-   */
-  function formatMoney(value) {
-
-    return Number(value).toLocaleString(
-      "en-MY",
-      {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      }
-    );
-
-  }
-
-
-  /*
-   * Share calculator result.
-   */
-  function shareResult() {
-
-    const wages =
-      document.getElementById("wages").value;
-
-    const age =
-      document.getElementById("age").value;
-
-
-    const text =
-      `Malaysia EIS Calculator 2026\n` +
-      `Monthly wages: RM ${wages}\n` +
-      `Age: ${age}\n\n` +
-      `Calculate your EIS contribution at:\n` +
-      `https://mycalculatorhub.github.io/eis-calculator.html`;
-
-
-    if (
-      navigator.share
-    ) {
-
-      navigator.share({
-
-        title:
-          "Malaysia EIS Calculator 2026",
-
-        text:
-          text
-
-      });
-
-    } else {
-
-      navigator.clipboard.writeText(text);
-
-      alert(
-        "EIS calculator result link copied!"
-      );
-
-    }
-
-  }
-
-
-  /*
-   * Populate contribution table.
-   */
-  function populateEISTable() {
-
-    const tableBody =
-      document.getElementById("eisTableBody");
-
-
-    let html = "";
-
-
-    for (const band of eisBands) {
-
-      html += `
-
-        <tr>
-
-          <td style="padding:10px; border-top:1px solid rgba(148,163,184,.2);">
-            RM ${formatMoney(band.min)}
-            – RM ${formatMoney(band.max)}
-          </td>
-
-          <td style="padding:10px; text-align:right; border-top:1px solid rgba(148,163,184,.2);">
-            RM ${formatMoney(band.contribution)}
-          </td>
-
-          <td style="padding:10px; text-align:right; border-top:1px solid rgba(148,163,184,.2);">
-            RM ${formatMoney(band.contribution)}
-          </td>
-
-          <td style="padding:10px; text-align:right; border-top:1px solid rgba(148,163,184,.2);">
-            RM ${formatMoney(band.contribution * 2)}
-          </td>
-
-        </tr>
-
-      `;
-
-    }
+    const total =
+      employee + employer;
 
 
     /*
-     * Add > RM6,000 row.
+     * Display result.
      */
-    html += `
-
-      <tr>
-
-        <td style="padding:10px; border-top:1px solid rgba(148,163,184,.2);">
-          Above RM6,000
-        </td>
-
-        <td style="padding:10px; text-align:right; border-top:1px solid rgba(148,163,184,.2);">
-          RM 11.90
-        </td>
-
-        <td style="padding:10px; text-align:right; border-top:1px solid rgba(148,163,184,.2);">
-          RM 11.90
-        </td>
-
-        <td style="padding:10px; text-align:right; border-top:1px solid rgba(148,163,184,.2);">
-          RM 23.80
-        </td>
-
-      </tr>
-
-    `;
+    $('employeeResult').textContent =
+      money(employee);
 
 
-    tableBody.innerHTML =
-      html;
-
-  }
+    $('resultSalary').textContent =
+      money(salary);
 
 
-  /*
-   * Show/hide the prior-contribution question.
-   */
-  function updatePriorContributionVisibility() {
-
-    const age =
-      parseInt(document.getElementById("age").value);
-
-    const group =
-      document.getElementById(
-        "priorContributionGroup"
-      );
+    $('employeeContribution').textContent =
+      money(employee);
 
 
-    if (
-      !isNaN(age) &&
-      age >= 57 &&
-      age < 60
-    ) {
+    $('employerContribution').textContent =
+      money(employer);
 
-      group.style.display = "block";
 
-    } else {
+    $('totalContribution').textContent =
+      money(total);
 
-      group.style.display = "none";
+
+    $('wageUsed').textContent =
+      money(r.wage);
+
+
+    $('annualEmployee').textContent =
+      money(employee * 12);
+
+
+    $('annualEmployer').textContent =
+      money(employer * 12);
+
+
+    /*
+     * Status message.
+     */
+    if (salary > 6000) {
+
+      $('eisStatus').textContent =
+        'Your wages exceed the RM6,000 ceiling, so the statutory maximum EIS contribution is RM11.90 from you and RM11.90 from your employer per month.';
+
+    }
+
+    else {
+
+      $('eisStatus').textContent =
+        'Your EIS contribution is calculated from the statutory PERKESO Act 800 contribution schedule.';
 
     }
 
@@ -1113,65 +1488,128 @@
 
 
   /*
-   * Listen for age changes.
+   * ==========================================================
+   * INPUT EVENTS
+   * ==========================================================
    */
-  document
-    .getElementById("age")
+
+  [
+    'eisSalary',
+    'eisAge',
+    'eisEmployment'
+  ].forEach(function(id) {
+
+    $(id).addEventListener(
+      'input',
+      calculate
+    );
+
+  });
+
+
+  $('eisEmployment')
     .addEventListener(
-      "input",
-      updatePriorContributionVisibility
+      'change',
+      calculate
+    );
+
+
+  document
+    .querySelectorAll(
+      'input[name="priorEis"]'
+    )
+    .forEach(function(input) {
+
+      input.addEventListener(
+        'change',
+        calculate
+      );
+
+    });
+
+
+  $('calculateEisBtn')
+    .addEventListener(
+      'click',
+      calculate
     );
 
 
   /*
-   * Initial state.
+   * ==========================================================
+   * SHARE
+   * ==========================================================
    */
-  updatePriorContributionVisibility();
 
-  populateEISTable();
+  $('shareEisBtn')
+    .addEventListener(
+      'click',
+      async function() {
+
+        const text =
+          'Malaysia EIS Calculator 2026\n' +
+
+          'Monthly wages: ' +
+          money(
+            $('eisSalary').value
+          ) +
+
+          '\nEmployee EIS: ' +
+          $('employeeContribution')
+            .textContent +
+
+          '\nEmployer EIS: ' +
+          $('employerContribution')
+            .textContent +
+
+          '\nTotal EIS: ' +
+          $('totalContribution')
+            .textContent +
+
+          '\n' +
+          location.href.split('#')[0];
+
+
+        try {
+
+          await navigator.clipboard.writeText(text);
+
+
+          $('shareEisBtn').textContent =
+            '✓ Calculation copied';
+
+
+          setTimeout(
+            function() {
+
+              $('shareEisBtn').textContent =
+                '↗ Share this calculation';
+
+            },
+            1800
+          );
+
+        }
+
+        catch(e) {
+
+          prompt(
+            'Copy this calculation:',
+            text
+          );
+
+        }
+
+      }
+    );
 
 
   /*
-   * Dark mode.
+   * Initial calculation.
    */
-  const themeToggle =
-    document.getElementById("themeToggle");
+  calculate();
 
-
-  if (localStorage.getItem("theme") === "dark") {
-
-    document.body.classList.add("dark");
-
-  }
-
-
-  themeToggle.addEventListener(
-    "click",
-    function() {
-
-      document.body.classList.toggle("dark");
-
-
-      if (
-        document.body.classList.contains("dark")
-      ) {
-
-        localStorage.setItem(
-          "theme",
-          "dark"
-        );
-
-      } else {
-
-        localStorage.setItem(
-          "theme",
-          "light"
-        );
-
-      }
-
-    }
-  );
+});
 
 </script>
 
