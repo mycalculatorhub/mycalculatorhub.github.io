@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Malaysia PCB Calculator 2026. Estimate your monthly Monthly Tax Deduction (PCB), annual income tax and take-home pay based on salary, EPF, marital status, children, tax reliefs and zakat.">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="canonical" href="https://mycalculatorhub.github.io/pcb-calculator.html">
+
+  <title>Malaysia PCB Calculator 2026 | Monthly Tax Deduction Calculator</title>
+
+  <meta property="og:title" content="Malaysia PCB Calculator 2026">
+  <meta property="og:description" content="Estimate Malaysia monthly PCB, annual income tax and take-home pay for 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mycalculatorhub.github.io/pcb-calculator.html">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N90MJX0CSD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N90MJX0CSD');
+  </script>
+
+  <style>
+    .form-note {
+      font-size: 0.82rem;
+      color: var(--muted, #64748b);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .relief-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(59, 130, 246, 0.08);
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    .relief-total span:last-child {
+      white-space: nowrap;
+    }
+
+    .result-warning {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(245, 158, 11, 0.10);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      font-size: 0.85rem;
+      line-height: 1.55;
+    }
+
+    .result-positive {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(34, 197, 94, 0.10);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      font-size: 0.85rem;
+      line-height: 1.55;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .small-label {
+      font-size: 0.78rem;
+      color: var(--muted, #64748b);
+      margin-top: 4px;
+    }
+
+    .result-number {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .tax-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.88rem;
+    }
+
+    .tax-table th,
+    .tax-table td {
+      padding: 9px 8px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      text-align: left;
+    }
+
+    .tax-table th:last-child,
+    .tax-table td:last-child {
+      text-align: right;
+    }
+
+    @media (max-width: 700px) {
+      .tax-table {
+        font-size: 0.8rem;
+      }
+
+      .result-number {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="nav">
+
+    <a class="brand" href="index.html">
+      <span>MY</span> Calculator Hub
+    </a>
+
+    <nav>
+      <a href="index.html">Calculators</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+      ☾
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="eyebrow">
+        Malaysia Tax Calculator
+      </div>
+
+      <h1>
+        Malaysia PCB Calculator 2026
+      </h1>
+
+      <p>
+        Estimate your monthly Monthly Tax Deduction (PCB), annual income tax
+        and estimated take-home pay based on your salary, EPF, family status,
+        tax reliefs and zakat.
+      </p>
+
+      <div class="year-badge">
+        2026 Tax Year
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- AD SPACE -->
+
+  <section class="ad-slot">
+    <div>
+      Advertisement
+    </div>
+  </section>
+
+
+  <!-- CALCULATOR -->
+
+  <section class="calculator-section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          PCB Calculator
+        </div>
+
+        <h2>
+          Calculate Your Estimated PCB
+        </h2>
+
+        <p>
+          Enter your monthly employment income and basic tax information below.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="calculator-grid">
+
+      <!-- INPUT CARD -->
+
+      <div class="content-card">
+
+        <h3>
+          Income & Personal Details
+        </h3>
+
+
+        <!-- RESIDENCY -->
+
+        <div class="field-group">
+
+          <label>
+            Tax Residency
+          </label>
+
+          <div class="radio-grid">
+
+            <label class="radio-card">
+              <input
+                type="radio"
+                name="residency"
+                value="resident"
+                checked
+              >
+              <span>
+                <strong>Resident</strong>
+                <small>Resident individual</small>
+              </span>
+            </label>
+
+            <label class="radio-card">
+              <input
+                type="radio"
+                name="residency"
+                value="nonresident"
+              >
+              <span>
+                <strong>Non-Resident</strong>
+                <small>Non-resident individual</small>
+              </span>
+            </label>
+
+          </div>
+
+          <div class="form-note">
+            This calculator is primarily designed for standard Malaysian
+            resident employees.
+          </div>
+
+        </div>
+
+
+        <!-- MONTHLY SALARY -->
+
+        <div class="field-group">
+
+          <label for="salary">
+            Monthly Gross Salary (RM)
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="salary"
+              min="0"
+              step="0.01"
+              placeholder="e.g. 5000"
+            >
+          </div>
+
+        </div>
+
+
+        <!-- BONUS -->
+
+        <div class="field-group">
+
+          <label for="bonus">
+            Annual Bonus / Additional Remuneration (RM)
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="bonus"
+              min="0"
+              step="0.01"
+              value="0"
+              placeholder="e.g. 10000"
+            >
+          </div>
+
+          <div class="form-note">
+            Optional. This is included when estimating your annual taxable
+            employment income.
+          </div>
+
+        </div>
+
+
+        <!-- EPF -->
+
+        <div class="field-group">
+
+          <label for="epfRate">
+            Employee EPF Contribution
+          </label>
+
+          <div class="radio-grid">
+
+            <label class="radio-card">
+              <input
+                type="radio"
+                name="epfRate"
+                value="11"
+                checked
+              >
+              <span>
+                <strong>11%</strong>
+                <small>Standard employee rate</small>
+              </span>
+            </label>
+
+            <label class="radio-card">
+              <input
+                type="radio"
+                name="epfRate"
+                value="0"
+              >
+              <span>
+                <strong>0%</strong>
+                <small>No EPF deduction</small>
+              </span>
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- MARITAL STATUS -->
+
+        <div class="field-group">
+
+          <label for="maritalStatus">
+            Marital Status
+          </label>
+
+          <select id="maritalStatus">
+            <option value="single">
+              Single
+            </option>
+
+            <option value="marriedWorking">
+              Married – Spouse Working / Has Income
+            </option>
+
+            <option value="marriedNoIncome">
+              Married – Spouse Has No Income
+            </option>
+          </select>
+
+        </div>
+
+
+        <!-- CHILDREN -->
+
+        <div class="field-group">
+
+          <label for="children">
+            Qualifying Children
+          </label>
+
+          <input
+            type="number"
+            id="children"
+            min="0"
+            max="20"
+            step="1"
+            value="0"
+            placeholder="0"
+          >
+
+          <div class="form-note">
+            Enter the number of qualifying children for whom you are claiming
+            child relief.
+          </div>
+
+        </div>
+
+
+        <!-- DISABLED -->
+
+        <div class="field-group">
+
+          <label>
+            Disabled Individual
+          </label>
+
+          <div class="radio-grid">
+
+            <label class="radio-card">
+              <input
+                type="radio"
+                name="disabled"
+                value="no"
+                checked
+              >
+              <span>
+                <strong>No</strong>
+              </span>
+            </label>
+
+            <label class="radio-card">
+              <input
+                type="radio"
+                name="disabled"
+                value="yes"
+              >
+              <span>
+                <strong>Yes</strong>
+              </span>
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <!-- RELIEFS -->
+
+        <div class="field-group">
+
+          <h3 style="margin-bottom:10px;">
+            Optional Annual Tax Reliefs
+          </h3>
+
+          <div class="form-note" style="margin-bottom:15px;">
+            Enter eligible amounts. The calculator applies the main 2026
+            annual limits shown below.
+          </div>
+
+
+          <label for="parentsRelief">
+            Parents / Grandparents Expenses
+            <span class="small-label">
+              Maximum RM8,000
+            </span>
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="parentsRelief"
+              min="0"
+              max="8000"
+              step="0.01"
+              value="0"
+            >
+          </div>
+
+
+          <label for="supportEquipment" style="margin-top:14px;">
+            Basic Supporting Equipment
+            <span class="small-label">
+              Maximum RM6,000
+            </span>
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="supportEquipment"
+              min="0"
+              max="6000"
+              step="0.01"
+              value="0"
+            >
+          </div>
+
+
+          <label for="educationFees" style="margin-top:14px;">
+            Education Fees
+            <span class="small-label">
+              Maximum RM7,000
+            </span>
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="educationFees"
+              min="0"
+              max="7000"
+              step="0.01"
+              value="0"
+            >
+          </div>
+
+
+          <label for="medicalExpenses" style="margin-top:14px;">
+            Medical Expenses
+            <span class="small-label">
+              Maximum RM10,000
+            </span>
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="medicalExpenses"
+              min="0"
+              max="10000"
+              step="0.01"
+              value="0"
+            >
+          </div>
+
+
+          <label for="lifestyleRelief" style="margin-top:14px;">
+            Lifestyle Relief
+            <span class="small-label">
+              Maximum RM2,500
+            </span>
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="lifestyleRelief"
+              min="0"
+              max="2500"
+              step="0.01"
+              value="0"
+            >
+          </div>
+
+
+          <label for="otherRelief" style="margin-top:14px;">
+            Other Eligible Reliefs
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="otherRelief"
+              min="0"
+              step="0.01"
+              value="0"
+            >
+          </div>
+
+
+          <div class="relief-total">
+            <span>
+              Total Entered Reliefs
+            </span>
+
+            <span id="reliefTotal">
+              RM0.00
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- ZAKAT -->
+
+        <div class="field-group">
+
+          <label for="zakat">
+            Annual Zakat / Fitrah Paid (RM)
+          </label>
+
+          <div class="input-wrap">
+            <span>RM</span>
+
+            <input
+              type="number"
+              id="zakat"
+              min="0"
+              step="0.01"
+              value="0"
+              placeholder="0"
+            >
+          </div>
+
+          <div class="form-note">
+            Zakat is treated as a tax rebate in the estimate, subject to
+            applicable rules.
+          </div>
+
+        </div>
+
+
+        <button
+          class="calculate-btn"
+          type="button"
+          onclick="calculatePCB()"
+        >
+          Calculate PCB
+        </button>
+
+      </div>
+
+
+      <!-- RESULT CARD -->
+
+      <div class="content-card" id="resultCard">
+
+        <div class="result-top">
+
+          <div>
+            <div class="eyebrow">
+              Your Estimate
+            </div>
+
+            <h3>
+              Estimated Monthly PCB
+            </h3>
+          </div>
+
+          <div class="mini-chip">
+            2026
+          </div>
+
+        </div>
+
+
+        <div class="take-home">
+
+          <div class="small-label">
+            Estimated Monthly PCB
+          </div>
+
+          <div
+            class="result-number"
+            id="monthlyPCB"
+          >
+            RM0.00
+          </div>
+
+        </div>
+
+
+        <div class="breakdown">
+
+          <div>
+            <span>
+              Monthly Gross Salary
+            </span>
+
+            <strong id="resultSalary">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Employee EPF
+            </span>
+
+            <strong id="resultEPF">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Annual Employment Income
+            </span>
+
+            <strong id="annualIncome">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Total Tax Reliefs
+            </span>
+
+            <strong id="annualReliefs">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Estimated Chargeable Income
+            </span>
+
+            <strong id="chargeableIncome">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Estimated Annual Tax
+            </span>
+
+            <strong id="annualTax">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Estimated Annual Zakat Rebate
+            </span>
+
+            <strong id="zakatRebate">
+              RM0.00
+            </strong>
+          </div>
+
+
+          <div>
+            <span>
+              Estimated Annual PCB
+            </span>
+
+            <strong id="annualPCB">
+              RM0.00
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div class="annual-grid">
+
+          <div class="mini-chip">
+            Effective Tax Rate:
+            <strong id="effectiveRate">
+              0.00%
+            </strong>
+          </div>
+
+          <div class="mini-chip">
+            Estimated Take-Home:
+            <strong id="takeHome">
+              RM0.00
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div
+          class="result-positive hidden"
+          id="zeroTaxMessage"
+        >
+          Based on the information entered, the estimated annual income tax
+          after the applicable basic reliefs and rebates is RM0.00.
+        </div>
+
+
+        <div
+          class="result-warning"
+          id="resultWarning"
+        >
+          This is an estimate. Actual employer PCB may differ because official
+          PCB calculations can use accumulated remuneration, previous PCB,
+          previous-employer information, TP1 deductions, TP3 information,
+          additional remuneration and other payroll inputs.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section id="how" class="info-section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          How It Works
+        </div>
+
+        <h2>
+          How Malaysia PCB Is Estimated
+        </h2>
+
+        <p>
+          PCB is a monthly deduction from employment income towards your
+          estimated income tax liability.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="info-grid">
+
+      <div class="content-card">
+
+        <h3>
+          1. Estimate Annual Income
+        </h3>
+
+        <p>
+          Monthly salary is annualised and optional bonus or additional
+          remuneration is added to estimate total employment income for the
+          year.
+        </p>
+
+      </div>
+
+
+      <div class="content-card">
+
+        <h3>
+          2. Apply EPF & Reliefs
+        </h3>
+
+        <p>
+          Employee EPF and eligible tax reliefs are taken into consideration
+          when estimating taxable income.
+        </p>
+
+      </div>
+
+
+      <div class="content-card">
+
+        <h3>
+          3. Calculate Income Tax
+        </h3>
+
+        <p>
+          The estimated chargeable income is applied against the applicable
+          progressive individual income tax bands.
+        </p>
+
+      </div>
+
+
+      <div class="content-card">
+
+        <h3>
+          4. Apply Zakat Rebate
+        </h3>
+
+        <p>
+          Entered eligible zakat payments are treated as a tax rebate in the
+          estimate, subject to applicable Malaysian tax rules.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TAX TABLE -->
+
+  <section class="info-section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          Tax Reference
+        </div>
+
+        <h2>
+          Progressive Income Tax Bands
+        </h2>
+
+        <p>
+          The calculator uses progressive resident individual tax bands for
+          the estimate.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="content-card">
+
+      <table class="tax-table">
+
+        <thead>
+          <tr>
+            <th>
+              Chargeable Income
+            </th>
+
+            <th>
+              Rate
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>First RM5,000</td>
+            <td>0%</td>
+          </tr>
+
+          <tr>
+            <td>RM5,001 – RM20,000</td>
+            <td>1%</td>
+          </tr>
+
+          <tr>
+            <td>RM20,001 – RM35,000</td>
+            <td>3%</td>
+          </tr>
+
+          <tr>
+            <td>RM35,001 – RM50,000</td>
+            <td>6%</td>
+          </tr>
+
+          <tr>
+            <td>RM50,001 – RM70,000</td>
+            <td>11%</td>
+          </tr>
+
+          <tr>
+            <td>RM70,001 – RM100,000</td>
+            <td>19%</td>
+          </tr>
+
+          <tr>
+            <td>RM100,001 – RM400,000</td>
+            <td>25%</td>
+          </tr>
+
+          <tr>
+            <td>RM400,001 – RM600,000</td>
+            <td>26%</td>
+          </tr>
+
+          <tr>
+            <td>RM600,001 – RM2,000,000</td>
+            <td>28%</td>
+          </tr>
+
+          <tr>
+            <td>Above RM2,000,000</td>
+            <td>30%</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="info-section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          About This Calculator
+        </div>
+
+        <h2>
+          Malaysia PCB Calculator 2026
+        </h2>
+
+        <p>
+          This calculator is designed to provide a convenient estimate of
+          monthly PCB for Malaysian employees.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="content-card">
+
+      <p>
+        Monthly Tax Deduction (PCB) is a mechanism used by employers in
+        Malaysia to deduct income tax from employees' remuneration and remit
+        the deduction to the Inland Revenue Board of Malaysia (HASiL).
+      </p>
+
+      <p>
+        Your actual PCB can differ from this estimate because an employer's
+        computerized PCB calculation can incorporate accumulated remuneration,
+        previous deductions, previous employers, additional remuneration,
+        TP1 claims and other payroll information.
+      </p>
+
+      <p>
+        For this reason, the result should be used for planning and estimation
+        rather than as an official tax assessment or payroll calculation.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIVACY -->
+
+  <section id="privacy" class="info-section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          Privacy
+        </div>
+
+        <h2>
+          Your Calculator Inputs
+        </h2>
+
+        <p>
+          Privacy matters when using financial calculators.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="content-card">
+
+      <p>
+        The calculations on this page are performed in your browser using
+        JavaScript. Salary, EPF, relief and other calculator inputs are not
+        sent to our server for calculation.
+      </p>
+
+      <p>
+        This website may use Google Analytics to understand general website
+        traffic and improve the service.
+      </p>
+
+      <p>
+        Last updated: 18 September 2026.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- DISCLAIMER -->
+
+  <section class="info-section">
+
+    <div class="content-card">
+
+      <h3>
+        Important Disclaimer
+      </h3>
+
+      <p>
+        This Malaysia PCB Calculator is an estimation tool and is not an
+        official HASiL calculator. Actual Monthly Tax Deduction may differ
+        depending on your individual circumstances, payroll history,
+        additional remuneration, employer information, TP1/TP3 submissions,
+        tax rebates and other factors.
+      </p>
+
+      <p>
+        Always refer to HASiL, your employer's payroll department or a
+        qualified tax professional for official tax calculations and filing
+        requirements.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MORE CALCULATORS -->
+
+  <section class="info-section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          More Tools
+        </div>
+
+        <h2>
+          More Malaysia Calculators
+        </h2>
+
+        <p>
+          Explore other useful Malaysian salary and financial calculators.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="coming-grid">
+
+      <a class="content-card" href="index.html">
+        <h3>
+          Malaysia Salary Calculator 2026
+        </h3>
+
+        <p>
+          Calculate estimated take-home salary after EPF, SOCSO, EIS, LINDUNG
+          24 Jam and PCB.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="ot-calculator.html">
+        <h3>
+          Malaysia OT Calculator 2026
+        </h3>
+
+        <p>
+          Estimate overtime pay based on Malaysian employment rules.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="epf-calculator.html">
+        <h3>
+          EPF Calculator 2026
+        </h3>
+
+        <p>
+          Estimate employee and employer EPF contributions.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="socso-calculator.html">
+        <h3>
+          SOCSO Calculator 2026
+        </h3>
+
+        <p>
+          Estimate PERKESO contribution based on your monthly wages.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="eis-calculator.html">
+        <h3>
+          EIS Calculator 2026
+        </h3>
+
+        <p>
+          Estimate employee and employer EIS contributions.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="house-affordability.html">
+        <h3>
+          House Affordability Calculator
+        </h3>
+
+        <p>
+          Estimate how much home you may be able to afford based on income
+          and commitments.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="car-affordability.html">
+        <h3>
+          Car Affordability Calculator
+        </h3>
+
+        <p>
+          Estimate a suitable car budget based on your income.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="salary-increment.html">
+        <h3>
+          Salary Increment Calculator
+        </h3>
+
+        <p>
+          Calculate your new salary after a percentage or fixed increment.
+        </p>
+      </a>
+
+
+      <a class="content-card" href="working-days.html">
+        <h3>
+          Working Days Calculator
+        </h3>
+
+        <p>
+          Calculate working days between two dates.
+        </p>
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div>
+      <strong>
+        MY Calculator Hub
+      </strong>
+
+      <p>
+        Free Malaysia calculators for salary, tax, EPF, SOCSO, EIS,
+        affordability and more.
+      </p>
+    </div>
+
+
+    <div>
+
+      <a href="index.html">
+        Calculators
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#privacy">
+        Privacy
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+  /*
+   * Malaysia PCB Calculator 2026
+   *
+   * This calculator is an ESTIMATOR.
+   *
+   * It is designed for a standard resident individual employment-income
+   * scenario and does not attempt to reproduce every internal employer
+   * payroll condition contained in the official HASiL computerized PCB
+   * specification.
+   */
+
+
+  function money(value) {
+
+    return "RM" + Number(value || 0).toLocaleString("en-MY", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+  }
+
+
+  function numberValue(id) {
+
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return 0;
+    }
+
+    const value = parseFloat(element.value);
+
+    return isNaN(value) ? 0 : Math.max(0, value);
+
+  }
+
+
+  function getRadioValue(name) {
+
+    const selected = document.querySelector(
+      'input[name="' + name + '"]:checked'
+    );
+
+    return selected ? selected.value : "";
+
+  }
+
+
+  /*
+   * Progressive resident individual income tax estimate.
+   */
+
+  function calculateProgressiveTax(chargeableIncome) {
+
+    let income = Math.max(0, chargeableIncome);
+
+    let tax = 0;
+
+
+    const bands = [
+
+      {
+        limit: 5000,
+        rate: 0
+      },
+
+      {
+        limit: 20000,
+        rate: 0.01
+      },
+
+      {
+        limit: 35000,
+        rate: 0.03
+      },
+
+      {
+        limit: 50000,
+        rate: 0.06
+      },
+
+      {
+        limit: 70000,
+        rate: 0.11
+      },
+
+      {
+        limit: 100000,
+        rate: 0.19
+      },
+
+      {
+        limit: 400000,
+        rate: 0.25
+      },
+
+      {
+        limit: 600000,
+        rate: 0.26
+      },
+
+      {
+        limit: 2000000,
+        rate: 0.28
+      },
+
+      {
+        limit: Infinity,
+        rate: 0.30
+      }
+
+    ];
+
+
+    let previousLimit = 0;
+
+
+    for (const band of bands) {
+
+      if (income <= previousLimit) {
+        break;
+      }
+
+
+      const taxableInBand =
+        Math.min(income, band.limit) - previousLimit;
+
+
+      if (taxableInBand > 0) {
+
+        tax += taxableInBand * band.rate;
+
+      }
+
+
+      previousLimit = band.limit;
+
+    }
+
+
+    return Math.max(0, tax);
+
+  }
+
+
+  /*
+   * Main PCB calculation.
+   */
+
+  function calculatePCB() {
+
+    const salary = numberValue("salary");
+
+    const bonus = numberValue("bonus");
+
+    const epfRate = parseFloat(getRadioValue("epfRate")) || 0;
+
+    const residency = getRadioValue("residency");
+
+    const maritalStatus =
+      document.getElementById("maritalStatus").value;
+
+    const children =
+      Math.floor(numberValue("children"));
+
+    const disabled =
+      getRadioValue("disabled") === "yes";
+
+
+    const parentsRelief =
+      Math.min(numberValue("parentsRelief"), 8000);
+
+    const supportEquipment =
+      Math.min(numberValue("supportEquipment"), 6000);
+
+    const educationFees =
+      Math.min(numberValue("educationFees"), 7000);
+
+    const medicalExpenses =
+      Math.min(numberValue("medicalExpenses"), 10000);
+
+    const lifestyleRelief =
+      Math.min(numberValue("lifestyleRelief"), 2500);
+
+    const otherRelief =
+      numberValue("otherRelief");
+
+    const zakat =
+      numberValue("zakat");
+
+
+    if (salary <= 0) {
+
+      alert("Please enter your monthly gross salary.");
+
+      return;
+
+    }
+
+
+    /*
+     * Monthly EPF.
+     */
+
+    const monthlyEPF =
+      salary * epfRate / 100;
+
+
+    /*
+     * Annual salary + bonus.
+     */
+
+    const annualSalary =
+      salary * 12;
+
+    const annualIncome =
+      annualSalary + bonus;
+
+
+    /*
+     * EPF tax deduction.
+     *
+     * The estimate uses the commonly applicable RM4,000 annual
+     * employee EPF relief ceiling.
+     */
+
+    const annualEPFRelief =
+      Math.min(monthlyEPF * 12, 4000);
+
+
+    /*
+     * Basic individual relief.
+     */
+
+    let individualRelief = 9000;
+
+
+    /*
+     * Spouse relief.
+     *
+     * Applied only for a married spouse without income in this
+     * simplified estimator.
+     */
+
+    let spouseRelief = 0;
+
+    if (maritalStatus === "marriedNoIncome") {
+
+      spouseRelief = 4000;
+
+    }
+
+
+    /*
+     * Child relief.
+     *
+     * Standard qualifying-child estimate.
+     *
+     * RM2,000 per qualifying child is used for this calculator.
+     */
+
+    const childRelief =
+      Math.min(children, 20) * 2000;
+
+
+    /*
+     * Disabled individual relief.
+     */
+
+    const disabledRelief =
+      disabled ? 6000 : 0;
+
+
+    /*
+     * Other entered reliefs.
+     */
+
+    const enteredReliefs =
+      parentsRelief +
+      supportEquipment +
+      educationFees +
+      medicalExpenses +
+      lifestyleRelief +
+      otherRelief;
+
+
+    /*
+     * Total reliefs.
+     */
+
+    const totalReliefs =
+      individualRelief +
+      spouseRelief +
+      childRelief +
+      disabledRelief +
+      annualEPFRelief +
+      enteredReliefs;
+
+
+    /*
+     * Non-resident treatment.
+     *
+     * A simplified 30% estimate is used here.
+     * Non-resident individuals generally do not receive the same
+     * resident relief treatment.
+     */
+
+    let chargeableIncome;
+
+    let annualTaxBeforeRebate;
+
+    let annualTaxAfterRebate;
+
+
+    if (residency === "nonresident") {
+
+      chargeableIncome =
+        annualIncome;
+
+      annualTaxBeforeRebate =
+        chargeableIncome * 0.30;
+
+      /*
+       * Zakat is not applied as a resident-style relief here.
+       * Keep the calculation conservative for the estimator.
+       */
+
+      annualTaxAfterRebate =
+        annualTaxBeforeRebate;
+
+    } else {
+
+      chargeableIncome =
+        Math.max(0, annualIncome - totalReliefs);
+
+      annualTaxBeforeRebate =
+        calculateProgressiveTax(chargeableIncome);
+
+
+      /*
+       * Zakat rebate cannot reduce tax below zero.
+       */
+
+      const actualZakatRebate =
+        Math.min(zakat, annualTaxBeforeRebate);
+
+      annualTaxAfterRebate =
+        Math.max(
+          0,
+          annualTaxBeforeRebate - actualZakatRebate
+        );
+
+    }
+
+
+    /*
+     * Monthly PCB estimate.
+     *
+     * The annual tax estimate is divided across 12 months.
+     *
+     * Additional remuneration is therefore included in the annual
+     * estimate but actual employer PCB on bonus may differ because
+     * HASiL's computerized method treats additional remuneration
+     * separately.
+     */
+
+    const monthlyPCB =
+      annualTaxAfterRebate / 12;
+
+
+    const annualPCB =
+      monthlyPCB * 12;
+
+
+    /*
+     * Zakat actually used as rebate.
+     */
+
+    const zakatRebate =
+      residency === "resident"
+        ? Math.min(zakat, annualTaxBeforeRebate)
+        : 0;
+
+
+    /*
+     * Estimated take-home after EPF and PCB.
+     *
+     * Bonus is excluded from the regular monthly take-home figure
+     * because it is not necessarily paid every month.
+     */
+
+    const monthlyTakeHome =
+      Math.max(
+        0,
+        salary -
+        monthlyEPF -
+        monthlyPCB
+      );
+
+
+    /*
+     * Effective annual tax rate.
+     */
+
+    const effectiveRate =
+      annualIncome > 0
+        ? (annualTaxAfterRebate / annualIncome) * 100
+        : 0;
+
+
+    /*
+     * Update result.
+     */
+
+    document.getElementById("monthlyPCB").textContent =
+      money(monthlyPCB);
+
+    document.getElementById("resultSalary").textContent =
+      money(salary);
+
+    document.getElementById("resultEPF").textContent =
+      money(monthlyEPF);
+
+    document.getElementById("annualIncome").textContent =
+      money(annualIncome);
+
+    document.getElementById("annualReliefs").textContent =
+      residency === "resident"
+        ? money(totalReliefs)
+        : money(0);
+
+    document.getElementById("chargeableIncome").textContent =
+      money(chargeableIncome);
+
+    document.getElementById("annualTax").textContent =
+      money(annualTaxAfterRebate);
+
+    document.getElementById("zakatRebate").textContent =
+      money(zakatRebate);
+
+    document.getElementById("annualPCB").textContent =
+      money(annualPCB);
+
+    document.getElementById("effectiveRate").textContent =
+      effectiveRate.toFixed(2) + "%";
+
+    document.getElementById("takeHome").textContent =
+      money(monthlyTakeHome);
+
+
+    /*
+     * Relief total shown in the input section.
+     */
+
+    document.getElementById("reliefTotal").textContent =
+      money(enteredReliefs);
+
+
+    /*
+     * Zero tax message.
+     */
+
+    const zeroTaxMessage =
+      document.getElementById("zeroTaxMessage");
+
+
+    if (annualTaxAfterRebate <= 0) {
+
+      zeroTaxMessage.classList.remove("hidden");
+
+    } else {
+
+      zeroTaxMessage.classList.add("hidden");
+
+    }
+
+
+    /*
+     * Update warning according to residency.
+     */
+
+    const warning =
+      document.getElementById("resultWarning");
+
+
+    if (residency === "nonresident") {
+
+      warning.innerHTML =
+        "<strong>Non-resident estimate:</strong> " +
+        "This calculation uses a simplified 30% estimate and does not " +
+        "attempt to reproduce every employer PCB condition. Actual " +
+        "non-resident taxation can depend on the nature and source of income.";
+
+    } else {
+
+      warning.innerHTML =
+        "<strong>Important:</strong> This is an estimate. Actual employer " +
+        "PCB may differ because official PCB calculations can use accumulated " +
+        "remuneration, previous PCB, previous-employer information, TP1 " +
+        "deductions, TP3 information, additional remuneration and other " +
+        "payroll inputs.";
+
+    }
+
+
+    /*
+     * Scroll to result on smaller screens.
+     */
+
+    if (window.innerWidth < 800) {
+
+      document.getElementById("resultCard").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+  }
+
+
+  /*
+   * Update relief total while typing.
+   */
+
+  function updateReliefTotal() {
+
+    const parents =
+      Math.min(numberValue("parentsRelief"), 8000);
+
+    const equipment =
+      Math.min(numberValue("supportEquipment"), 6000);
+
+    const education =
+      Math.min(numberValue("educationFees"), 7000);
+
+    const medical =
+      Math.min(numberValue("medicalExpenses"), 10000);
+
+    const lifestyle =
+      Math.min(numberValue("lifestyleRelief"), 2500);
+
+    const other =
+      numberValue("otherRelief");
+
+
+    const total =
+      parents +
+      equipment +
+      education +
+      medical +
+      lifestyle +
+      other;
+
+
+    document.getElementById("reliefTotal").textContent =
+      money(total);
+
+  }
+
+
+  /*
+   * Attach live input listeners.
+   */
+
+  [
+    "parentsRelief",
+    "supportEquipment",
+    "educationFees",
+    "medicalExpenses",
+    "lifestyleRelief",
+    "otherRelief"
+  ].forEach(function(id) {
+
+    const element =
+      document.getElementById(id);
+
+    if (element) {
+
+      element.addEventListener(
+        "input",
+        updateReliefTotal
+      );
+
+    }
+
+  });
+
+
+  /*
+   * Allow Enter key to calculate.
+   */
+
+  document.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (event.key === "Enter") {
+
+        const active =
+          document.activeElement;
+
+        if (
+          active &&
+          active.tagName === "INPUT"
+        ) {
+
+          calculatePCB();
+
+        }
+
+      }
+
+    }
+  );
+
+
+  /*
+   * Initial display.
+   */
+
+  updateReliefTotal();
+
+</script>
+
+</body>
+</html>
