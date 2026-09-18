@@ -1,20 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>EPF Calculator Malaysia 2026 | KWSP Contribution Calculator</title>
-
-  <meta name="description" content="Calculate estimated EPF (KWSP) employee and employer contributions in Malaysia for 2026. Check your monthly EPF contribution and total contribution.">
-
-  <link rel="canonical" href="https://mycalculatorhub.github.io/epf-calculator.html">
-
-  <link rel="stylesheet" href="style.css">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N90MJX0CSD"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -22,448 +13,1664 @@
 
     gtag('config', 'G-N90MJX0CSD');
   </script>
+
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Malaysia EPF Calculator 2026. Estimate your monthly KWSP employee contribution, employer contribution and total EPF contribution."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0f172a"
+  >
+
+  <link
+    rel="canonical"
+    href="https://mycalculatorhub.github.io/epf-calculator.html"
+  >
+
+  <title>Malaysia EPF Calculator 2026 | KWSP Contribution Calculator</title>
+
+
+  <!-- Open Graph -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Malaysia EPF Calculator 2026 | KWSP Contribution Calculator"
+  >
+
+  <meta
+    property="og:description"
+    content="Estimate Malaysian EPF (KWSP) employee and employer contributions for 2026."
+  >
+
+  <meta
+    property="og:url"
+    content="https://mycalculatorhub.github.io/epf-calculator.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Malaysia Calculator Hub"
+  >
+
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Google AdSense: after approval, replace ca-pub-XXXXXXXXXXXXXXXX with your publisher ID. -->
+
+  <!--
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous">
+  </script>
+  -->
+
 </head>
+
 
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="logo">Malaysia Calculator Hub</a>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="salary-calculator.html">Salary</a>
-        <a href="ot-calculator.html">OT</a>
-        <a href="house-affordability.html">House</a>
-        <a href="car-affordability.html">Car</a>
-      </nav>
+<header class="topbar">
+
+  <div class="nav">
+
+    <a class="brand" href="index.html">
+      <span>MY</span> Calculator Hub
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        Calculators
+      </a>
+
+      <a href="#how">
+        How it works
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#privacy">
+        Privacy
+      </a>
+
+    </nav>
+
+
+    <button
+      id="themeToggle"
+      class="icon-btn"
+      aria-label="Toggle dark mode"
+    >
+      ☾
+    </button>
+
+  </div>
+
+</header>
+
+
+
+<main id="top">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="pill">
+      🇲🇾 Updated for 2026
     </div>
-  </header>
 
 
-  <main class="container">
-
-    <section class="hero">
-      <h1>EPF Calculator Malaysia 2026</h1>
-
-      <p>
-        Calculate your estimated monthly EPF (KWSP) employee contribution,
-        employer contribution and total EPF contribution in Malaysia.
-      </p>
-    </section>
+    <h1>
+      Malaysia EPF Calculator 2026
+    </h1>
 
 
-    <section class="ad-slot" aria-label="Advertisement">
-      <span>Advertisement</span>
-      <!-- AdSense unit can be placed here after approval -->
-    </section>
+    <p>
+      Estimate your monthly EPF (KWSP) employee contribution,
+      employer contribution and total EPF savings.
+    </p>
 
 
-    <section class="calculator-card">
+    <a
+      class="hero-btn"
+      href="#calculator"
+    >
+      Calculate EPF contribution ↓
+    </a>
 
-      <h2>EPF Contribution Calculator</h2>
+  </div>
 
-      <div class="form-group">
-        <label for="salary">Monthly Salary (RM)</label>
+</section>
+
+
+
+<!-- =========================
+     ADVERTISEMENT
+========================= -->
+
+<section
+  class="ad-slot"
+  aria-label="Advertisement"
+>
+
+  <span>
+    Advertisement
+  </span>
+
+  <!-- AdSense unit can be placed here after approval -->
+
+</section>
+
+
+
+<!-- =========================
+     EPF CALCULATOR
+========================= -->
+
+<section
+  id="calculator"
+  class="section"
+>
+
+
+  <div class="calculator-grid">
+
+
+    <!-- =========================
+         INPUT CARD
+    ========================= -->
+
+    <div class="card input-card">
+
+
+      <div class="section-head">
+
+        <div>
+
+          <p class="eyebrow">
+            YOUR DETAILS
+          </p>
+
+          <h2>
+            EPF calculator
+          </h2>
+
+        </div>
+
+
+        <span class="year-badge">
+          2026
+        </span>
+
+      </div>
+
+
+
+      <!-- SALARY -->
+
+      <label>
+
+        Monthly salary / wages (RM)
 
         <input
+          id="epfSalary"
           type="number"
-          id="salary"
           min="0"
           step="0.01"
-          placeholder="Example: 5000"
+          value="5000"
+          inputmode="decimal"
         >
-      </div>
+
+        <small>
+          Enter your monthly EPF-contributable wages.
+        </small>
+
+      </label>
 
 
-      <div class="form-group">
-        <label for="age">Age</label>
+
+      <!-- AGE -->
+
+      <label>
+
+        Age
 
         <input
+          id="epfAge"
           type="number"
-          id="age"
           min="14"
-          max="100"
-          placeholder="Example: 28"
+          max="75"
+          value="28"
+          inputmode="numeric"
         >
-      </div>
+
+        <small>
+          EPF contribution rates vary by age.
+        </small>
+
+      </label>
 
 
-      <div class="form-group">
 
-        <label for="status">Employee Status</label>
+      <!-- EMPLOYEE TYPE -->
 
-        <select id="status">
-          <option value="malaysian">Malaysian / Permanent Resident</option>
-          <option value="foreign">Non-Malaysian (registered from 1 Aug 1998)</option>
+      <label>
+
+        Employee category
+
+        <select id="epfEmployeeType">
+
+          <option value="malaysian">
+            Malaysian citizen
+          </option>
+
+          <option value="pr">
+            Permanent Resident (PR)
+          </option>
+
+          <option value="foreign">
+            Non-Malaysian citizen
+          </option>
+
         </select>
 
+      </label>
+
+
+
+      <!-- FOREIGN EMPLOYEE -->
+
+      <div
+        id="foreignEpfNotice"
+        class="notice hidden"
+      >
+
+        For applicable non-Malaysian employees registered from
+        1 August 1998, the current statutory EPF rate is generally
+        2% employee + 2% employer.
+
       </div>
 
 
-      <button onclick="calculateEPF()">
-        Calculate EPF
+
+      <!-- CALCULATE -->
+
+      <button
+        id="epfCalculateBtn"
+        class="calculate-btn"
+      >
+        Calculate EPF contribution
       </button>
 
 
-      <div id="result" class="result" style="display:none;">
+    </div>
 
-        <h2>Estimated EPF Contribution</h2>
 
-        <div class="result-grid">
 
-          <div class="result-box">
-            <span>Employee Contribution</span>
-            <strong id="employeeContribution">RM0.00</strong>
-          </div>
+    <!-- =========================
+         RESULT CARD
+    ========================= -->
 
-          <div class="result-box">
-            <span>Employer Contribution</span>
-            <strong id="employerContribution">RM0.00</strong>
-          </div>
+    <div
+      class="card result-card"
+      id="epfResults"
+    >
 
-          <div class="result-box">
-            <span>Total EPF Contribution</span>
-            <strong id="totalContribution">RM0.00</strong>
+
+      <div class="result-top">
+
+        <div>
+
+          <p class="eyebrow">
+            ESTIMATED MONTHLY CONTRIBUTION
+          </p>
+
+
+          <div
+            id="epfTotal"
+            class="take-home"
+          >
+            RM 0.00
           </div>
 
         </div>
 
-        <p id="rateExplanation"></p>
+
+        <div class="mini-chip">
+          total EPF
+        </div>
 
       </div>
 
-    </section>
 
 
-    <section class="content-section">
+      <!-- BREAKDOWN -->
 
-      <h2>How EPF Contributions Work in Malaysia</h2>
-
-      <p>
-        EPF, also known as KWSP, is Malaysia's mandatory retirement savings
-        scheme for eligible employees. Both employees and employers contribute
-        to the employee's EPF account.
-      </p>
-
-      <p>
-        For Malaysian employees and permanent residents below age 60,
-        the statutory employee contribution is generally 11%. The employer
-        contribution is generally 13% for monthly wages of RM5,000 and below,
-        and 12% for wages above RM5,000.
-      </p>
-
-      <p>
-        Employees aged 60 and above generally have a different statutory
-        contribution structure. Non-Malaysian employees registered from
-        1 August 1998 generally use a 2% employee and 2% employer contribution
-        rate.
-      </p>
-
-      <p>
-        <strong>Important:</strong> Actual EPF contributions for wages up to
-        RM20,000 are determined using the official KWSP Third Schedule wage
-        ranges. This calculator provides an estimate using the statutory
-        contribution rates and should not be treated as an official payroll
-        calculation.
-      </p>
-
-    </section>
+      <div class="breakdown">
 
 
-    <section class="content-section">
+        <div class="row">
 
-      <h2>EPF Contribution Rates</h2>
+          <span>
+            Monthly salary
+          </span>
 
-      <div class="table-wrapper">
+          <strong id="epfGross">
+            RM 0.00
+          </strong>
 
-        <table>
+        </div>
 
-          <thead>
-            <tr>
-              <th>Employee Category</th>
-              <th>Employee</th>
-              <th>Employer</th>
-            </tr>
-          </thead>
 
-          <tbody>
+        <div class="row">
 
-            <tr>
-              <td>Malaysian / PR below 60, salary ≤ RM5,000</td>
-              <td>11%</td>
-              <td>13%</td>
-            </tr>
+          <span>
 
-            <tr>
-              <td>Malaysian / PR below 60, salary &gt; RM5,000</td>
-              <td>11%</td>
-              <td>12%</td>
-            </tr>
+            Employee contribution
 
-            <tr>
-              <td>Non-Malaysian registered from 1 Aug 1998</td>
-              <td>2%</td>
-              <td>2%</td>
-            </tr>
+            <small id="employeeRateLabel">
+              Employee share
+            </small>
 
-            <tr>
-              <td>Malaysian aged 60 and above</td>
-              <td>0%</td>
-              <td>4%</td>
-            </tr>
+          </span>
 
-          </tbody>
+          <strong id="employeeEpf">
+            RM 0.00
+          </strong>
 
-        </table>
+        </div>
+
+
+        <div class="row">
+
+          <span>
+
+            Employer contribution
+
+            <small id="employerRateLabel">
+              Employer share
+            </small>
+
+          </span>
+
+          <strong id="employerEpf">
+            RM 0.00
+          </strong>
+
+        </div>
+
+
+        <div class="row total">
+
+          <span>
+            Total EPF contribution
+          </span>
+
+          <strong id="totalEpf">
+            RM 0.00
+          </strong>
+
+        </div>
+
 
       </div>
 
-    </section>
 
 
-    <section class="content-section">
+      <!-- ANNUAL -->
 
-      <h2>Example</h2>
-
-      <p>
-        If your monthly salary is RM5,000 and you are a Malaysian employee
-        below age 60, the statutory rates are 11% for the employee and 13%
-        for the employer.
-      </p>
-
-      <p>
-        A simple percentage estimate would therefore be RM550 employee
-        contribution and RM650 employer contribution, for RM1,200 total.
-        However, the actual statutory contribution should be checked against
-        the applicable KWSP Third Schedule wage range.
-      </p>
-
-    </section>
+      <div class="annual-grid">
 
 
-    <section class="content-section">
+        <div>
 
-      <h2>Frequently Asked Questions</h2>
+          <span>
+            Annual employee contribution
+          </span>
 
-      <h3>What is the EPF contribution rate in Malaysia?</h3>
+          <strong id="annualEmployee">
+            RM 0.00
+          </strong>
 
-      <p>
-        For Malaysian employees and permanent residents below 60, the
-        employee contribution is generally 11%. Employer contribution is
-        generally 13% for wages up to RM5,000 and 12% above RM5,000.
-      </p>
-
-
-      <h3>Does the employer contribute to EPF?</h3>
-
-      <p>
-        Yes. Eligible employers are required to contribute to EPF according
-        to the applicable statutory contribution schedule.
-      </p>
+        </div>
 
 
-      <h3>What happens after age 60?</h3>
+        <div>
 
-      <p>
-        EPF contribution rates change after age 60. For Malaysian employees,
-        the employee share is generally 0% and the employer share is 4%.
-      </p>
+          <span>
+            Annual employer contribution
+          </span>
 
+          <strong id="annualEmployer">
+            RM 0.00
+          </strong>
 
-      <h3>Is this calculator official?</h3>
+        </div>
 
-      <p>
-        No. This is an independent calculator provided for estimation and
-        educational purposes. For official contribution amounts, refer to
-        KWSP's current Third Schedule and your EPF statement.
-      </p>
-
-    </section>
-
-
-    <section class="content-section">
-
-      <h2>More Malaysia Calculators</h2>
-
-      <div class="calculator-links">
-
-        <a href="salary-calculator.html" class="calculator-link">
-          <strong>Salary Calculator</strong>
-          <small>Calculate your estimated take-home pay</small>
-        </a>
-
-        <a href="ot-calculator.html" class="calculator-link">
-          <strong>OT Calculator</strong>
-          <small>Calculate your overtime pay</small>
-        </a>
-
-        <a href="salary-increment.html" class="calculator-link">
-          <strong>Salary Increment Calculator</strong>
-          <small>Calculate your new salary after an increment</small>
-        </a>
-
-        <a href="house-affordability.html" class="calculator-link">
-          <strong>House Affordability Calculator</strong>
-          <small>Estimate how much house you can afford</small>
-        </a>
-
-        <a href="car-affordability.html" class="calculator-link">
-          <strong>Car Affordability Calculator</strong>
-          <small>Estimate your affordable car price</small>
-        </a>
 
       </div>
 
-    </section>
 
 
-    <section class="ad-slot" aria-label="Advertisement">
-      <span>Advertisement</span>
-      <!-- AdSense unit can be placed here after approval -->
-    </section>
-
-  </main>
+      <p
+        id="epfNote"
+        class="result-note"
+      ></p>
 
 
-  <footer class="site-footer">
 
-    <div class="container">
+      <!-- SHARE -->
 
-      <p>
-        © 2026 Malaysia Calculator Hub
+      <button
+        id="shareEpfBtn"
+        class="share-btn"
+      >
+        ↗ Share this calculation
+      </button>
+
+
+
+      <p class="disclaimer">
+
+        This calculator provides an estimate for informational purposes.
+        Actual EPF contributions are determined according to the applicable
+        KWSP Third Schedule and your employer's payroll information.
+
       </p>
 
-      <p>
-        Calculator results are estimates for informational purposes only.
-      </p>
 
     </div>
 
-  </footer>
+  </div>
 
+</section>
+
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section
+  class="section"
+  id="how"
+>
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      HOW IT WORKS
+    </p>
+
+
+    <h2>
+      How EPF contributions work in Malaysia
+    </h2>
+
+
+
+    <div class="info-grid">
+
+
+      <article>
+
+        <h3>
+          Employee contribution
+        </h3>
+
+        <p>
+          For Malaysian employees and permanent residents below age 60,
+          the statutory employee contribution is generally 11%.
+          The actual contribution amount for wages up to RM20,000 is
+          determined using the applicable KWSP wage-range schedule.
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <h3>
+          Employer contribution
+        </h3>
+
+        <p>
+          For Malaysian employees below age 60, the employer contribution
+          is generally 13% for wages of RM5,000 and below and 12% for wages
+          above RM5,000, subject to the official contribution schedule.
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <h3>
+          Age 60 and above
+        </h3>
+
+        <p>
+          Contribution rates change after age 60. For Malaysian citizens
+          aged 60 and above, the employee share is generally 0% and the
+          employer share is generally 4%.
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <h3>
+          Non-Malaysian employees
+        </h3>
+
+        <p>
+          Applicable non-Malaysian employees registered as EPF members
+          from 1 August 1998 generally use a 2% employee and 2% employer
+          contribution rate.
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <h3>
+          Wage-range calculation
+        </h3>
+
+        <p>
+          For wages up to RM20,000, employers generally use the contribution
+          amount specified in the KWSP Third Schedule rather than simply
+          multiplying the wage by the headline percentage.
+        </p>
+
+      </article>
+
+
+
+      <article>
+
+        <h3>
+          Total EPF contribution
+        </h3>
+
+        <p>
+          Your total monthly EPF contribution consists of your employee
+          contribution plus your employer's contribution.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EPF RATES
+========================= -->
+
+<section class="section">
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      2026 CONTRIBUTION RATES
+    </p>
+
+
+    <h2>
+      EPF contribution rates
+    </h2>
+
+
+    <div class="info-grid">
+
+
+      <article>
+
+        <h3>
+          Malaysian / PR below 60
+        </h3>
+
+        <p>
+          Employee: 11%
+        </p>
+
+        <p>
+          Employer: 13% for wages of RM5,000 and below;
+          12% for wages above RM5,000.
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <h3>
+          Malaysian citizen aged 60+
+        </h3>
+
+        <p>
+          Employee: 0%
+        </p>
+
+        <p>
+          Employer: 4%
+        </p>
+
+      </article>
+
+
+      <article>
+
+        <h3>
+          Applicable non-Malaysian employee
+        </h3>
+
+        <p>
+          Employee: 2%
+        </p>
+
+        <p>
+          Employer: 2%
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+    <p class="result-note">
+
+      Contribution rules shown above are based on the current KWSP
+      contribution structure effective from October 2025 salary/wage.
+      The official Third Schedule should be used for exact payroll
+      contribution amounts.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXAMPLE
+========================= -->
+
+<section class="section">
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      EXAMPLE
+    </p>
+
+
+    <h2>
+      EPF example
+    </h2>
+
+
+    <p>
+
+      Suppose a Malaysian employee below age 60 earns RM5,000 per month.
+
+      The applicable headline statutory rates are 11% employee and
+      13% employer. However, the actual contribution payable is determined
+      using the KWSP Third Schedule wage range.
+
+    </p>
+
+
+    <p>
+
+      This distinction matters because KWSP states that employers should
+      not simply calculate the contribution by multiplying the exact salary
+      by the percentage for wages up to RM20,000.
+
+    </p>
+
+
+    <p>
+
+      For example, KWSP's published example shows that a wage of RM3,250
+      results in RM359 employee contribution and RM424 employer contribution
+      under the wage-range approach.
+
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  class="section"
+  id="about"
+>
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      ABOUT
+    </p>
+
+
+    <h2>
+      About Malaysia Calculator Hub
+    </h2>
+
+
+    <p>
+
+      Malaysia Calculator Hub is an independent calculator project
+      designed to make everyday Malaysian financial, employment and
+      engineering calculations easier to understand.
+
+    </p>
+
+
+    <p>
+
+      We use publicly available information from Malaysian government
+      and statutory bodies where possible, including KWSP, PERKESO
+      and HASiL.
+
+    </p>
+
+
+    <p>
+
+      Rules and contribution schedules can change, so users should confirm
+      important payroll or financial figures with the relevant authority
+      or their employer.
+
+    </p>
+
+
+    <p>
+
+      <b>
+        We are not affiliated with KWSP, PERKESO, HASiL or any Malaysian
+        government agency.
+      </b>
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRIVACY
+========================= -->
+
+<section
+  class="section"
+  id="privacy"
+>
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      PRIVACY
+    </p>
+
+
+    <h2>
+      Privacy Policy
+    </h2>
+
+
+    <p>
+      <b>
+        Last updated: 3 September 2026
+      </b>
+    </p>
+
+
+    <p>
+
+      Malaysia Calculator Hub is designed so that calculator calculations
+      can be performed directly in your browser. We do not require an
+      account and we do not ask you to submit your salary details to us.
+
+    </p>
+
+
+    <h3>
+      Information entered into the calculator
+    </h3>
+
+
+    <p>
+
+      The calculator processes the information you enter locally in your
+      browser to produce the displayed result. We do not intentionally
+      collect or store those values on our server.
+
+    </p>
+
+
+    <h3>
+      Cookies and advertising
+    </h3>
+
+
+    <p>
+
+      If advertising services such as Google AdSense are enabled,
+      third-party vendors including Google may use cookies, web beacons,
+      IP addresses or similar technologies to serve and measure advertising.
+
+    </p>
+
+
+    <h3>
+      Analytics
+    </h3>
+
+
+    <p>
+
+      Google Analytics may collect aggregated information such as pages
+      viewed, device information and general usage patterns.
+
+    </p>
+
+
+    <h3>
+      Contact
+    </h3>
+
+
+    <p>
+
+      For privacy questions, contact us through the email address published
+      on the website once our support mailbox is active.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     DISCLAIMER
+========================= -->
+
+<section class="section">
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      DISCLAIMER
+    </p>
+
+
+    <h2>
+      EPF Calculator Disclaimer
+    </h2>
+
+
+    <p>
+
+      This website provides estimates for educational and planning
+      purposes only. It does not constitute tax, legal, payroll,
+      investment or financial advice.
+
+    </p>
+
+
+    <p>
+
+      Actual EPF contributions may differ because the official KWSP
+      contribution schedule, wage definition, employee status and
+      employer payroll information may affect the contribution amount.
+
+    </p>
+
+
+    <p>
+
+      For official EPF contribution amounts, refer to the latest
+      KWSP Third Schedule, your EPF statement or your employer's
+      payroll records.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     MORE CALCULATORS
+========================= -->
+
+<section class="section">
+
+  <div class="content-card">
+
+
+    <p class="eyebrow">
+      MORE CALCULATORS
+    </p>
+
+
+    <h2>
+      Malaysia calculators
+    </h2>
+
+
+
+    <div class="coming-grid">
+
+
+      <a
+        href="index.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          🏠
+
+          <b>
+            Calculator Hub
+          </b>
+
+          <small>
+            Explore all Malaysia calculators
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="salary-calculator.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          💰
+
+          <b>
+            Salary Calculator
+          </b>
+
+          <small>
+            Calculate your estimated take-home pay
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="ot-calculator.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          ⏱️
+
+          <b>
+            OT Calculator
+          </b>
+
+          <small>
+            Calculate your overtime pay
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="house-affordability.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          🏠
+
+          <b>
+            House Affordability
+          </b>
+
+          <small>
+            Estimate how much house you can afford
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="car-affordability.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          🚗
+
+          <b>
+            Car Affordability
+          </b>
+
+          <small>
+            Estimate a comfortable car budget
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="salary-increment.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          📈
+
+          <b>
+            Salary Increment
+          </b>
+
+          <small>
+            See your salary increase
+          </small>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="working-days.html"
+        style="text-decoration:none;color:inherit;"
+      >
+
+        <div>
+
+          📅
+
+          <b>
+            Working Days
+          </b>
+
+          <small>
+            Calculate working days and pay periods
+          </small>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <b>
+      Malaysia Calculator Hub
+    </b>
+
+    <span>
+      Independent • Practical • Malaysia-focused
+    </span>
+
+    <span>
+      © 2026 Malaysia Calculator Hub
+    </span>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================
+     EPF CALCULATOR SCRIPT
+========================= -->
 
 <script>
 
-function calculateEPF() {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const salaryInput = document.getElementById("salary");
-  const ageInput = document.getElementById("age");
-  const statusInput = document.getElementById("status");
 
-  const salary = parseFloat(salaryInput.value);
-  const age = parseInt(ageInput.value);
-  const status = statusInput.value;
+  const salaryInput =
+    document.getElementById("epfSalary");
 
-  if (isNaN(salary) || salary < 0) {
-    alert("Please enter a valid monthly salary.");
-    return;
+  const ageInput =
+    document.getElementById("epfAge");
+
+  const employeeType =
+    document.getElementById("epfEmployeeType");
+
+  const calculateBtn =
+    document.getElementById("epfCalculateBtn");
+
+  const foreignNotice =
+    document.getElementById("foreignEpfNotice");
+
+
+  function formatRM(amount) {
+
+    return "RM " + Number(amount).toLocaleString("en-MY", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
   }
 
-  if (isNaN(age) || age < 14 || age > 100) {
-    alert("Please enter a valid age.");
-    return;
-  }
 
 
-  let employeeRate = 0;
-  let employerRate = 0;
-  let explanation = "";
+  function updateForeignNotice() {
 
+    if (employeeType.value === "foreign") {
 
-  /*
-    Malaysian / PR employees
-  */
-
-  if (status === "malaysian") {
-
-    if (age >= 60) {
-
-      employeeRate = 0;
-      employerRate = 0.04;
-
-      explanation =
-        "For Malaysian employees aged 60 and above, this estimate uses 0% employee contribution and 4% employer contribution.";
+      foreignNotice.classList.remove("hidden");
 
     } else {
 
-      employeeRate = 0.11;
-
-      if (salary <= 5000) {
-
-        employerRate = 0.13;
-
-        explanation =
-          "Estimated using 11% employee contribution and 13% employer contribution.";
-
-      } else {
-
-        employerRate = 0.12;
-
-        explanation =
-          "Estimated using 11% employee contribution and 12% employer contribution.";
-
-      }
+      foreignNotice.classList.add("hidden");
 
     }
 
   }
 
 
-  /*
-    Non-Malaysian employees registered
-    from 1 August 1998
-  */
 
-  else {
+  employeeType.addEventListener(
+    "change",
+    updateForeignNotice
+  );
 
-    employeeRate = 0.02;
-    employerRate = 0.02;
 
-    explanation =
-      "Estimated using the 2% employee and 2% employer contribution rate for applicable non-Malaysian employees.";
+
+  calculateBtn.addEventListener(
+    "click",
+    calculateEPF
+  );
+
+
+
+  function calculateEPF() {
+
+
+    const salary =
+      parseFloat(salaryInput.value);
+
+    const age =
+      parseInt(ageInput.value);
+
+
+    if (
+      isNaN(salary) ||
+      salary <= 0
+    ) {
+
+      alert(
+        "Please enter a valid monthly salary."
+      );
+
+      return;
+
+    }
+
+
+    if (
+      isNaN(age) ||
+      age < 14 ||
+      age > 75
+    ) {
+
+      alert(
+        "Please enter an age between 14 and 75."
+      );
+
+      return;
+
+    }
+
+
+
+    let employeeContribution = 0;
+
+    let employerContribution = 0;
+
+    let employeeRateText = "";
+
+    let employerRateText = "";
+
+    let note = "";
+
+
+
+    /*
+      NON-MALAYSIAN EMPLOYEE
+    */
+
+    if (
+      employeeType.value === "foreign"
+    ) {
+
+
+      employeeContribution =
+        salary * 0.02;
+
+
+      employerContribution =
+        salary * 0.02;
+
+
+      employeeRateText =
+        "2% employee";
+
+
+      employerRateText =
+        "2% employer";
+
+
+      note =
+        "Estimated using the current 2% employee and 2% employer rate for applicable non-Malaysian employees registered from 1 August 1998.";
+
+    }
+
+
+
+    /*
+      MALAYSIAN CITIZEN
+    */
+
+    else if (
+      employeeType.value === "malaysian"
+    ) {
+
+
+      if (age >= 60) {
+
+
+        employeeContribution = 0;
+
+
+        employerContribution =
+          salary * 0.04;
+
+
+        employeeRateText =
+          "0% employee";
+
+
+        employerRateText =
+          "4% employer";
+
+
+        note =
+          "For Malaysian citizens aged 60 and above, this estimate uses 0% employee and 4% employer contribution.";
+
+      }
+
+
+      else {
+
+
+        employeeContribution =
+          salary * 0.11;
+
+
+        employerContribution =
+          salary <= 5000
+            ? salary * 0.13
+            : salary * 0.12;
+
+
+        employeeRateText =
+          "11% employee";
+
+
+        employerRateText =
+          salary <= 5000
+            ? "13% employer"
+            : "12% employer";
+
+
+        note =
+          "For wages up to RM20,000, actual statutory EPF contributions are determined using the official KWSP Third Schedule wage-range approach. This page currently displays a percentage-based estimate.";
+
+      }
+
+    }
+
+
+
+    /*
+      PERMANENT RESIDENT
+    */
+
+    else {
+
+
+      if (age >= 60) {
+
+
+        employeeContribution =
+          salary * 0.055;
+
+
+        employerContribution =
+          salary <= 5000
+            ? salary * 0.065
+            : salary * 0.06;
+
+
+        employeeRateText =
+          "5.5% employee";
+
+
+        employerRateText =
+          salary <= 5000
+            ? "6.5% employer"
+            : "6% employer";
+
+
+        note =
+          "For Malaysian permanent residents aged 60 and above, the applicable statutory rates are generally 5.5% employee and 6.5% employer for wages of RM5,000 and below, and 6% employer above RM5,000.";
+
+      }
+
+
+      else {
+
+
+        employeeContribution =
+          salary * 0.11;
+
+
+        employerContribution =
+          salary <= 5000
+            ? salary * 0.13
+            : salary * 0.12;
+
+
+        employeeRateText =
+          "11% employee";
+
+
+        employerRateText =
+          salary <= 5000
+            ? "13% employer"
+            : "12% employer";
+
+
+        note =
+          "For wages up to RM20,000, actual statutory EPF contributions are determined using the official KWSP Third Schedule wage-range approach. This page currently displays a percentage-based estimate.";
+
+      }
+
+    }
+
+
+
+    /*
+      DISPLAY RESULTS
+    */
+
+
+    const total =
+      employeeContribution +
+      employerContribution;
+
+
+    document.getElementById(
+      "epfGross"
+    ).textContent =
+      formatRM(salary);
+
+
+    document.getElementById(
+      "employeeEpf"
+    ).textContent =
+      formatRM(employeeContribution);
+
+
+    document.getElementById(
+      "employerEpf"
+    ).textContent =
+      formatRM(employerContribution);
+
+
+    document.getElementById(
+      "totalEpf"
+    ).textContent =
+      formatRM(total);
+
+
+    document.getElementById(
+      "epfTotal"
+    ).textContent =
+      formatRM(total);
+
+
+    document.getElementById(
+      "annualEmployee"
+    ).textContent =
+      formatRM(employeeContribution * 12);
+
+
+    document.getElementById(
+      "annualEmployer"
+    ).textContent =
+      formatRM(employerContribution * 12);
+
+
+    document.getElementById(
+      "employeeRateLabel"
+    ).textContent =
+      employeeRateText;
+
+
+    document.getElementById(
+      "employerRateLabel"
+    ).textContent =
+      employerRateText;
+
+
+    document.getElementById(
+      "epfNote"
+    ).textContent =
+      note;
+
 
   }
 
 
-  const employeeContribution =
-    salary * employeeRate;
 
-  const employerContribution =
-    salary * employerRate;
+  /*
+    INITIAL STATE
+  */
 
-  const totalContribution =
-    employeeContribution + employerContribution;
+  updateForeignNotice();
 
-
-  document.getElementById("employeeContribution").textContent =
-    formatRM(employeeContribution);
-
-  document.getElementById("employerContribution").textContent =
-    formatRM(employerContribution);
-
-  document.getElementById("totalContribution").textContent =
-    formatRM(totalContribution);
-
-  document.getElementById("rateExplanation").textContent =
-    explanation +
-    " Actual KWSP contributions may differ because statutory contributions for wages up to RM20,000 are determined using the official Third Schedule wage ranges.";
-
-  document.getElementById("result").style.display = "block";
-
-}
+  calculateEPF();
 
 
-function formatRM(amount) {
 
-  return "RM" + amount.toLocaleString("en-MY", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
+  /*
+    SHARE BUTTON
+  */
 
-}
+  const shareBtn =
+    document.getElementById("shareEpfBtn");
+
+
+  shareBtn.addEventListener(
+    "click",
+    async function () {
+
+
+      const shareData = {
+
+        title:
+          "Malaysia EPF Calculator 2026",
+
+        text:
+          "Calculate EPF contribution in Malaysia.",
+
+        url:
+          window.location.href
+
+      };
+
+
+      try {
+
+
+        if (
+          navigator.share
+        ) {
+
+          await navigator.share(
+            shareData
+          );
+
+        }
+
+        else {
+
+          await navigator.clipboard.writeText(
+            window.location.href
+          );
+
+          alert(
+            "Calculator link copied!"
+          );
+
+        }
+
+
+      }
+
+      catch (error) {
+
+        console.log(
+          "Share cancelled."
+        );
+
+      }
+
+    }
+  );
+
+
+});
 
 </script>
 
+
+
+<!-- EXISTING SITE JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
