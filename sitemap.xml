@@ -1,33 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://mycalculatorhub.github.io/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://mycalculatorhub.github.io/salary-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mycalculatorhub.github.io/ot-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mycalculatorhub.github.io/house-affordability.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mycalculatorhub.github.io/car-affordability.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mycalculatorhub.github.io/salary-increment.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mycalculatorhub.github.io/working-days.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mycalculatorhub.github.io/epf-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mycalculatorhub.github.io/socso-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mycalculatorhub.github.io/eis-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mycalculatorhub.github.io/pcb-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>
